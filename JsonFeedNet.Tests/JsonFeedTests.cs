@@ -76,7 +76,6 @@ namespace JsonFeedNet.Tests
         {
             var jsonFeed = new JsonFeed
             {
-                Version = @"https://jsonfeed.org/version/1",
                 Title = "Dan Rigby",
                 Description = "Mobile App Development & More.",
                 HomePageUrl = @"http://danrigby.com",

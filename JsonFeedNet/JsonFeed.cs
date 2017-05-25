@@ -13,7 +13,7 @@ namespace JsonFeedNet
         /// The URL of the version of the format the feed uses.
         /// </summary>
         [JsonProperty("version")]
-        public string Version { get; set; } //required
+        public string Version { get; set; } = @"https://jsonfeed.org/version/1"; //required
 
         /// <summary>
         /// The name of the feed.
