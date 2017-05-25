@@ -1,0 +1,637 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "Timetable",
+  "home_page_url": "http://timetable.manton.org/",
+  "items": [
+    {
+      "id": "http://timetable.manton.org/2017/04/episode-45-launch-week/",
+      "url": "http://timetable.manton.org/2017/04/episode-45-launch-week/",
+      "title": "Episode 45: Launch week",
+      "content_html": "I’m rolling out early access to Micro.blog this week. I talk about how the first 2 days have gone, mistakes with TestFlight, and what to do next.",
+      "date_published": "2017-04-26T01:09:45+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/139/episode-45-launch-week.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 5236920
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2017/04/episode-44-disappoint-some-people/",
+      "url": "http://timetable.manton.org/2017/04/episode-44-disappoint-some-people/",
+      "title": "Episode 44: Disappoint some people",
+      "content_html": "I look back at Katy Perry’s performance at the Grammys. Why it’s okay to make a political statement and risk disappointing some fans.",
+      "date_published": "2017-04-20T16:59:09+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/136/episode-44-disappoint-some-people.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 3590496
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2017/04/episode-43-default-themes/",
+      "url": "http://timetable.manton.org/2017/04/episode-43-default-themes/",
+      "title": "Episode 43: Default themes",
+      "content_html": "Finalizing the default themes for Micro.blog, why they’re based on Jekyll, and a thousand beta testers.",
+      "date_published": "2017-04-18T18:24:39+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/134/episode-43-default-themes.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 4400851
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2017/04/episode-42-officially-announced/",
+      "url": "http://timetable.manton.org/2017/04/episode-42-officially-announced/",
+      "title": "Episode 42: Officially announced",
+      "content_html": "Today I sent a Kickstarter update about the rollout date. I also talk about the invite code system, the book, and stickers.",
+      "date_published": "2017-04-17T22:34:14+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/132/episode-42-officially-announced.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 7436651
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2017/04/episode-41-final-rollout-date/",
+      "url": "http://timetable.manton.org/2017/04/episode-41-final-rollout-date/",
+      "title": "Episode 41: Final rollout date",
+      "content_html": "Wrapping up a busy week, I realize there’s too much going on to start the Micro.blog rollout next week. It will be the following week, April 24th.",
+      "date_published": "2017-04-15T02:11:02+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/129/episode-41-final-rollout-date.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 3796695
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2017/04/episode-40-just-the-basics/",
+      "url": "http://timetable.manton.org/2017/04/episode-40-just-the-basics/",
+      "title": "Episode 40: Just the basics",
+      "content_html": "Picking up hamburgers for lunch and talking about keeping the iPhone app simple.",
+      "date_published": "2017-04-13T21:49:52+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/126/episode-40-just-the-basics.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 6003412
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2017/04/episode-39-handling-mistakes/",
+      "url": "http://timetable.manton.org/2017/04/episode-39-handling-mistakes/",
+      "title": "Episode 39: Handling mistakes",
+      "content_html": "I start with a clip from the Oscars, then talk about my repeated mistake over-promising on the Micro.blog rollout schedule.",
+      "date_published": "2017-04-12T18:32:39+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/124/episode-39-handling-mistakes.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 3480351
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2017/04/episode-38-season-2/",
+      "url": "http://timetable.manton.org/2017/04/episode-38-season-2/",
+      "title": "Episode 38: Season 2",
+      "content_html": "It’s a rainy week in Austin. I catch up on the progress for Micro.blog and some thoughts on the bigger picture for where it’s going.",
+      "date_published": "2017-04-11T18:56:59+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/122/episode-38-season-2.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 7491835
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2017/02/episode-37-next-steps/",
+      "url": "http://timetable.manton.org/2017/02/episode-37-next-steps/",
+      "title": "Episode 37: Next steps",
+      "content_html": "Now that the Kickstarter campaign has wrapped up, I move to the next phase of getting Micro.blog ready, planning for invites, and focusing on the Slack community.",
+      "date_published": "2017-02-07T17:14:38+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/115/episode-37-next-steps.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 3634859
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2017/01/episode-36-stretch-goals/",
+      "url": "http://timetable.manton.org/2017/01/episode-36-stretch-goals/",
+      "title": "Episode 36: Stretch goals",
+      "content_html": "Recent thoughts on App.net shutting down and details about why I added a stretch goal to my Kickstarter campaign.",
+      "date_published": "2017-01-17T17:45:49+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/112/episode-36-stretch-goals.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 7146632
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2017/01/episode-35-kickstarter-optimism/",
+      "url": "http://timetable.manton.org/2017/01/episode-35-kickstarter-optimism/",
+      "title": "Episode 35: Kickstarter optimism",
+      "content_html": "A week after launching the Kickstarter, I talk about its success so far and why I believe I can build Micro.blog, with a clip about optimism from Gary Vaynerchuk.",
+      "date_published": "2017-01-10T16:19:32+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/109/episode-35-kickstarter-optimism.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 5134845
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2017/01/episode-34-launching-tomorrow/",
+      "url": "http://timetable.manton.org/2017/01/episode-34-launching-tomorrow/",
+      "title": "Episode 34: Launching tomorrow",
+      "content_html": "Happy New Year! I talk about the first day of the year, and the final day to finish my Kickstarter project for Micro.blog.",
+      "date_published": "2017-01-01T23:27:13+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/107/episode-34-launching-tomorrow.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 3463529
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/12/episode-33-kickstarter-launch-review/",
+      "url": "http://timetable.manton.org/2016/12/episode-33-kickstarter-launch-review/",
+      "title": "Episode 33: Kickstarter launch review",
+      "content_html": "The morning after Christmas, I give a quick update on Micro.blog plans and Kickstarter’s Launch Now review feature.",
+      "date_published": "2016-12-26T15:04:04+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/104/episode-33-kickstarter-launch-review.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 3781342
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/12/episode-32-super-mario-run/",
+      "url": "http://timetable.manton.org/2016/12/episode-32-super-mario-run/",
+      "title": "Episode 32: Super Mario Run",
+      "content_html": "I share some thoughts on the first day of Super Mario Run and how my work week is wrapping up.",
+      "date_published": "2016-12-16T15:18:09+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/101/episode-32-super-mario-run.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 4524097
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/12/episode-31-getting-out-there/",
+      "url": "http://timetable.manton.org/2016/12/episode-31-getting-out-there/",
+      "title": "Episode 31: Getting out there",
+      "content_html": "I try the new WeWork location at the Domain, listen to a singer at the car dealership, and remember that I need to get out to talk to real people about my work.",
+      "date_published": "2016-12-12T20:29:14+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/99/episode-31-getting-out-there.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 4262979
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/12/episode-30-november-question/",
+      "url": "http://timetable.manton.org/2016/12/episode-30-november-question/",
+      "title": "Episode 30: November question",
+      "content_html": "From a listener question, I talk about steps in November to wrap up old projects and finish new ones.",
+      "date_published": "2016-12-09T18:11:02+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/97/episode-30-november-question.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 4899688
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/11/episode-29-dot-blog/",
+      "url": "http://timetable.manton.org/2016/11/episode-29-dot-blog/",
+      "title": "Episode 29: Dot blog",
+      "content_html": "I got a new domain! I talk about the .blog registration process and my evolving plans.",
+      "date_published": "2016-11-25T14:25:28+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/94/episode-29-dot-blog.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 4874445
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/11/episode-28-work-soundtrack/",
+      "url": "http://timetable.manton.org/2016/11/episode-28-work-soundtrack/",
+      "title": "Episode 28: Work soundtrack",
+      "content_html": "Not enough sleep yet still focused on getting work done. I review today’s blog post and play a clip from the Moana soundtrack.",
+      "date_published": "2016-11-18T22:16:06+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/91/episode-28-work-soundtrack.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 5230657
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/11/episode-27-something-was-missing/",
+      "url": "http://timetable.manton.org/2016/11/episode-27-something-was-missing/",
+      "title": "Episode 27: Something was missing",
+      "content_html": "One week after the election, I react to Apple’s design book announcement and talk about why social networks may be broken.",
+      "date_published": "2016-11-15T23:10:23+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/89/episode-27-something-was-missing.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 4193132
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/10/episode-26-losing-a-week/",
+      "url": "http://timetable.manton.org/2016/10/episode-26-losing-a-week/",
+      "title": "Episode 26: Losing a week",
+      "content_html": "I talk about getting derailed with home repairs, the U.S. presidential election, and writing about the Dash controversy.",
+      "date_published": "2016-10-19T19:30:29+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/85/episode-26-losing-a-week.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 4964415
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/10/episode-25-tim-duncan/",
+      "url": "http://timetable.manton.org/2016/10/episode-25-tim-duncan/",
+      "title": "Episode 25: Tim Duncan",
+      "content_html": "Back after a summer break, on this episode I talk through what we can learn from Tim Duncan’s incredible 19-year career.",
+      "date_published": "2016-10-07T21:33:42+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/83/episode-25-tim-duncan.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 3987955
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/06/episode-24-san-francisco-reset/",
+      "url": "http://timetable.manton.org/2016/06/episode-24-san-francisco-reset/",
+      "title": "Episode 24: San Francisco reset",
+      "content_html": "I summarize my week in San Francisco from the perspective of not just the WWDC technical news and events, but also of using the trip to refocus on my priorities for Riverfold Software.",
+      "date_published": "2016-06-17T22:11:16+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/80/episode-24-san-francisco-reset.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 6248022
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/05/episode-23-when-a-product-is-over/",
+      "url": "http://timetable.manton.org/2016/05/episode-23-when-a-product-is-over/",
+      "title": "Episode 23: When a product is over",
+      "content_html": "I play a clip from the Upgrade podcast and then talk about my struggle to wind down a product correctly.",
+      "date_published": "2016-05-18T15:19:05+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/77/episode-23-when-a-product-is-over.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 6701145
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/05/episode-22-grumpy-about-everything/",
+      "url": "http://timetable.manton.org/2016/05/episode-22-grumpy-about-everything/",
+      "title": "Episode 22: Grumpy about everything",
+      "content_html": "Last week was stressful. This episode is about being mad at nothing and everything, and why fireflies are magical.",
+      "date_published": "2016-05-16T21:16:09+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/75/episode-22-grumpy-about-everything.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 4251591
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/05/episode-21-the-right-work-balance/",
+      "url": "http://timetable.manton.org/2016/05/episode-21-the-right-work-balance/",
+      "title": "Episode 21: The right work balance",
+      "content_html": "Today I take stock of the last few weeks of client work and recovering from 2 months of focusing so heavily on my personal blog.",
+      "date_published": "2016-05-04T14:46:38+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/72/episode-21-the-right-work-balance.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 3760442
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/04/episode-20-kickstarter-rewards/",
+      "url": "http://timetable.manton.org/2016/04/episode-20-kickstarter-rewards/",
+      "title": "Episode 20: Kickstarter rewards",
+      "content_html": "I talk about receiving the Loish art book and my current thoughts on Kickstarter goals and rewards.",
+      "date_published": "2016-04-06T20:01:39+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/69/episode-20-kickstarter-rewards.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 4258693
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/04/episode-19-kickstarter-recording/",
+      "url": "http://timetable.manton.org/2016/04/episode-19-kickstarter-recording/",
+      "title": "Episode 19: Kickstarter recording",
+      "content_html": "I finally record a video for my Kickstarter project. Now I just need to edit it and do everything else.",
+      "date_published": "2016-04-05T19:18:11+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/67/episode-19-kickstarter-recording.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 3623188
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/03/episode-18-waiting-for-the-se/",
+      "url": "http://timetable.manton.org/2016/03/episode-18-waiting-for-the-se/",
+      "title": "Episode 18: Waiting for the SE",
+      "content_html": "I’m playing Nintendo’s new iPhone app Miitomo, watching my Mii character pace around the room as he (and I) wait for our iPhone SE delivery. Also talk about the library routine and Rails 5.",
+      "date_published": "2016-03-31T15:21:40+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/65/episode-18-waiting-for-the-se.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 3962776
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/03/episode-17-spring-break/",
+      "url": "http://timetable.manton.org/2016/03/episode-17-spring-break/",
+      "title": "Episode 17: Spring break",
+      "content_html": "It’s spring break week, which means the kids are out of school and SXSW is taking over downtown.",
+      "date_published": "2016-03-14T21:16:12+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/62/episode-17-spring-break.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 2759675
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/03/episode-16-dont-panic/",
+      "url": "http://timetable.manton.org/2016/03/episode-16-dont-panic/",
+      "title": "Episode 16: Don&#8217;t panic",
+      "content_html": "This week I’m thinking back on how Staple! Expo went over the weekend, and why it never helps to panic when something isn’t going perfectly to plan.",
+      "date_published": "2016-03-11T14:58:02+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/60/episode-16-dont-panic.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 1751614
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/02/episode-15-leap-year/",
+      "url": "http://timetable.manton.org/2016/02/episode-15-leap-year/",
+      "title": "Episode 15: Leap year",
+      "content_html": "I reflect on 6 months as an indie, think about stealing time for projects, and plan how I can use working from a coffee shop in the morning to provide a better structure to my day.",
+      "date_published": "2016-02-29T20:25:26+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/57/episode-15-leap-year.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 3042254
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/02/episode-14-coffee-writing/",
+      "url": "http://timetable.manton.org/2016/02/episode-14-coffee-writing/",
+      "title": "Episode 14: Coffee writing",
+      "content_html": "At my 10th new coffee shop in as many days, I write a few blog posts. And on this episode I talk about it.",
+      "date_published": "2016-02-27T23:26:47+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/54/episode-14-coffee-writing.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 2137795
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/02/episode-13-luck/",
+      "url": "http://timetable.manton.org/2016/02/episode-13-luck/",
+      "title": "Episode 13: Luck",
+      "content_html": "I finally drop the stickers in the mailbox at our neighborhood post office. Thinking this episode about what it means to be lucky.",
+      "date_published": "2016-02-23T17:18:39+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/52/episode-13-luck.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 1752427
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/02/episode-12-kickstarter-music/",
+      "url": "http://timetable.manton.org/2016/02/episode-12-kickstarter-music/",
+      "title": "Episode 12: Kickstarter music",
+      "content_html": "Back from a quick trip to Portland, today I’m thinking about the music for my Kickstarter project.",
+      "date_published": "2016-02-17T16:32:07+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/48/episode-12-kickstarter-music.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 2192760
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/02/episode-11-timing-a-launch/",
+      "url": "http://timetable.manton.org/2016/02/episode-11-timing-a-launch/",
+      "title": "Episode 11: Timing a launch",
+      "content_html": "Back from a sick day or two, I talk today about Twitter’s algorithmic timeline change and why it would be nice to launch a product when your competitor has some bad news.",
+      "date_published": "2016-02-11T17:45:24+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/46/episode-11-timing-a-launch.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 2033516
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/02/episode-10-planning-outside/",
+      "url": "http://timetable.manton.org/2016/02/episode-10-planning-outside/",
+      "title": "Episode 10: Planning outside",
+      "content_html": "I take the iPad Pro and my microphone out to the front porch, to think through what work I need to focus on for today.",
+      "date_published": "2016-02-01T21:07:33+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/43/episode-10-planning-outside.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 2136126
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/01/episode-9-not-just-an-app/",
+      "url": "http://timetable.manton.org/2016/01/episode-9-not-just-an-app/",
+      "title": "Episode 9: Not just an app",
+      "content_html": "Today I mention the iPhone app rejection, talk about why the iPhone app itself is secondary to the web version, and reveal more about the Kickstarter.",
+      "date_published": "2016-01-29T20:43:15+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/41/episode-9-not-just-an-app.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 2960339
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/01/episode-8-early-start/",
+      "url": "http://timetable.manton.org/2016/01/episode-8-early-start/",
+      "title": "Episode 8: Early start",
+      "content_html": "Recorded in 3 segments, I set my alarm early this morning to get some coding done before the day starts slipping away.",
+      "date_published": "2016-01-25T18:31:59+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/38/episode-8-early-start.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 2133612
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/01/episode-7-backup-distractions/",
+      "url": "http://timetable.manton.org/2016/01/episode-7-backup-distractions/",
+      "title": "Episode 7: Backup distractions",
+      "content_html": "This morning I was distracted a little with backups, ordering a new hard drive, and thinking about my iOS app, which was just rejected by Apple.",
+      "date_published": "2016-01-22T20:26:46+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/36/episode-7-backup-distractions.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 3438698
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/01/episode-6-thinking-about-kickstarter/",
+      "url": "http://timetable.manton.org/2016/01/episode-6-thinking-about-kickstarter/",
+      "title": "Episode 6: Thinking about Kickstarter",
+      "content_html": "I start with some thoughts on basketball, my potential Kickstarter campaign, and whether it’s better to start strong or finish strong. (Go Spurs Go!)",
+      "date_published": "2016-01-19T18:34:17+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/34/episode-6-thinking-about-kickstarter.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 2263612
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/01/episode-5-mailing-stickers/",
+      "url": "http://timetable.manton.org/2016/01/episode-5-mailing-stickers/",
+      "title": "Episode 5: Mailing stickers",
+      "content_html": "Today I stopped at the post office to pick up some stamps to mail stickers for the new microblogging app and platform I’m working on.",
+      "date_published": "2016-01-13T16:55:49+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/31/episode-5-mailing-stickers.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 2908722
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/01/episode-4-driving-downtown/",
+      "url": "http://timetable.manton.org/2016/01/episode-4-driving-downtown/",
+      "title": "Episode 4: Driving downtown",
+      "content_html": "This morning I was downtown to work at a coffee shop for a few hours before lunch. I talk about getting out of the house and last night’s icon sketches.",
+      "date_published": "2016-01-12T01:32:41+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/29/episode-4-driving-downtown.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 2459416
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/01/episode-3-friday-already/",
+      "url": "http://timetable.manton.org/2016/01/episode-3-friday-already/",
+      "title": "Episode 3: Friday already",
+      "content_html": "On this episode, I talk about finishing some work and the new iPhone microphone I bought.",
+      "date_published": "2016-01-08T20:59:47+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/23/episode-3-friday-already.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 1851283
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/01/episode-2-naming-the-podcast/",
+      "url": "http://timetable.manton.org/2016/01/episode-2-naming-the-podcast/",
+      "title": "Episode 2: Naming the podcast",
+      "content_html": "On this episode, I talk about trying tea instead of coffee, how I named this podcast, and my work schedule as I wrap up the week.",
+      "date_published": "2016-01-07T20:01:52+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/19/episode-2-naming-the-podcast.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 2893469
+        }
+      ]
+    },
+    {
+      "id": "http://timetable.manton.org/2016/01/episode-1-hello/",
+      "url": "http://timetable.manton.org/2016/01/episode-1-hello/",
+      "title": "Episode 1: Hello",
+      "content_html": "On the first episode, I introduce the idea behind the show and the topics I hope to cover.",
+      "date_published": "2016-01-06T02:57:22+00:00",
+      "attachments": [
+        {
+          "url": "http://timetable.manton.org/podcast-download/10/episode-1-hello.mp3",
+          "mime_type": "audio/mpeg",
+          "size_in_bytes": 3126886
+        }
+      ]
+    }
+  ]
+}
