@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>JsonFeed.NET</id>
+    <version>$version$-alpha</version>
+    <title>$title$</title>
+    <authors>Dan Rigby</authors>
+    <owners>Dan Rigby</owners>
+    <licenseUrl>https://github.com/DanRigby/JsonFeed.Net/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/DanRigby/JsonFeed.Net</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Initial alpha release.</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>jsonfeed jsonfeed.net jsonfeed.org</tags>
+  </metadata>
+</package>

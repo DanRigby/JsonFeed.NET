@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("JsonFeed.Net Tests")]
+[assembly: AssemblyTitle("JsonFeed.NET Tests")]
 [assembly: AssemblyDescription("JsonFeed.Net Unit Tests")]
 [assembly: AssemblyProduct("JsonFeedNet.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]

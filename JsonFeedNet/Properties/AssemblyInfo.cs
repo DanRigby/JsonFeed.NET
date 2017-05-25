@@ -4,8 +4,8 @@ using System.Reflection;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("JsonFeed.Net")]
-[assembly: AssemblyDescription("Portable Library for working with jsonfeed.org compliant feeds.")]
+[assembly: AssemblyTitle("JsonFeed.NET")]
+[assembly: AssemblyDescription("Portable .NET library for generating and consuming JSON Feed (jsonfeed.org) compliant feeds.")]
 [assembly: AssemblyProduct("JsonFeedNet")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyCulture("")]
