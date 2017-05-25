@@ -1,4 +1,4 @@
-JsonFeed.NET v0.2.0
+JsonFeed.NET v0.2.1
 ==============
 
 JsonFeed.NET is a portable .NET library for generating and consuming [JSON Feed](https://jsonfeed.org/) compliant site feeds.
