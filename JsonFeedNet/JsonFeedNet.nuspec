@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>JsonFeed.NET</id>
-    <version>$version$-alpha</version>
+    <version>$version$</version>
     <title>$title$</title>
     <authors>Dan Rigby</authors>
     <owners>Dan Rigby</owners>
@@ -10,7 +10,13 @@
     <projectUrl>https://github.com/DanRigby/JsonFeed.Net</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Initial alpha release.</releaseNotes>
+    <releaseNotes>
+      Remove the prerelease tag from the package.
+      Prefixed the class names with JsonFeed to avoid any naming collisions.
+      Added xml documentation for the API methods.
+      Added an API for writing directly to a stream.
+      Updated samples in the Readme file.
+    </releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>jsonfeed jsonfeed.net jsonfeed.org</tags>
   </metadata>

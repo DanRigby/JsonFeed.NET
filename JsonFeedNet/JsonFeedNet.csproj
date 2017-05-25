@@ -33,10 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Attachment.cs" />
-    <Compile Include="Author.cs" />
-    <Compile Include="FeedItem.cs" />
-    <Compile Include="Hub.cs" />
+    <Compile Include="JsonFeedAttachment.cs" />
+    <Compile Include="JsonFeedAuthor.cs" />
+    <Compile Include="JsonFeedFeedItem.cs" />
+    <Compile Include="JsonFeedHub.cs" />
     <Compile Include="JsonFeed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

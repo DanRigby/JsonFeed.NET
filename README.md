@@ -1,4 +1,4 @@
-JsonFeed.NET v0.1.0-alpha
+JsonFeed.NET v0.2.0
 ==============
 
 JsonFeed.NET is a portable .NET library for generating and consuming [JSON Feed](https://jsonfeed.org/) compliant site feeds.
@@ -15,7 +15,7 @@ JsonFeed.NET is a portable .NET library for generating and consuming [JSON Feed]
 
 ## How To Install
 
-`Install-Package JsonFeed.NET -Pre`
+`Install-Package JsonFeed.NET`
 
 ## Sample Usage
 
@@ -26,38 +26,49 @@ JsonFeed jsonFeed = JsonFeed.Parse(jsonFeedString);
 
 #### Parsing a JsonFeed from a Url
 ```csharp
-JsonFeed jsonFeed = await JsonFeed.ParseFromUriAsync(new Uri(@"https://jsonfeed.org/feed.json"));
+JsonFeed jsonFeed = await JsonFeed.ParseFromUriAsync(new Uri("https://jsonfeed.org/feed.json"));
 ```
 
-#### Creating a new JsonFeed and serializing it to a string
+#### Parsing a JsonFeed from a Url using a custom HttpMessageHandler
+```csharp
+JsonFeed jsonFeed = await JsonFeed.ParseFromUriAsync(new Uri("https://jsonfeed.org/feed.json"), new HttpClientHandler());
+```
+
+#### Creating a new JsonFeed and writing it to a string
 
 ```csharp
 var jsonFeed = new JsonFeed
 {
-    Version = @"https://jsonfeed.org/version/1",
     Title = "Dan Rigby",
     Description = "Mobile App Development & More.",
     HomePageUrl = @"http://danrigby.com",
     FeedUrl = @"http://danrigby.com/feed.json",
-    Author = new Author
+    Author = new JsonFeedAuthor
     {
         Name = "Dan Rigby",
-        Url = @"https://twitter.com/DanRigby"
+        Url = @"https://twitter.com/DanRigby",
     },
-    Items = new List<FeedItem>
+    Items = new List<JsonFeedFeedItem>
     {
-        new FeedItem
+        new JsonFeedFeedItem
         {
             Id = @"http://danrigby.com/2015/09/12/inotifypropertychanged-the-net-4-6-way/",
             Url = @"http://danrigby.com/2015/09/12/inotifypropertychanged-the-net-4-6-way/",
             Title = "INotifyPropertyChanged, The .NET 4.6 Way",
-            ContentText = @"This would be the text of my blog post, but that would be way too verbose to put in this sample. (;",
+            ContentText = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             DatePublished = new DateTime(2015, 09, 12)
         }
     }
 };
 
-string jsonFeedString = jsonFeed.Serialize();
+string jsonFeedString = jsonFeed.Write();
+```
+
+#### Writing a JsonFeed to a stream
+
+```csharp
+JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
+jsonFeed.Write(stream);
 ```
 
 ## License

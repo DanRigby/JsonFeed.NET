@@ -16,7 +16,7 @@ namespace JsonFeedNet.Tests
         {
             string inputJsonFeed = GetResourceAsString("Simple.json");
             JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
-            string outputJsonFeed = jsonFeed.Serialize();
+            string outputJsonFeed = jsonFeed.Write();
 
             Assert.AreEqual(inputJsonFeed, outputJsonFeed);
         }
@@ -26,7 +26,7 @@ namespace JsonFeedNet.Tests
         {
             string inputJsonFeed = GetResourceAsString("DaringFireballBlog.json");
             JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
-            string outputJsonFeed = jsonFeed.Serialize();
+            string outputJsonFeed = jsonFeed.Write();
 
             Assert.AreEqual(inputJsonFeed.Length, outputJsonFeed.Length);
         }
@@ -36,7 +36,7 @@ namespace JsonFeedNet.Tests
         {
             string inputJsonFeed = GetResourceAsString("HyperCriticalBlog.json");
             JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
-            string outputJsonFeed = jsonFeed.Serialize();
+            string outputJsonFeed = jsonFeed.Write();
 
             Assert.AreEqual(inputJsonFeed.Length, outputJsonFeed.Length);
         }
@@ -46,7 +46,7 @@ namespace JsonFeedNet.Tests
         {
             string inputJsonFeed = GetResourceAsString("MaybePizzaBlog.json");
             JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
-            string outputJsonFeed = jsonFeed.Serialize();
+            string outputJsonFeed = jsonFeed.Write();
 
             Assert.AreEqual(inputJsonFeed.Length, outputJsonFeed.Length);
         }
@@ -56,7 +56,7 @@ namespace JsonFeedNet.Tests
         {
             string inputJsonFeed = GetResourceAsString("TheRecordPodcast.json");
             JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
-            string outputJsonFeed = jsonFeed.Serialize();
+            string outputJsonFeed = jsonFeed.Write();
 
             Assert.AreEqual(inputJsonFeed.Length, outputJsonFeed.Length);
         }
@@ -66,13 +66,31 @@ namespace JsonFeedNet.Tests
         {
             string inputJsonFeed = GetResourceAsString("TimeTablePodcast.json");
             JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
-            string outputJsonFeed = jsonFeed.Serialize();
+            string outputJsonFeed = jsonFeed.Write();
 
             Assert.AreEqual(inputJsonFeed.Length, outputJsonFeed.Length);
         }
 
         [Test]
-        public void SerializeCreatedFeed()
+        public async Task ParseFromUri()
+        {
+            JsonFeed jsonFeed = await JsonFeed.ParseFromUriAsync(new Uri("https://jsonfeed.org/feed.json"));
+            string outputJsonFeed = jsonFeed.Write();
+
+            Assert.IsNotEmpty(outputJsonFeed);
+        }
+
+        [Test]
+        public async Task ParseFromUriWithCustomHttpMessageHandler()
+        {
+            JsonFeed jsonFeed = await JsonFeed.ParseFromUriAsync(new Uri("https://jsonfeed.org/feed.json"), new HttpClientHandler());
+            string outputJsonFeed = jsonFeed.Write();
+
+            Assert.IsNotEmpty(outputJsonFeed);
+        }
+
+        [Test]
+        public void WriteFeedToString()
         {
             var jsonFeed = new JsonFeed
             {
@@ -80,27 +98,46 @@ namespace JsonFeedNet.Tests
                 Description = "Mobile App Development & More.",
                 HomePageUrl = @"http://danrigby.com",
                 FeedUrl = @"http://danrigby.com/feed.json",
-                Author = new Author
+                Author = new JsonFeedAuthor
                 {
                     Name = "Dan Rigby",
-                    Url = @"https://twitter.com/DanRigby"
+                    Url = @"https://twitter.com/DanRigby",
                 },
-                Items = new List<FeedItem>
+                Items = new List<JsonFeedFeedItem>
                 {
-                    new FeedItem
+                    new JsonFeedFeedItem
                     {
                         Id = @"http://danrigby.com/2015/09/12/inotifypropertychanged-the-net-4-6-way/",
                         Url = @"http://danrigby.com/2015/09/12/inotifypropertychanged-the-net-4-6-way/",
                         Title = "INotifyPropertyChanged, The .NET 4.6 Way",
-                        ContentText = @"This would be the text of my blog post, but that would be way too verbose to put in this sample. (;",
+                        ContentText = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                         DatePublished = new DateTime(2015, 09, 12)
                     }
                 }
             };
 
-            string jsonFeedString = jsonFeed.Serialize();
+            string jsonFeedString = jsonFeed.Write();
 
             Assert.IsNotEmpty(jsonFeedString);
+        }
+
+        [Test]
+        public void WriteFeedToStream()
+        {
+            string inputJsonFeed = GetResourceAsString("Simple.json");
+            JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
+
+            using (var memoryStream = new MemoryStream())
+            {
+                jsonFeed.Write(memoryStream);
+                memoryStream.Position = 0;
+
+                using (var reader = new StreamReader(memoryStream))
+                {
+                    string outputJsonFeed = reader.ReadToEnd();
+                    Assert.AreEqual(inputJsonFeed, outputJsonFeed);
+                }
+            }
         }
 
         private static string GetResourceAsString(string resourceName)

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace JsonFeedNet
 {
-
     public class JsonFeed
     {
         /// <summary>
@@ -78,7 +79,7 @@ namespace JsonFeedNet
         /// The feed author.
         /// </summary>
         [JsonProperty("author")]
-        public Author Author { get; set; } //optional
+        public JsonFeedAuthor Author { get; set; } //optional
 
         /// <summary>
         /// Indicates whether or not the feed is finished — that is, whether or not it will ever update again.
@@ -91,19 +92,13 @@ namespace JsonFeedNet
         /// Endpoints that can be used to subscribe to real-time notifications of changes to this feed.
         /// </summary>
         [JsonProperty("hubs")]
-        public List<Hub> Hubs { get; set; } //optional
+        public List<JsonFeedHub> Hubs { get; set; } //optional
 
         /// <summary>
         /// The individual items in the feed.
         /// </summary>
         [JsonProperty("items")]
-        public List<FeedItem> Items { get; set; } //required
-
-        public static JsonFeed Parse(string jsonFeedString)
-        {
-            JsonFeed jsonFeed = JsonConvert.DeserializeObject<JsonFeed>(jsonFeedString);
-            return jsonFeed;
-        }
+        public List<JsonFeedFeedItem> Items { get; set; } //required
 
         private static readonly JsonSerializerSettings _serializerSettings = new JsonSerializerSettings
         {
@@ -112,6 +107,23 @@ namespace JsonFeedNet
             DateFormatHandling = DateFormatHandling.IsoDateFormat
         };
 
+        /// <summary>
+        /// Parses a JsonFeed in an input string into a JsonFeed object for use by code.
+        /// </summary>
+        /// <param name="jsonFeedString">The JSON Feed as a string.</param>
+        /// <returns>A JsonFeed object representing the parsed feed.</returns>
+        public static JsonFeed Parse(string jsonFeedString)
+        {
+            JsonFeed jsonFeed = JsonConvert.DeserializeObject<JsonFeed>(jsonFeedString);
+            return jsonFeed;
+        }
+
+        /// <summary>
+        /// Retrieves a remote feed from the specified Uri and parses it into a JsonFeed object for use by code.
+        /// </summary>
+        /// <param name="jsonFeedUri">The Uri of the JSON Feed to retrieve and parse.</param>
+        /// <param name="httpMessageHandler">Optional: A customer HttpMessageHandler implementation to use for the network requests(s).</param>
+        /// <returns>A JsonFeed object representing the parsed feed.</returns>
         public static async Task<JsonFeed> ParseFromUriAsync(Uri jsonFeedUri, HttpMessageHandler httpMessageHandler = null)
         {
             var client = new HttpClient(httpMessageHandler ?? new HttpClientHandler());
@@ -120,11 +132,31 @@ namespace JsonFeedNet
             return Parse(jsonDocument);
         }
 
-        public string Serialize()
+        /// <summary>
+        /// Serializes the JsonFeed object into a JSON string.
+        /// </summary>
+        /// <returns>A string containing the generated feed JSON.</returns>
+        public string Write()
         {
             return this.ToString();
         }
 
+        /// <summary>
+        /// Serializes the JsonFeed object into a JSON string and writes it to the provided stream.
+        /// </summary>
+        /// <param name="stream">The stream to write the JSON to.</param>
+        public void Write(Stream stream)
+        {
+            var encoding = new UTF8Encoding(false);
+            var writer = new StreamWriter(stream, encoding);
+            writer.Write(this);
+            writer.Flush();
+        }
+
+        /// <summary>
+        /// Serializes the JsonFeed object into a JSON string.
+        /// </summary>
+        /// <returns>A string containing the generated feed JSON.</returns>
         public override string ToString()
         {
             string jsonString = JsonConvert.SerializeObject(this, _serializerSettings);

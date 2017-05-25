@@ -5,7 +5,7 @@ namespace JsonFeedNet
     /// <summary>
     /// A feed author.
     /// </summary>
-    public class Author
+    public class JsonFeedAuthor
     {
         /// <summary>
         /// The author's name.

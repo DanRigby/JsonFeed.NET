@@ -7,7 +7,7 @@ namespace JsonFeedNet
     /// <summary>
     /// An individual item in a feed.
     /// </summary>
-    public class FeedItem
+    public class JsonFeedFeedItem
     {
         /// <summary>
         /// The unique identifier for the feed item.
@@ -91,7 +91,7 @@ namespace JsonFeedNet
         /// If not specified, then the top-level author, if present, is the author of the item.
         /// </summary>
         [JsonProperty("author")]
-        public Author Author { get; set; } //optional
+        public JsonFeedAuthor Author { get; set; } //optional
 
         /// <summary>
         /// Tags associated with the feed item.
@@ -106,6 +106,6 @@ namespace JsonFeedNet
         /// Podcasts, for instance, would include an attachment that’s an audio or video file. 
         /// </summary>
         [JsonProperty("attachments")]
-        public List<Attachment> Attachments { get; set; } //optional
+        public List<JsonFeedAttachment> Attachments { get; set; } //optional
     }
 }

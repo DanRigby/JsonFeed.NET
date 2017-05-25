@@ -5,7 +5,7 @@ namespace JsonFeedNet
     /// <summary>
     /// A related resource to a feed.
     /// </summary>
-    public class Attachment
+    public class JsonFeedAttachment
     {
         /// <summary>
         /// The location of the attachment.

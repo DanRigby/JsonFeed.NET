@@ -5,7 +5,7 @@ namespace JsonFeedNet
     /// <summary>
     /// Endpoint that can be used to subscribe to real-time notifications of changes to a feed.
     /// </summary>
-    public class Hub
+    public class JsonFeedHub
     {
         /// <summary>
         /// The type field describes the protocol used to talk with the hub, such as “rssCloud” or “WebSub.”
