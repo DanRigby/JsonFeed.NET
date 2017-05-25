@@ -18,7 +18,7 @@ JsonFeed jsonFeed = JsonFeed.Parse(jsonFeedString);
 
 #### Parsing a JsonFeed from a Url
 ```csharp
-JsonFeed jsonFeed = await JsonFeed.ParseFromUriAsync(new Uri(https://jsonfeed.org/feed.json));
+JsonFeed jsonFeed = await JsonFeed.ParseFromUriAsync(new Uri(@"https://jsonfeed.org/feed.json"));
 ```
 
 #### Creating a new JsonFeed and serializing it to a string
