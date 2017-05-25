@@ -1,9 +1,9 @@
 {
   "version": "https://jsonfeed.org/version/1",
   "title": "The Record",
-  "description": "The stories you should know about the Mac and Cocoa developer community. Hosted by Brent Simmons and Chris Parrish.",
   "home_page_url": "http://therecord.co/",
   "feed_url": "http://therecord.co/feed.json",
+  "description": "The stories you should know about the Mac and Cocoa developer community. Hosted by Brent Simmons and Chris Parrish.",
   "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL — http://therecord.co/feed.json — and add it your reader.",
   "author": {
     "name": "Brent Simmons and Chris Parrish"

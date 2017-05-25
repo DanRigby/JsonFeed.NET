@@ -6,13 +6,13 @@
   "items": [
     {
       "id": "2",
-      "content_text": "This is a second item.",
-      "url": "https://example.org/second-item"
+      "url": "https://example.org/second-item",
+      "content_text": "This is a second item."
     },
     {
       "id": "1",
-      "content_html": "<p>Hello, world!</p>",
-      "url": "https://example.org/initial-post"
+      "url": "https://example.org/initial-post",
+      "content_html": "<p>Hello, world!</p>"
     }
   ]
 }
