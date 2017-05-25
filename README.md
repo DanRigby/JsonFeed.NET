@@ -5,6 +5,12 @@ JsonFeed.NET is a portable .NET library for generating and consuming [JSON Feed]
 
  [![NuGet Pre Release](https://img.shields.io/nuget/vpre/JsonFeed.NET.svg?style=plastic)](https://www.nuget.org/packages/JsonFeed.NET) [![Twitter Follow](https://img.shields.io/twitter/follow/DanRigby.svg?style=plastic)](https://twitter.com/DanRigby)
 
+#### Supported platforms
+* .NET Framework 4.5.1+
+* UWP
+* Xamarin.iOS
+* Xamarin.Android
+
 ## How To Install
 
 `Install-Package JsonFeed.NET -Pre`
