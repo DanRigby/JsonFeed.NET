@@ -7,6 +7,8 @@ JsonFeed.NET is a portable .NET library for generating and consuming [JSON Feed]
 
 #### Supported platforms
 * .NET Framework 4.5.1+
+* .NET Core 1.1+
+* Mono
 * UWP
 * Xamarin.iOS
 * Xamarin.Android
