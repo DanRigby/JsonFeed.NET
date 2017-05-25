@@ -35,7 +35,7 @@
   <ItemGroup>
     <Compile Include="JsonFeedAttachment.cs" />
     <Compile Include="JsonFeedAuthor.cs" />
-    <Compile Include="JsonFeedFeedItem.cs" />
+    <Compile Include="JsonFeedItem.cs" />
     <Compile Include="JsonFeedHub.cs" />
     <Compile Include="JsonFeed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -46,7 +46,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="JsonFeedNet.nuspec" />
+    <None Include="JsonFeedNet.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

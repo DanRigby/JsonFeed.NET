@@ -7,7 +7,7 @@ namespace JsonFeedNet
     /// <summary>
     /// An individual item in a feed.
     /// </summary>
-    public class JsonFeedFeedItem
+    public class JsonFeedItem
     {
         /// <summary>
         /// The unique identifier for the feed item.

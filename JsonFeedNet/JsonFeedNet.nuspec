@@ -11,11 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>
-      Remove the prerelease tag from the package.
-      Prefixed the class names with JsonFeed to avoid any naming collisions.
-      Added xml documentation for the API methods.
-      Added an API for writing directly to a stream.
-      Updated samples in the Readme file.
+      Fix bad rename on JsonFeedItem.
     </releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>jsonfeed jsonfeed.net jsonfeed.org</tags>

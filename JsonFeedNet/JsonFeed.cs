@@ -98,7 +98,7 @@ namespace JsonFeedNet
         /// The individual items in the feed.
         /// </summary>
         [JsonProperty("items")]
-        public List<JsonFeedFeedItem> Items { get; set; } //required
+        public List<JsonFeedItem> Items { get; set; } //required
 
         private static readonly JsonSerializerSettings _serializerSettings = new JsonSerializerSettings
         {

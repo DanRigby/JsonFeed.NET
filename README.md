@@ -48,9 +48,9 @@ var jsonFeed = new JsonFeed
         Name = "Dan Rigby",
         Url = @"https://twitter.com/DanRigby",
     },
-    Items = new List<JsonFeedFeedItem>
+    Items = new List<JsonFeedItem>
     {
-        new JsonFeedFeedItem
+        new JsonFeedItem
         {
             Id = @"http://danrigby.com/2015/09/12/inotifypropertychanged-the-net-4-6-way/",
             Url = @"http://danrigby.com/2015/09/12/inotifypropertychanged-the-net-4-6-way/",
