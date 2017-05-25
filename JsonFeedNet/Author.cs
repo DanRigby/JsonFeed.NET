@@ -1,0 +1,26 @@
+﻿namespace JsonFeedNet
+{
+    /// <summary>
+    /// A feed author.
+    /// </summary>
+    public class Author
+    {
+        /// <summary>
+        /// The author's name.
+        /// </summary>
+        public string Name { get; set; } //name (optional)
+
+        /// <summary>
+        /// The URL of a site owned by the author.
+        /// It could be a blog, micro-blog, Twitter account, and so on.
+        /// </summary>
+        public string Url { get; set; } //url (optional)
+
+        /// <summary>
+        /// The URL for an image for the author.
+        /// It should be square and relatively large — such as 512 x 512.
+        /// It should use transparency where appropriate, since it may be rendered on a non-white background.
+        /// </summary>
+        public string Avatar { get; set; } //avatar (optional)
+    }
+}
