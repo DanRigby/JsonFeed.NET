@@ -1,55 +1,45 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{06D49D6D-5801-4EA8-8A85-B04E29B5B500}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>JsonFeedNet</RootNamespace>
-    <AssemblyName>JsonFeedNet</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TargetFrameworkProfile>Profile44</TargetFrameworkProfile>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyTitle>JsonFeed.NET</AssemblyTitle>
+    <Product>JsonFeedNet</Product>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Description>Portable .NET library for generating and consuming JSON Feed (jsonfeed.org) compliant feeds.</Description>
+    <Copyright>Copyright 2017</Copyright>
+    <Version>1.1.0.0</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <AssemblyTitle>JsonFeed.NET</AssemblyTitle>
+    <Product>JsonFeedNet</Product>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Description>Portable .NET library for generating and consuming JSON Feed (jsonfeed.org) compliant feeds.</Description>
+    <Copyright>Copyright 2017</Copyright>
+    <Version>1.1.0.0</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <Description>Portable .NET library for generating and consuming JSON Feed (jsonfeed.org) compliant feeds.</Description>
+    <Copyright>Copyright 2017</Copyright>
+    <Version>1.1.0.0</Version>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <Authors>Dan Rigby, RouR</Authors>
+    <PackageId>JsonFeed.NET</PackageId>
+    <PackageLicenseUrl>https://github.com/DanRigby/JsonFeed.Net/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/DanRigby/JsonFeed.Net</PackageProjectUrl>
+    <PackageReleaseNotes>
+      Fix bad rename on JsonFeedItem.
+    </PackageReleaseNotes>
+    <PackageTags>jsonfeed jsonfeed.net jsonfeed.org</PackageTags>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="JsonFeedAttachment.cs" />
-    <Compile Include="JsonFeedAuthor.cs" />
-    <Compile Include="JsonFeedItem.cs" />
-    <Compile Include="JsonFeedHub.cs" />
-    <Compile Include="JsonFeed.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="JsonFeedNet.nuspec">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
