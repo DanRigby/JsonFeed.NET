@@ -14,7 +14,7 @@ namespace JsonFeedNet
         /// The URL of the version of the format the feed uses.
         /// </summary>
         [JsonProperty("version")]
-        public string Version { get; set; } = @"https://jsonfeed.org/version/1"; //required
+        public string Version { get; set; } = @"https://jsonfeed.org/version/1.1"; //required
 
         /// <summary>
         /// The name of the feed.
@@ -79,7 +79,22 @@ namespace JsonFeedNet
         /// The feed author.
         /// </summary>
         [JsonProperty("author")]
+        [Obsolete("obsolete by specification version 1.1. Use `Authors`")]
         public JsonFeedAuthor Author { get; set; } //optional
+
+        /// <summary>
+        /// Specifies one or more feed authors.
+        /// </summary>
+        [JsonProperty("authors")]
+        public JsonFeedAuthor[] Authors { get; set; } //optional
+
+        /// <summary>
+        /// Primary language for the feed in the format specified in RFC 5646.
+        /// The value is usually a 2-letter language tag from ISO 639-1, optionally followed by a region tag.
+        /// (Examples: en or en-US.)
+        /// </summary>
+        [JsonProperty("language")]
+        public string Language { get; set; } //optional
 
         /// <summary>
         /// Indicates whether or not the feed is finished — that is, whether or not it will ever update again.

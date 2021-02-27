@@ -72,6 +72,25 @@ namespace JsonFeedNet.Tests
         }
 
         [Test]
+        public void Version_1_1()
+        {
+            string inputJsonFeed = GetResourceAsString("json_v1.1.json");
+            JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
+            string outputJsonFeed = jsonFeed.Write().Replace("\r\n", "\n");
+
+            
+            Assert.AreEqual(1, jsonFeed.Authors.Length);
+            Assert.AreEqual("John Gruber", jsonFeed.Authors[0].Name);
+            Assert.AreEqual("https://twitter.com/gruber", jsonFeed.Authors[0].Url);
+            Assert.AreEqual(48, jsonFeed.Items.Count);
+            Assert.AreEqual(1, jsonFeed.Items[0].Authors.Length);
+            Assert.AreEqual("John Gruber", jsonFeed.Items[0].Authors[0].Name);
+
+            Assert.AreEqual(inputJsonFeed, outputJsonFeed);
+            Assert.AreEqual(inputJsonFeed.Length, outputJsonFeed.Length);
+        }
+
+        [Test]
         public async Task ParseFromUri()
         {
             JsonFeed jsonFeed = await JsonFeed.ParseFromUriAsync(new Uri("https://jsonfeed.org/feed.json"));
