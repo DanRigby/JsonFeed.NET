@@ -1,0 +1,682 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Daring Fireball",
+  "home_page_url": "https://daringfireball.net/",
+  "feed_url": "https://daringfireball.net/feeds/json",
+  "icon": "https://daringfireball.net/graphics/apple-touch-icon.png",
+  "favicon": "https://daringfireball.net/graphics/favicon-64.png",
+  "authors": [
+    {
+      "name": "John Gruber",
+      "url": "https://twitter.com/gruber"
+    }
+  ],
+  "items": [
+    {
+      "id": "https://daringfireball.net/linked/2021/02/26/mailtrackerblocker",
+      "url": "https://daringfireball.net/linked/2021/02/26/mailtrackerblocker",
+      "external_url": "https://apparition47.github.io/MailTrackerBlocker/",
+      "title": "MailTrackerBlocker for Apple Mail on MacOS",
+      "content_html": "\n<p>Open source plugin for Apple Mail on MacOS, by Aaron Lee:</p>\n\n<blockquote>\n  <p>MailTrackerBlocker is a plugin (mailbundle) for the default Mail\napp built-in to macOS. Email marketers and other interests often\nembed these trackers in HTML emails so they can track how often,\nwhen and where you open your emails. This plugin works by\nstripping out a good majority of these spy pixels out of the HTML\nbefore display, rendering the typical advice of <em>disabling “load\nremote content in messages” unnecessary</em>.</p>\n\n<p>Browse your inbox privately with images displayed once again.</p>\n</blockquote>\n\n<p>There’s a simple installer to download, and <a href=\"https://github.com/apparition47/MailTrackerBlocker\">the project’s GitHub page</a> has instructions for installing via HomeBrew. I’ve been running it since Wednesday, and it seems to do just what it says on the tin — it blocks many (most?) marketing and newsletter trackers without requiring you to turn off all remote images. When it does block something, there’s a very subtle indication — the small “ⓧ” button turns blue. Click that button and you get an alert telling you what it blocked. Simple and unobtrusive.</p>\n\n<p>MailTrackerBlocker is a cool project Lee has made available for free, but he has a <a href=\"https://github.com/sponsors/apparition47\">sponsor page</a> where you can send some dough to thank him. (I sent him a one-time donation via PayPal — you should too if you dig this as much as I do.)</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://apparition47.github.io/MailTrackerBlocker/\">apparition47.github.io/MailTrackerBlocker/</a></strong></em></p>\n",
+      "date_published": "2021-02-27T01:06:30+00:00",
+      "date_modified": "2021-02-27T01:09:39+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/26/spoonbill",
+      "url": "https://daringfireball.net/linked/2021/02/26/spoonbill",
+      "external_url": "https://spoonbill.io/",
+      "title": "Spoonbill",
+      "content_html": "\n<p>Speaking of Justin Duke, in addition to Buttondown, he also created and runs Spoonbill, a nifty free service that lets you track changes to the bios of the people you follow on Twitter:</p>\n\n<blockquote>\n  <p>How it works.</p>\n\n<ol>\n<li><p>First, you sign up. (Duh.)</p></li>\n<li><p>Then we look at all the folks you’re following on Twitter.</p></li>\n<li><p>We check every couple minutes to see if they’ve changed their\nprofile information.</p></li>\n<li><p>If they have, we record it!</p></li>\n<li><p>Then, every morning (or every week), we send you an email with\nall the changes.</p></li>\n</ol>\n</blockquote>\n\n<p>Daily was too much for me, perhaps because I follow too many accounts on Twitter, but once a week is perfect. And you can subscribe via RSS instead of email — this is a very natural service for RSS.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://spoonbill.io/\">spoonbill.io/</a></strong></em></p>\n",
+      "date_published": "2021-02-27T00:44:34+00:00",
+      "date_modified": "2021-02-27T00:44:34+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/26/mailcoach",
+      "url": "https://daringfireball.net/linked/2021/02/26/mailcoach",
+      "external_url": "https://mailcoach.app/",
+      "title": "Mailcoach: Another Self-Hosted Newsletter Service",
+      "content_html": "\n<p>“Mailcoach is a self-hosted email marketing platform that integrates with services like Amazon SES, Mailgun, Postmark or Sendgrid to send out bulk mailings affordably.”</p>\n\n<p>Mailcoach lets you disable tracking with a checkbox, and <a href=\"https://twitter.com/freekmurze/status/1365411634957725701\">the next version will have tracking off by default</a>.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://mailcoach.app/\">mailcoach.app/</a></strong></em></p>\n",
+      "date_published": "2021-02-26T22:41:07+00:00",
+      "date_modified": "2021-02-26T22:41:08+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/26/sendy",
+      "url": "https://daringfireball.net/linked/2021/02/26/sendy",
+      "external_url": "https://sendy.co/",
+      "title": "Sendy: Self-Hosted Newsletter Service Built Atop Amazon SES",
+      "content_html": "\n<p>Sendy is an interesting newsletter service recommended by a longtime DF reader:</p>\n\n<blockquote>\n  <p>Sendy is a self hosted email newsletter application that lets you\nsend trackable emails via <a href=\"http://aws.amazon.com/ses/\">Amazon Simple Email Service\n(SES)</a>. This makes it possible for you to send authenticated\nbulk emails at an insanely low price without sacrificing\ndeliverability.</p>\n</blockquote>\n\n<p>You need to host the PHP application yourself (more or less like self-hosting, say, WordPress), but the emails go out via Amazon’s service. Sendy makes it easy to disable tracking pixels, and, even if you do track subscribers, the tracking information never involves any third parties, including Sendy. Just you.</p>\n\n<p>Sendy’s big pitch isn’t privacy but cost: they claim to be 100-200 times cheaper than MailChimp or Campaign Monitor.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://sendy.co/\">sendy.co/</a></strong></em></p>\n",
+      "date_published": "2021-02-26T17:32:39+00:00",
+      "date_modified": "2021-02-26T17:32:40+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/26/buttondown",
+      "url": "https://daringfireball.net/linked/2021/02/26/buttondown",
+      "external_url": "https://buttondown.email/",
+      "title": "Buttondown: Newsletter Service That Allows Opting Out of Tracking",
+      "content_html": "\n<p>It’s hard to find newsletter services that even allow you — the purveyor of the newsletter — <em>not</em> to track your subscribers. Buttondown — from <a href=\"https://twitter.com/justinmduke\">Justin Duke</a> — is one option, and it looks pretty sweet. (Markdown editing, for example.) From <a href=\"https://buttondown.email/features/privacy\">Buttondown’s privacy feature page</a>:</p>\n\n<blockquote>\n  <p>Many busineses thrive the concept of collecting data about\nindividuals based on their email addresses and inbox usage. (You\ncan read about that <a href=\"https://www.nytimes.com/2017/04/24/technology/personal-data-firm-slice-unroll-me-backlash-uber.html\">here</a>.) Buttondown is different. As a\nbootstrapped business, I don’t need to engage with data on level.\nYour information is yours, and yours alone.</p>\n\n<p>Buttondown collects the standard bevy of email analytics: IP\naddresses, open and click events, client information. Buttondown\nsends that to <em>absolutely nobody</em> besides, well, you, the beloved\ncustomer. And if you want to completely opt out, you can.</p>\n</blockquote>\n\n<p>By default, Buttondown seems just as privacy-intrusive as all the other newsletter providers:</p>\n\n<blockquote>\n  <p>Track Opens and Clicks — Per-email analytics mean you get an easy\nfunnel of how many folks are engaging with your emails and what\ncontent they’re interested in.</p>\n</blockquote>\n\n<p>Translated to plain English: “<em>Spy tracking allows you to know when each of your subscribers opens and reads your newsletter, including the ability to creep on them individually.</em>” Buttondown’s privacy “win” is that it at least <a href=\"https://twitter.com/pascallaliberte/status/1365372547311800322\">allows you to turn tracking off with a simple checkbox</a>. Most services don’t. I can’t find any hosted service that doesn’t offer tracking period, or even defaults to no tracking.</p>\n\n<p>[<strong>Update:</strong> <a href=\"https://twitter.com/justinmduke/status/1365435225715609603\">Justin Duke, on Twitter</a>: “thanks for the buttondown mention! agreed that defaulting to opt out of tracking automatically is better: the current default wasn’t a deliberate choice so much as an artifact of the initial behavior’s implementation.” He’s changing the default to <em>not</em> use analytics, as of tonight. Nice!]</p>\n\n<p>One message I’ve heard from <a href=\"https://stratechery.com/\">folks</a> <a href=\"https://www.ben-evans.com/newsletter\">who</a> would <a href=\"https://craigmod.com/\">know</a> is that two of the reasons for the ubiquitous use of tracking pixels in newsletters are anti-spam tools (<em>anti</em>-anti-spam tools, really) and the expense of sending emails to people who never read them. Newsletters being flagged as spam — especially by major players like Gmail and Hotmail — is a never-ending game of whack-a-mole, and spy pixels help alert newsletter providers that their messages are being flagged. Expense-wise, those who send free newsletters want to cull from their lists people who never open them or click any of the links. Sending newsletters to thousands (let alone tens of thousands or more) of subscribers is, relatively speaking, expensive.</p>\n\n<p>I’m sympathetic, but that’s a <a href=\"https://quotegeek.com/quotes-from-movies/boogie-nights/1125/\">YP, not an MP</a>, so fuck you and your tracking pixels. I’m blocking them and you should too.</p>\n\n<p>But that’s why the world needs a company like Apple to take action. If Apple were to kneecap email tracking in Mail for Mac and iOS, the industry would have to adapt.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://buttondown.email/\">buttondown.email/</a></strong></em></p>\n",
+      "date_published": "2021-02-26T17:25:31+00:00",
+      "date_modified": "2021-02-27T00:37:25+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/25/twitter-super-follows",
+      "url": "https://daringfireball.net/linked/2021/02/25/twitter-super-follows",
+      "external_url": "https://www.theverge.com/2021/2/25/22301375/twitter-super-follows-communities-paid-followers",
+      "title": "Twitter Teases Upcoming Features: Paid ‘Super Follows’ and Community Groups",
+      "content_html": "\n<p>Jacob Kastrenakes, reporting for The Verge:</p>\n\n<blockquote>\n  <p>The payment feature, called Super Follows, will allow Twitter\nusers to charge followers and give them access to extra content.\nThat could be bonus tweets, access to a community group,\nsubscription to a newsletter, or a badge indicating your support.\nIn a mockup screenshot, Twitter showed an example where a user\ncharges $4.99 per month to receive a series of perks. Twitter sees\nit as a way to let creators and publishers get paid directly by\ntheir fans.</p>\n\n<p>Twitter also announced a new feature called Communities, which\nappear to be its take on something like Facebook Groups. People\ncan create and join groups around specific interests — like cats\nor plants, Twitter suggests — allowing them to see more tweets\nfocused on those topics. Groups have been a huge success for\nFacebook (and a huge moderation problem, too), and they could be a\nparticularly helpful tool on Twitter, since the service’s\nopen-ended nature can make it difficult for new users to get\nstarted on the platform.</p>\n</blockquote>\n\n<p>Both these features sound great. Ben Thompson and I encouraged Twitter to do something like “Super Follows” a few weeks ago on Dithering. Almost certainly, though, all of this will only work in Twitter’s own client, not third-party apps like Tweetbot and Twitterrific.</p>\n\n<p>Twitter hasn’t said how the economics will work — what cut of the money they’re going to take — but last month <a href=\"https://www.engadget.com/twitter-buys-revue-newsletter-service-124341255.html\">when they acquired paid-newsletter Substack rival Revue</a>, they cut Revue’s take to just 5 percent. (Substack takes 10.)</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.theverge.com/2021/2/25/22301375/twitter-super-follows-communities-paid-followers\">theverge.com/2021/2/25/22301375/twitter-super-follows…</a></strong></em></p>\n",
+      "date_published": "2021-02-26T04:45:32+00:00",
+      "date_modified": "2021-02-26T16:46:50+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/25/steve-jobs-stories",
+      "url": "https://daringfireball.net/linked/2021/02/25/steve-jobs-stories",
+      "external_url": "https://www.youtube.com/watch?v=5YRn41OnfPE",
+      "title": "‘Steve Jobs Stories’ on Clubhouse",
+      "content_html": "\n<p>Computer History Museum:</p>\n\n<blockquote>\n  <p>Chris Fralic, Steven Levy, Esther Dyson, Mike Slade, John Sculley,\nSeth Godin, Andy Cunningham, Dan’l Lewin, Doug Menuez, Regis\nMcKenna, Andy Hertzfeld, and Steven Rosenblatt share their “Steve\nJobs Stories” in honor of what would have been the Apple\ncofounder’s 66th birthday.</p>\n</blockquote>\n\n<p>I missed the first half of this show on Clubhouse, but caught the second half live. Easily the best event I’ve heard on Clubhouse. Good stories, well told. Nice job by the Computer History Museum getting this recorded and posted to YouTube for posterity.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.youtube.com/watch?v=5YRn41OnfPE\">youtube.com/watch?v=5YRn41OnfPE</a></strong></em></p>\n",
+      "date_published": "2021-02-26T03:14:28+00:00",
+      "date_modified": "2021-02-26T16:44:30+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/25/el-toro-ip-targeting",
+      "url": "https://daringfireball.net/linked/2021/02/25/el-toro-ip-targeting",
+      "external_url": "https://eltoro.com/ad-tech/",
+      "title": "El Toro ‘One-to-One IP Targeting’",
+      "content_html": "\n<p>“Ad tech” (read: spyware) company El Toro is just one company in an industry full of competitors, but their description of their capabilities struck me as particularly flagrant in its utter disregard for privacy:</p>\n\n<blockquote>\n  <p>As a marketing organization focused on sales not metrics, El\nToro’s ad tech brings the location-specific accuracy of direct\nmail to digital advertising. Through our patented <a href=\"https://www.iptargeting.com/\">IP\nTargeting</a> technology we target digital ads to your customer\nby matching their IP address with their physical address, bringing\na wide variety of banner and display ads to the sites the targeted\ncustomer visits on the Internet.</p>\n\n<p>Specifically, El Toro offers: Targeting without having to use\ncookies, census blocks, or geo-location tools.</p>\n</blockquote>\n\n<p>They claim the ability not just to match your IP address to a general location, but to your exact home street address, and from there to specific devices within your home. Their pitch to would-be advertisers is that they can target you by IP address the same way marketers send all those print catalogs to your house. From their above-linked IP Targeting website:</p>\n\n<blockquote>\n  <p>The El Toro patented algoirthm [<em>sic</em>] uses 38+ points of data to\nmatch an IP to a household with 95% accuracy.</p>\n</blockquote>\n\n<p>Do I believe they can match IPs to street addresses with 95 percent accuracy? No. I wouldn’t believe a word out of these guys’ mouths, to be honest. But the fact that they can do it with any degree of accuracy is a problem that needs to be solved.</p>\n\n<p>Why doesn’t Apple build a VPN into its OSes? Or as an offering of paid iCloud accounts at least? At this point, if privacy truly is a paramount concern, it might be necessary to do everything over a trusted VPN. IP addresses are inherently not private.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://eltoro.com/ad-tech/\">eltoro.com/ad-tech/</a></strong></em></p>\n",
+      "date_published": "2021-02-25T19:45:23+00:00",
+      "date_modified": "2021-02-26T00:05:23+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/24/email-privacy",
+      "url": "https://daringfireball.net/linked/2021/02/24/email-privacy",
+      "external_url": "https://daringfireball.net/2019/07/superhuman_and_email_privacy",
+      "title": "From the DF Archive: Superhuman and Email Privacy",
+      "content_html": "\n<p>Yours truly, back in July 2019:</p>\n\n<blockquote>\n  <p>They call them “read receipts”, and functionally they do work like read receipts, insofar as they indicate when you read a message. But real email read receipts are under the <em>recipient</em>’s control, and they’re a simple binary flag, read or unread  —  they don’t tell the sender how many times or when you view a message.</p>\n</blockquote>\n\n<p>This post was about Superhuman in particular, but it applies to all email services using tracking pixels. Email has an official “read receipt” feature, a feature that is under the recipient’s control, as it should be. These spy pixels are a surreptitious circumvention.</p>\n\n<blockquote>\n  <p>I know that mailing list software generally includes tracking pixels. I don’t think that’s ethical either. On a personal level, though, with Superhuman, tracking when and how many times a recipient views a message is simply absurdly wrong.</p>\n\n<p>It’s also something the vast, overwhelming majority of people don’t even realize is possible. I’ve told the basic Superhuman tracking story to a few people over the last few weeks, and asked whether they realized this was possible; all of them expressed shock and many of them outrage as well. Email should be private, <em>and most people assume, incorrectly, that it is</em>. You have to be a web developer of some sort to understand how this is possible. Email is supposed to be like paper mail  —  you send it, they get it, and you have no idea whether they read it or not. It bounces back to you if they never even receive it, say, because you addressed it incorrectly. The original conception of email is completely private.</p>\n\n<p>But also, the original conception of email is that messages are plain text. No fonts, no styles, just plain text, with optional attachments. But those attachments are embedded in the message, not pulled from a server when the message is viewed.</p>\n\n<p>Once we allowed email clients to act as de facto web browsers, loading remote content from servers when messages are viewed, we opened up not just a can of worms but an entire case of canned worms. Every privacy exploit for a web browser is now a privacy exploit for email. But it’s worse, because people naturally assume that email is completely private.</p>\n</blockquote>\n\n<p>It’s a little depressing re-reading this piece today. Everything I’m arguing today, I argued then. Email privacy in the face of these trackers remains an industry-wide disgrace.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://daringfireball.net/2019/07/superhuman_and_email_privacy\">daringfireball.net/2019/07/superhuman_and_email_privacy</a></strong></em></p>\n",
+      "date_published": "2021-02-25T04:44:13+00:00",
+      "date_modified": "2021-02-25T19:15:05+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/2021/02/apple_mail_and_hidden_tracking_images",
+      "url": "https://daringfireball.net/2021/02/apple_mail_and_hidden_tracking_images",
+      "title": "★ Apple Mail and Hidden Tracking Images",
+      "content_html": "\n<p>In my <a href=\"https://daringfireball.net/linked/2021/02/23/email-spy-pixels\">piece yesterday about email tracking images</a> (“spy pixels” or “spy trackers”), I complained about the fact that Apple — a company that rightfully prides itself for its numerous features protecting user privacy — offers no built-in defenses for email tracking.</p>\n\n<p>A slew of readers wrote to argue that Apple Mail <em>does</em> offer such a feature: <a href=\"https://www.theverge.com/22288190/email-pixel-trackers-how-to-stop-images-automatic-download\">the option not to load any remote resources</a> at all. It’s a setting for Mail on both Mac and iOS, and I know about it — I’ve had it enabled for years. But this is a throwing-the-baby-out-with-bath-water approach. What Hey offers — by default — is the ability to load regular images automatically, so your messages look “right”, but block all known images from tracking sources (which are generally 1×1 px invisible GIFs).</p>\n\n<p>Typical users are never going to enable Mail’s option not to load remote content. It renders nearly all marketing messages and newsletters as weird-looking at best, unreadable at worst. And when you get a message whose images you <em>do</em> want to see, when you tell Mail to load them, it loads all of them — including trackers. Apple Mail has no knowledge of spy trackers at all, just an all-or-nothing ability to turn off all remote images and load them manually.</p>\n\n<p>Mail’s “Load remote content in messages” option is a great solution to bandwidth problems — remember to turn it on the next time you’re using Wi-Fi on an airplane, for example. It’s a terrible solution to tracking. No one would call it a good solution to tracking if Safari’s only defense were an option not to load any images at all until you manually click a button in each tab to load them all. But that’s exactly what Apple offers with Mail. (Safari doesn’t block tracking images, but Safari does support content blocking extensions that do — one solution for Mail would be to enable the same content blocker extensions in Mail that are enabled in Safari.)</p>\n\n<p>How does Hey know which images are trackers and which are “regular” images? They can’t know with absolute certainty. But they’ve worked hard on this feature, and <a href=\"https://hey.com/spy-trackers/\">have an entire web page promoting it</a>. From that page:</p>\n\n<blockquote>\n  <p><em>HEY manages this protection through several layers of defenses.</em>\nFirst, we’ve identified all the major spy-pixel patterns, so we\ncan strip those out directly. When we find one of those pesky\npixels, we’ll tell you exactly who put it in there, and from what\nemail application it came. Second, we bulk strip everything that\neven smells like a spy pixel. That includes 1x1 images, trackers\nhidden in code, and everything else we can do to protect you.\nBetween those two practices, <em>we’re confident we’ll catch 98% of\nall the tracking that’s happening out there</em>.</p>\n\n<p>But even if a spy pixel sneaks through our defenses (and we vow to\nkeep them updated all the time!), you’ll have an effective last\nline of defense: HEY routes all images through our own servers\nfirst, so <em>your</em> IP address never leaks. This prevents anyone from\ndiscovering your physical location just by opening an email. Like\nVPN, but for email.</p>\n</blockquote>\n\n<p>Apple should do something similar: identify and block spy trackers in email by default, and route all other images through an anonymizing proxy service.<sup id=\"fnr1-2021-02-24\"><a href=\"#fn1-2021-02-24\">1</a></sup> And, like Hey, they should flag all emails containing known trackers with a shame badge. It’s a disgraceful practice that has grown to be accepted industry-wide as standard procedure, because the vast majority of users have no idea it’s even going on. Through reverse IP address geolocation, newsletter and marketing email services track not just <em>that</em> you opened their messages, but <em>when</em> you opened them, and <em>where you were</em> (to the extent that your IP address reveals your location).</p>\n\n<p>No thanks. Apple should offer defenses against email tracking just as robust as Safari’s defenses against web tracking.<sup id=\"fnr2-2021-02-24\"><a href=\"#fn2-2021-02-24\">2</a></sup></p>\n\n<div class=\"footnotes\">\n<hr />\n<ol>\n\n<li id=\"fn1-2021-02-24\">\n<p>Gmail has been proxying remote images in messages <a href=\"https://gmail.googleblog.com/2013/12/images-now-showing.html\">since 2013</a>.&nbsp;<a href=\"#fnr1-2021-02-24\"  class=\"footnoteBackLink\"  title=\"Jump back to footnote 1 in the text.\">&#x21A9;&#xFE0E;</a></p>\n</li>\n\n<li id=\"fn2-2021-02-24\">\n<p>Don’t get me started on how predictable this entire privacy disaster was, once we lost the war over whether email messages should be plain text only or could contain embedded HTML. Effectively all email clients are web browsers now, yet don’t have any of the privacy protection features actual browsers do.&nbsp;<a href=\"#fnr2-2021-02-24\"  class=\"footnoteBackLink\"  title=\"Jump back to footnote 2 in the text.\">&#x21A9;&#xFE0E;︎</a></p>\n</li>\n\n\n</ol>\n</div>\n\n\n\n    ",
+      "date_published": "2021-02-25T04:06:37+00:00",
+      "date_modified": "2021-02-25T19:53:48+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/24/apple-store-app-easter-egg",
+      "url": "https://daringfireball.net/linked/2021/02/24/apple-store-app-easter-egg",
+      "external_url": "https://9to5mac.com/2020/08/05/apple-store-app-10-years-easter-egg/",
+      "title": "The Apple Store App Has an Easter Egg",
+      "content_html": "\n<p>Search for “10 years” and you get a fun animation. Any others?</p>\n\n<p><strong>Updates:</strong></p>\n\n<ul>\n<li>Also in the Apple Store app: “<a href=\"https://twitter.com/BickyBhullar/status/1364766591213129731\">Let it snow</a>”.</li>\n</ul>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://9to5mac.com/2020/08/05/apple-store-app-10-years-easter-egg/\">9to5mac.com/2020/08/05/apple-store-app-10-years-easter-egg/</a></strong></em></p>\n",
+      "date_published": "2021-02-25T02:28:20+00:00",
+      "date_modified": "2021-02-25T03:11:35+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/24/nasa-parachute-message",
+      "url": "https://daringfireball.net/linked/2021/02/24/nasa-parachute-message",
+      "external_url": "https://www.theverge.com/2021/2/23/22297094/hidden-message-parachute-nasa-mars-perseverance-rover",
+      "title": "The Hidden Message in the Parachute of NASA’s Mars Rover",
+      "content_html": "\n<p>Joey Roulette, writing for The Verge:</p>\n\n<blockquote>\n  <p>The parachute that helped NASA’s Perseverance rover land on Mars\nlast week unfurled to reveal a seemingly random pattern of colors\nin video clips of the rover’s landing. But there was more to the\nstory: NASA officials later said it contained a hidden message\nwritten in binary computer code.</p>\n\n<p>Internet sleuths cracked the message within hours. The red and\nwhite pattern spelled out “Dare Mighty Things” in concentric\nrings. The saying is the Perseverance team’s motto, and it is also\nemblazoned on the walls of Mission Control at NASA’s Jet\nPropulsion Laboratory (JPL), the mission team’s Southern\nCalifornia headquarters.</p>\n\n<p>The parachute’s outer ring appears to translate to coordinates for\nJPL: 34°11′58″ N 118°10′31″ W.</p>\n</blockquote>\n\n<p><a href=\"https://twitter.com/tanurai/status/1364232877848883200\">Tonya Fish posted a handy guide on Twitter</a> (also <a href=\"https://github.com/tanyafish/parachute\">available as a PDF</a>) explaining how the code works. (<a href=\"https://kottke.org/21/02/the-secret-message-encoded-in-the-parachute-of-the-mars-perseverance-rover\">Via Kottke</a>.)</p>\n\n<p>Seems sad to me that NASA and JPL are willing to have some fun with clever Easter eggs with a Mars rover, yet Apple, of all companies, no longer does any Easter eggs at all. Computers are supposed to be fun.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.theverge.com/2021/2/23/22297094/hidden-message-parachute-nasa-mars-perseverance-rover\">theverge.com/2021/2/23/22297094/hidden-message-parachute…</a></strong></em></p>\n",
+      "date_published": "2021-02-24T19:51:34+00:00",
+      "date_modified": "2021-02-25T02:57:34+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/23/email-spy-pixels",
+      "url": "https://daringfireball.net/linked/2021/02/23/email-spy-pixels",
+      "external_url": "https://www.bbc.com/news/technology-56071437",
+      "title": "BBC News: ‘Spy Pixels in Emails Have Become Endemic’",
+      "content_html": "\n<p>Speaking of Hey, BBC News ran a piece on email spy pixels last week:</p>\n\n<blockquote>\n  <p>The use of “invisible” tracking tech in emails is now “endemic”, according to a messaging service that analysed its traffic at the BBC’s request. Hey’s review indicated that two-thirds of emails sent to its users’ personal accounts contained a “spy pixel”, even after excluding for spam. […]</p>\n\n<p>Defenders of the trackers say they are a commonplace marketing tactic. And several of the companies involved noted their use of such tech was mentioned within their wider privacy policies.</p>\n</blockquote>\n\n<p>“It’s in our privacy policy” is nonsense when it comes to email spy pixels. It’s nonsense for most privacy policies, period, because most privacy policies are so deliberately long, opaque, and abstruse as to be unintelligible. But with email they’re absurd. The recipient of an email containing a tracking pixel never agreed to any privacy policy from the sender.</p>\n\n<p>And “it’s a commonplace marketing tactic” is not a defense. It’s an excuse, but it’s a shitty one. It just shows how out of control the entire tracking industry is. Their justification for all of it is, effectively, “<em>It’s pervasive so it must be OK.</em>” That’s like saying back in the 1960s that most people smoke so it must be safe. Or that most people don’t wear seat belts so that must be safe.</p>\n\n<blockquote>\n  <p>Emails pixels can be used to log:</p>\n\n<ul>\n<li>if and when an email is opened</li>\n<li>how many times it is opened</li>\n<li>what device or devices are involved</li>\n<li>the user’s rough physical location, deduced from their internet protocol (IP) address - in some cases making it possible to see the street the recipient is on</li>\n</ul>\n</blockquote>\n\n<p>Hey’s default blocking of spy pixels — along with displaying a prominent badge shaming the sender for using them — is one of its best features. Apple should take a long hard look at Mail and the way that it does nothing to protect users’ privacy from these trackers. They’re insidious and offensive.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.bbc.com/news/technology-56071437\">bbc.com/news/technology-56071437</a></strong></em></p>\n",
+      "date_published": "2021-02-24T04:26:44+00:00",
+      "date_modified": "2021-02-24T04:36:42+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/23/hey-world",
+      "url": "https://daringfireball.net/linked/2021/02/23/hey-world",
+      "external_url": "https://world.hey.com/jason/hey-world-b02a6f2e",
+      "title": "‘Hey, World!’",
+      "content_html": "\n<p>Jason Fried, on an experimental blogging service Basecamp has built into their email service Hey:</p>\n\n<blockquote>\n  <p>So we set out to do it. To test the theory. And over the last few\nweeks we built it into HEY, our new email service. We’re calling\nthe feature HEY World. This post you’re reading right now is the\nworld’s first HEY World post. And I published it by simply\nemailing this text directly to world@hey.com from my jason@hey.com\naccount. That was it.</p>\n\n<p>For now, this remains an experiment. I’ve got my own HEY World\nblog, and David has his. We’re going to play for a while. And, if\nthere’s demand, we’ll roll this out to anyone with a personal\n@hey.com account. It feels like Web 1.0 again in all the right\nways. And it’s about time.</p>\n\n<p>Speaking of Web 1.0, HEY World pages are lighting fast. No\njavascript, no tracking, no junk. They’re a shoutout to simpler\ntimes. Respect.</p>\n</blockquote>\n\n<p>You can subscribe to a Hey World blog via email (of course) or RSS. Feels like simple stuff — like RSS — is experiencing a renaissance.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://world.hey.com/jason/hey-world-b02a6f2e\">world.hey.com/jason/hey-world-b02a6f2e</a></strong></em></p>\n",
+      "date_published": "2021-02-24T02:56:48+00:00",
+      "date_modified": "2021-02-24T02:56:49+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/23/hello-world",
+      "url": "https://daringfireball.net/linked/2021/02/23/hello-world",
+      "external_url": "https://twitter.com/MIT_CSAIL/status/1363875135191678984",
+      "title": "‘Hello, World’",
+      "content_html": "\n<p>MIT’s Computer Science &amp; Artificial Intelligence Lab:</p>\n\n<blockquote>\n  <p>Today’s the day that “hello world” said “hello world!”</p>\n\n<p>The term was coined in a textbook published #otd in 1978: “C\nProgramming Language,” written by Brian Kernighan and Dennis\nRitchie.</p>\n</blockquote>\n\n<p>Tweeted yesterday, so it’s no longer “on this day”, sorry, but interesting history nonetheless.</p>\n\n<p>I still write “Hello, world” as a first exercise in any new language or programming environment. Not a superstition per se, but more like a talisman. Just seems like the right thing to do.</p>\n\n<p><em>The C Programming Language</em> is a wonderfully-written book. It explains the basics of C better than anything I’ve ever seen. C is a weird, hard language but K&amp;R describe it with joy. It’s a serious book written in a conversational style.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://twitter.com/MIT_CSAIL/status/1363875135191678984\">twitter.com/MIT_CSAIL/status/1363875135191678984</a></strong></em></p>\n",
+      "date_published": "2021-02-24T02:50:25+00:00",
+      "date_modified": "2021-02-24T03:03:05+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/23/grober-censored",
+      "url": "https://daringfireball.net/linked/2021/02/23/grober-censored",
+      "external_url": "https://www.mcsweeneys.net/articles/im-being-censored-and-you-can-read-hear-and-see-me-talk-about-it-in-the-news-on-the-radio-and-on-tv",
+      "title": "‘I’m Being Censored, and You Can Read, Hear, and See Me Talk About It in the News, on the Radio, and on TV’",
+      "content_html": "\n<p>Eli Grober, writing for McSweeney’s:</p>\n\n<blockquote>\n  <p>Hi there, thanks for reading this. I’m being censored. That’s why I’m writing a piece in a major publication that you are consuming easily and for free. Because I am being absolutely and completely muzzled.</p>\n\n<p>Also, I just went on a massively-watched TV show to let you know that my voice is being down-right suffocated. I basically can’t talk to anyone. Which is why I’m talking to all of you.</p>\n</blockquote>\n\n<p>As Jeanetta Grace Susan has convincingly argued, <a href=\"https://twitter.com/ProjectLincoln/status/1353781525582635012\">conservative voices <em>are</em> being silenced</a>.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.mcsweeneys.net/articles/im-being-censored-and-you-can-read-hear-and-see-me-talk-about-it-in-the-news-on-the-radio-and-on-tv\">mcsweeneys.net/articles/im-being-censored-and-you-can-read…</a></strong></em></p>\n",
+      "date_published": "2021-02-23T17:01:30+00:00",
+      "date_modified": "2021-02-23T17:10:34+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/22/reuters-covid-deaths",
+      "url": "https://daringfireball.net/linked/2021/02/22/reuters-covid-deaths",
+      "external_url": "https://graphics.reuters.com/HEALTH-CORONAVIRUS/USA-CASUALTIES-CHRONOLOGY/xklpyomnrpg/index.html",
+      "title": "500,000 Lives Lost",
+      "content_html": "\n<p>Staggering, sobering data visualization from Reuters.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://graphics.reuters.com/HEALTH-CORONAVIRUS/USA-CASUALTIES-CHRONOLOGY/xklpyomnrpg/index.html\">graphics.reuters.com/HEALTH-CORONAVIRUS/USA-CASUALTIES…</a></strong></em></p>\n",
+      "date_published": "2021-02-23T02:01:35+00:00",
+      "date_modified": "2021-02-23T02:01:36+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/feeds/sponsors/2021/02/instabug_application_performan_1",
+      "url": "https://daringfireball.net/feeds/sponsors/2021/02/instabug_application_performan_1",
+      "external_url": "https://try.instabug.com/daringfireball-apm?utm_source=daringfireball&utm_medium=nativeads&utm_campaign=daringfireball-rssfeed-feb-q121&utm_content=Spon",
+      "title": "[Sponsor] Instabug: Application Performance Monitoring Built for Mobile Apps",
+      "content_html": "\n<p>Track your users’ experience in the wild with Instabug’s Application Performance Monitoring. </p>\n\n<p>Instabug SDK provides you the same level of profiling you get in Xcode Instruments from your live users, with a lightweight SDK and minimal footprint. Whether it’s a crash, slow screen transitions, slow network call, or UI hangs, utilize performance patterns to fix issues faster and spot trends and spikes. </p>\n\n<p>Find out what your app is missing and join the top mobile teams like Verizon, Ventee Privee, and Lyft relying on Instabug for app quality.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://try.instabug.com/daringfireball-apm?utm_source=daringfireball&utm_medium=nativeads&utm_campaign=daringfireball-rssfeed-feb-q121&utm_content=Spon\">try.instabug.com/daringfireball-apm?utm_source…</a></strong></em></p>\n",
+      "date_published": "2021-02-22T21:56:55-05:00",
+      "date_modified": "2021-02-22T21:56:56-05:00",
+      "authors": [
+        {
+          "name": "Daring Fireball Department of Commerce"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/21/mux-video",
+      "url": "https://daringfireball.net/linked/2021/02/21/mux-video",
+      "external_url": "https://get.mux.com/3b5E55d",
+      "title": "Mux Video",
+      "content_html": "\n<p>My thanks to Mux for once again sponsoring DF last week. Mux Video is an API to powerful video streaming — think of it as akin to Stripe for video — built by the founders of Zencoder and creators of Video.js, and a team of ex-YouTube and Twitch engineers. Take any video file or live stream and make it play beautifully at scale on any device, powered by magical-feeling features like automatic thumbnails, animated GIFs, and data-driven encoding decisions.</p>\n\n<p>Spend your time building what people want, not drudging through <code>ffmpeg</code> documentation.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://get.mux.com/3b5E55d\">get.mux.com/3b5E55d</a></strong></em></p>\n",
+      "date_published": "2021-02-21T23:37:40+00:00",
+      "date_modified": "2021-02-21T23:37:42+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/2021/02/unlock_with_apple_watch_with_face_mask",
+      "url": "https://daringfireball.net/2021/02/unlock_with_apple_watch_with_face_mask",
+      "title": "★ How ‘Unlock With Apple Watch’ While Wearing a Face Mask Works in iOS 14.5",
+      "content_html": "\n<p>I don’t generally write about features in beta versions of iOS. In fact, I don’t generally install beta versions of iOS, at least on my main iPhone. But the new “Unlock With Apple Watch” feature, which kicks in when you’re wearing a face mask, was too tempting to resist.</p>\n\n<p>First things first: to use this feature, you need to install iOS 14.5 on your iPhone and WatchOS 7.4 on your Apple Watch (both of which are, at this writing, on their second developer betas). So far, for me, these OS releases have been utterly reliable. Your mileage may vary, and running a beta OS on your daily-carry devices is always at your own risk. But I think the later we go in OS release cycles, the more stable the betas tend to be. Over the summer, between WWDC and the September (or October) new iPhone event, iOS releases can be buggy as hell. The x.1 releases are usually the stable ones, and the releases after that tend to be very stable in beta — Apple uses these releases to fix bugs and to add new features that are stable. If anything, I think iOS 14.5 is very stable technically, and only volatile <em>politically</em>, with the new opt-in requirement for targeted ad user tracking. </p>\n\n<p>After using this feature for a few weeks now, I can’t see going back. As the designated errand runner in our quarantined family, it’s a game changer. Prior to iOS 14.5, using a Face ID iPhone while wearing a face mask sucked. Every single time you unlocked your phone, you needed to enter the passcode/passphrase. The longer your passcode, the more secure it is (of course), but the more annoying it is to enter incessantly.</p>\n\n<p>“Unlock With Apple Watch” eliminates almost all of that annoyance. It’s that good. It’s optional (as it should be), and off by default (also as it should be, for reasons explained below). It’s easy to turn on in Settings on your iPhone: go to Face ID &amp; Passcode, enter your passcode, and scroll down to the “Unlock With Apple Watch” section, where you’ll find toggles for each Apple Watch (running WatchOS 7.4 or later) paired with your iPhone.</p>\n\n<p>Here is how the feature seems to work.</p>\n\n<ol>\n<li><p>Does Face ID work normally? I.e. is the face in front of the phone <em>you</em>, the owner, and are you not wearing a mask? If so, unlock normally. Normal non-mask Face ID is unchanged when this feature is enabled.</p></li>\n<li><p>If Face ID fails, is there a face wearing a mask in front of the phone? If so, is an authorized Apple Watch in a secure state (i.e. the watch itself is unlocked and on your wrist) and <em>very</em> close to the iPhone? If so, unlock, and send a notification to the watch stating that the watch was just used to unlock this iPhone. The notification sent to the watch includes a button to immediately lock the iPhone.</p></li>\n</ol>\n\n<p>Because it’s a two-step process (step #1 first, then step #2), it does take a bit longer than Face ID without a mask (which is really just step #1). But it works more than fast enough to be a pleasant convenience experience. Regular Face ID is so fast you forget it’s even there; “Unlock With Apple Watch” is slow enough that you notice it’s there, but fast enough that it isn’t a bother.</p>\n\n<p>It’s important to note that in step #2, it works with <em>any</em> face wearing a mask. It’s not trying to do a half-face check that your eyes and forehead look like you, or anything like that. My iPhone will unlock if my wife or son is the face in front of my iPhone — but only if they’re wearing a mask, and only if my Apple Watch is very close to the phone. I’d say less than 1 meter — pretty much about what you would think the maximum distance would be between a watch on one wrist and an iPhone in the other hand.</p>\n\n<p>When this feature kicks in, you <em>always</em> get a wrist notification telling you it happened, <a href=\"/misc/2021/02/watchos-unlock-notification.png\">with just one button</a>: “Lock iPhone”. If you tap this button, the iPhone is immediately hard-locked and requires your passcode to be re-entered even if you take your mask off. (It’s the same hard-locked mode you can put your iPhone into manually by pressing and holding the power button and one of the volume buttons — a good tip to remember when going through a security checkpoint or any other potential encounter with law enforcement.)</p>\n\n<p>I’m not sure if anyone will be annoyed by this mandatory wrist notification, but they shouldn’t be, and it shouldn’t be optional. You want this notification every time to prevent anyone from surreptitiously unlocking your iPhone near you, just by putting a face mask on.</p>\n\n<p>Also, if your Apple Watch is in Sleep mode (the bed icon in WatchOS’s Control Center), <a href=\"/misc/2021/02/iphone-lock-screen-sleep-mode.jpeg\">the feature does not work</a>.</p>\n\n<p>It’s occasionally slow. And two or three times, I got a message on my iPhone that my watch was too far away for the feature to work, even though I raised my watch-wearing wrist next to the phone. These hiccups were rare, and to my recollection, I only ran into them with iOS 14.5 beta 1, not beta 2.</p>\n\n<p>Even in the worst case scenario, where the feature doesn’t work, you’re no worse off than you were before the feature existed: you simply have to manually enter your phone’s passcode.</p>\n\n<p>Last but not least, the “Unlock With Apple Watch” feature very specifically seems to be looking for a face wearing a face mask. The feature does not kick in if Face ID fails for any other reason — like, say, if you’re wearing sunglasses with lenses that Face ID can’t see through. (I wish they’d make this work with sunglasses, too.)</p>\n\n<h2 id=\"addenda\">Addenda</h2>\n\n<p><strong>Throwing Shade:</strong> There seems to be some confusion over what I’m asking for w/r/t sunglasses. Face ID has always supported an option to turn off “Require Attention for Face ID”. When off, Face ID will work even if it doesn’t detect your eyes looking at the screen. (It’s an essential accessibility feature for people with certain vision problems.) If you own sunglasses that the iPhone’s TrueDepth camera system can’t “see” through, you can disable “Require Attention for Face ID” to allow Face ID to work while you’re wearing your shades.</p>\n\n<p>This is far from ideal though, because it weakens Face ID <em>all the time</em>, not just when you’re wearing sunglasses. What’s nice about the new “Unlock With Apple Watch” feature is that it only applies when you’re wearing a mask <em>and</em> your Apple Watch. What I’m saying I’d like to see Apple support is an extension of “Unlock With Apple Watch” that would do the same thing for sunglasses that it currently does for face masks. I’ve heard from readers who have trouble with Face ID when wearing their motorcycle helmets, too, and I’m sure there are other examples. Basically, I’d like to see Apple add the option of trusting your Apple Watch to unlock your iPhone in more scenarios where your face can’t be recognized. My request is very different from, and more secure than, the existing “Require Attention” feature.</p>\n\n<p>(Speaking of which, while wearing a mask, “Unlock With Apple Watch” does <em>not</em> check for whether your eyes are looking at the display, regardless of your setting for “Require Attention for Face ID”. Again, this makes sense, because it’s not Face ID — “Unlock With Apple Watch” is an alternative authentication method that kicks in <em>after</em> Face ID has failed.)</p>\n\n<p><strong>Apple Pay:</strong> I didn’t mention the fact that “Unlock With Apple Watch” does not work with Apple Pay. This makes sense, because however secure “Unlock With Apple Watch” is (and I think it’s quite secure), it’s not as secure as Face ID authenticating your actual face. For payments, you obviously want the highest level of secure authentication.</p>\n\n<p>Also, for Apple Pay, if you’re wearing your Apple Watch (a requirement for “Unlock With Apple Watch”), you can <em>just use your Apple Watch for Apple Pay</em>.</p>\n\n<p>It also doesn’t work with apps that use Face ID for authentication within them. Banking apps, for example, or unlocking locked notes in Apple Notes. But this makes sense too — the feature is specifically called “Unlock With Apple Watch”. It unlocks your phone, that’s it. Anything else that requires Face ID for secure authentication still requires Face ID.</p>\n\n\n\n    ",
+      "date_published": "2021-02-21T23:35:39+00:00",
+      "date_modified": "2021-02-23T00:23:40+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/19/the-talk-show-308",
+      "url": "https://daringfireball.net/linked/2021/02/19/the-talk-show-308",
+      "external_url": "https://daringfireball.net/thetalkshow/2021/02/19/ep-308",
+      "title": "The Talk Show: ‘Peak Hubris’",
+      "content_html": "\n<p>Christina Warren returns to the show to talk about Apple Car, Apple TV, Clubhouse, and Bloomberg hamfistedly revisiting “The Big Hack”.</p>\n\n<p>Sponsored by:</p>\n\n<ul>\n<li><a href=\"https://squarespace.com/talkshow\">Squarespace</a>: Make your next move. Use code <strong>talkshow</strong> for 10% off your first order.</li>\n<li><a href=\"https://linode.com/thetalkshow\">Linode</a>: Instantly deploy and manage an SSD server in the Linode Cloud. New accounts can get $100 credit.</li>\n<li><a href=\"https://flatfile.io/\">Flatfile</a>: Spend less time formatting spreadsheet data, and more time using it.</li>\n</ul>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://daringfireball.net/thetalkshow/2021/02/19/ep-308\">daringfireball.net/thetalkshow/2021/02/19/ep-308</a></strong></em></p>\n",
+      "date_published": "2021-02-20T04:59:33+00:00",
+      "date_modified": "2021-02-20T04:59:33+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/19/tbl-australia",
+      "url": "https://daringfireball.net/linked/2021/02/19/tbl-australia",
+      "external_url": "https://www.independent.co.uk/news/australia-internet-law-tim-berners-lee-b1803988.html",
+      "title": "Tim Berners-Lee Worries Australian Law Could Make the Web ‘Unworkable’",
+      "content_html": "\n<p>Anthony Cuthbertson, reporting for The Independent:</p>\n\n<blockquote>\n  <p>“Specifically, I am concerned that that code risks breaching a\nfundamental principle of the web by requiring payment for linking\nbetween certain content online,” Berners-Lee told a Senate\ncommittee scrutinizing a bill that would create the New Media\nBargaining Code.</p>\n\n<p>If the code is deployed globally, it could “make the web\nunworkable around the world”, he said.</p>\n\n<p>It’s a question dividing proponents and critics of the proposed\nAustralian law: does it effectively make Google and Facebook\n“pay for clicks” and might it be the beginning of the end of\nfree access?</p>\n</blockquote>\n\n<p>I don’t know what this Berners-Lee guy knows about the web, but I agree.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.independent.co.uk/news/australia-internet-law-tim-berners-lee-b1803988.html\">independent.co.uk/news/australia-internet-law-tim-berners…</a></strong></em></p>\n",
+      "date_published": "2021-02-20T00:18:11+00:00",
+      "date_modified": "2021-02-20T04:33:31+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/19/mogull-apple-platform-security-guide",
+      "url": "https://daringfireball.net/linked/2021/02/19/mogull-apple-platform-security-guide",
+      "external_url": "https://tidbits.com/2021/02/18/apple-platform-security-guide-reveals-focus-on-vertical-integration/",
+      "title": "Rich Mogull on Apple’s Updated 2021 Platform Security Guide",
+      "content_html": "\n<p>Rich Mogull, writing at TidBits, on Apple’s 2021 <a href=\"https://tidbits.com/2021/02/18/apple-platform-security-guide-reveals-focus-on-vertical-integration/\">Platform Security Guide</a>:</p>\n\n<blockquote>\n  <p>As wonderful as the Apple Platform Security guide is as a\nresource, writing about it is about as easy as writing a hot take\non the latest updates to the dictionary. Sure, the guide has\nnumerous updates and lots of new content, but the real story isn’t\nin the details, but in the larger directions of Apple’s security\nprogram, how that impacts Apple’s customers, and what it means to\nthe technology industry at large.</p>\n\n<p>From that broader perspective, the writing is on the wall. <em>The\nfuture of cybersecurity is vertical integration.</em> By vertical\nintegration, I mean the combination of hardware, software, and\ncloud-based services to build a comprehensive ecosystem. Vertical\nintegration for increased security isn’t merely a trend at Apple,\nit’s one we see in wide swaths of the industry, including such key\nplayers as Amazon Web Services. When security really matters, it’s\nhard to compete if you don’t have complete control of the stack:\nhardware, software, and services.</p>\n</blockquote>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://tidbits.com/2021/02/18/apple-platform-security-guide-reveals-focus-on-vertical-integration/\">tidbits.com/2021/02/18/apple-platform-security-guide…</a></strong></em></p>\n",
+      "date_published": "2021-02-19T20:50:20+00:00",
+      "date_modified": "2021-02-19T20:50:21+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/19/app-store-bunco-irrational-prices",
+      "url": "https://daringfireball.net/linked/2021/02/19/app-store-bunco-irrational-prices",
+      "external_url": "https://9to5mac.com/2021/02/19/apple-cracks-down-on-apps-with-irrationally-high-prices-as-app-store-scams-are-exposed/",
+      "title": "Apple Cracks Down on Apps With ‘Irrationally High Prices’ as App Store Scams Are Exposed",
+      "content_html": "\n<p>Guilherme Rambo, writing for 9to5Mac:</p>\n\n<blockquote>\n  <p>App Store scams have <a href=\"https://9to5mac.com/2021/02/12/developer-reveals-fake-app-store-reviews-and-scams/\">recently resurfaced</a> as a developer\nexposed several scam apps in the App Store making millions of\ndollars per year. Most of these apps exploit fake ratings and\nreviews to show up in search results and look legit, but trick\nusers into getting subscriptions at irrationally high prices.</p>\n\n<p>It looks like Apple has started to crack down on scam attempts by\nrejecting apps that look like they have subscriptions or other\nin-app purchases with prices that don’t seem reasonable to the App\nReview team.</p>\n</blockquote>\n\n<p>From the rejection letter sent by the App Store review team:</p>\n\n<blockquote>\n  <p>Customers expect the App Store to be a safe and trusted\nmarketplace for purchasing digital goods. Apps should never betray\nthis trust by attempting to rip-off or cheat users in any way.</p>\n\n<p>Unfortunately, the prices you’ve selected for your app or in-app\npurchase products in your app do not reflect the value of the\nfeatures and content offered to the user. Charging irrationally\nhigh prices for content or services with limited value is a\nrip-off to customers and is not appropriate for the App Store.</p>\n\n<p>Specifically, the prices for the following items are\nirrationally high:</p>\n</blockquote>\n\n<p>This is exactly the sort of crackdown I’ve been advocating for years. A bunco squad that looks for scams, starting with apps that (a) have high-priced in-app purchases and subscriptions, and (b) are generating a lot of money. Ideally Apple will crack down on <em>all</em> scams, but practically speaking, all that matters is that they identify and eliminate <em>successful</em> scams — and identify the scammers behind them and keep them out of the store.</p>\n\n<p>Developer <a href=\"https://twitter.com/keleftheriou/\">Kosta Eleftheriou</a> has been righteously leading a sort of indie bunco squad for a few weeks, identifying a <a href=\"https://twitter.com/keleftheriou/status/1360146136695152640\">slew</a> of <a href=\"https://twitter.com/keleftheriou/status/1356011069395755009\">scams</a> (usually involving apps with <a href=\"https://techcrunch.com/2021/02/03/apple-urged-to-root-out-rating-scams-as-developer-highlights-ugly-cost-of-enforcement-failure/\">clearly fraudulent ratings</a>, too).</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://9to5mac.com/2021/02/19/apple-cracks-down-on-apps-with-irrationally-high-prices-as-app-store-scams-are-exposed/\">9to5mac.com/2021/02/19/apple-cracks-down-on-apps-with…</a></strong></em></p>\n",
+      "date_published": "2021-02-19T20:46:07+00:00",
+      "date_modified": "2021-02-19T20:58:59+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/19/one-full-day-in-cancun",
+      "url": "https://daringfireball.net/linked/2021/02/19/one-full-day-in-cancun",
+      "external_url": "https://www.washingtonpost.com/politics/ted-cruz-cancun-storm/2021/02/19/ce1dc25e-7252-11eb-93be-c10813e358a2_story.html",
+      "title": "Nomination for Lede of the Year",
+      "content_html": "\n<p>Ashley Parker, reporting for The Washington Post:</p>\n\n<blockquote>\n  <p>Usually, it takes at least one full day in Cancun to do something embarrassing you’ll never live down.</p>\n\n<p>But for Ted Cruz (R-Tex.), it took just 10 hours — from when his United plane touched down at Cancun International Airport at 7:52 p.m. Wednesday to when he booked a return flight back to Houston around 6 a.m. Thursday — for the state’s junior senator to apparently realize he had made a horrible mistake.</p>\n</blockquote>\n\n<p>Give Cruz credit for this: he’s brought the whole nation together in unity.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.washingtonpost.com/politics/ted-cruz-cancun-storm/2021/02/19/ce1dc25e-7252-11eb-93be-c10813e358a2_story.html\">washingtonpost.com/politics/ted-cruz-cancun-storm/2021/02…</a></strong></em></p>\n",
+      "date_published": "2021-02-19T17:08:54+00:00",
+      "date_modified": "2021-02-19T17:10:33+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/19/pfizer-vaccine-single-dose-efficacy",
+      "url": "https://daringfireball.net/linked/2021/02/19/pfizer-vaccine-single-dose-efficacy",
+      "external_url": "https://www.nytimes.com/live/2021/02/19/world/covid-19-coronavirus#pfizers-vaccine-works-well-after-one-dose-and-doesnt-always-need-ultracold-storage",
+      "title": "Pfizer’s Vaccine Works Well With One Dose",
+      "content_html": "\n<p>The New York Times:</p>\n\n<blockquote>\n  <p>A study in Israel showed that the vaccine is robustly effective after the first shot, echoing what other research has shown for the AstraZeneca vaccine and raising the possibility that regulators in some countries could authorize delaying a second dose instead of giving both on the strict schedule of three weeks apart as tested in clinical trials. […]</p>\n\n<p><a href=\"https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)00448-7/fulltext\">Published in The Lancet</a> on Thursday and drawing from a group of 9,100 Israeli health care workers, the study showed that Pfizer’s vaccine was 85 percent effective 15 to 28 days after receiving the first dose. Pfizer and BioNTech’s late-stage clinical trials, which enrolled 44,000 people, showed that the vaccine was 95 percent effective if two doses were given three weeks apart. […]</p>\n\n<p>Pfizer and BioNTech also announced on Friday that their vaccine can be stored at standard freezer temperatures for up to two weeks, potentially expanding the number of smaller pharmacies and doctors’ offices that could administer the vaccine, which now must be stored at ultracold temperatures.</p>\n</blockquote>\n\n<p>The U.S. needs to change its policy and get more shots into more arms as quickly as possible. Administer the second booster shots in the summer after a majority of Americans have gotten their first. The current policy is simply wrong, given the data, and is halving the rate at which we can achieve herd immunity.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.nytimes.com/live/2021/02/19/world/covid-19-coronavirus#pfizers-vaccine-works-well-after-one-dose-and-doesnt-always-need-ultracold-storage\">nytimes.com/live/2021/02/19/world/covid-19-coronavirus…</a></strong></em></p>\n",
+      "date_published": "2021-02-19T16:58:32+00:00",
+      "date_modified": "2021-02-19T17:22:09+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/19/petri-carlson-suspicious-behaviors",
+      "url": "https://daringfireball.net/linked/2021/02/19/petri-carlson-suspicious-behaviors",
+      "external_url": "https://www.washingtonpost.com/opinions/2021/02/17/tucker-carlson-jill-biden-relationship/",
+      "title": "Tucker Carlson Detects Other Suspicious Behaviors",
+      "content_html": "\n<p>If we were to debate which newspaper is better, The New York Times or Washington Post, Alexandra Petri would be one of my top arguments in favor of the Post.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.washingtonpost.com/opinions/2021/02/17/tucker-carlson-jill-biden-relationship/\">washingtonpost.com/opinions/2021/02/17/tucker-carlson-jill…</a></strong></em></p>\n",
+      "date_published": "2021-02-19T16:23:39+00:00",
+      "date_modified": "2021-02-19T16:30:05+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/19/blackburn-nasa-logo",
+      "url": "https://daringfireball.net/linked/2021/02/19/blackburn-nasa-logo",
+      "external_url": "https://www.nytimes.com/2021/02/18/us/bruce-blackburn-dead.html",
+      "title": "Bruce Blackburn, Designer of Ubiquitous NASA Logo, Dies at 82",
+      "content_html": "\n<p>A bit of sad NASA-related news today, too:</p>\n\n<blockquote>\n  <p>Bruce Blackburn, a graphic designer whose modern and minimalist\nlogos became ingrained in the nation’s consciousness, including\nthe four bold red letters for NASA known as the “worm” and the\n1976 American Revolution Bicentennial star, died on Feb. 1 in\nArvada, Colo., near Denver. He was 82. […]</p>\n\n<p>In a design career of more than 40 years, Mr. Blackburn developed\nbrand imagery for clients like IBM, Mobil and the Museum of Modern\nArt. But he is best known for the NASA worm, which has become\nsynonymous with space exploration and the concept of the\ntechnological future itself.</p>\n</blockquote>\n\n<p>I’m glad he lived long enough to see NASA <a href=\"https://www.nytimes.com/2020/04/08/science/nasa-logo-worm-spacex.html\">re-embrace his wonderful logo</a>. It’s such a perfect mark — one that will always feel like a symbol of the future.</p>\n\n<p><strong>Update:</strong> NASA’s 1976 “<a href=\"https://www.nasa.gov/sites/default/files/atoms/files/nasa_graphics_manual_nhb_1430-2_jan_1976.pdf\">Graphics Standards Manual</a>” — 60-page document on how to use the logo. This is how you do it.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.nytimes.com/2021/02/18/us/bruce-blackburn-dead.html\">nytimes.com/2021/02/18/us/bruce-blackburn-dead.html</a></strong></em></p>\n",
+      "date_published": "2021-02-19T05:00:51+00:00",
+      "date_modified": "2021-02-20T18:29:01+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/18/nasa-perseverance-mars",
+      "url": "https://daringfireball.net/linked/2021/02/18/nasa-perseverance-mars",
+      "external_url": "https://www.nytimes.com/2021/02/18/science/nasa-peseverance-mars-landing.html",
+      "title": "NASA’s Perseverance Rover Lands on Mars",
+      "content_html": "\n<p>Kenneth Chang, reporting for The New York Times:</p>\n\n<blockquote>\n  <p>NASA safely landed a new robotic rover on Mars on Thursday,\nbeginning its most ambitious effort in decades to directly study\nwhether there was ever life on the now barren red planet.</p>\n\n<p>While the agency has completed other missions to Mars, the $2.7\nbillion robotic explorer, named Perseverance, carries scientific\ntools that will bring advanced capabilities to the search for life\nbeyond Earth. The rover, about the size of a car, can use its\nsophisticated cameras, lasers that can analyze the chemical makeup\nof Martian rocks and ground-penetrating radar to identify the\nchemical signatures of fossilized microbial life that may have\nthrived on Mars when it was a planet full of flowing water.</p>\n</blockquote>\n\n<p>Great landing, and a great day for science.</p>\n\n<p><a href=\"https://eyes.nasa.gov/apps/mars2020/#/home\">More here, from NASA’s own website</a>.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.nytimes.com/2021/02/18/science/nasa-peseverance-mars-landing.html\">nytimes.com/2021/02/18/science/nasa-peseverance-mars…</a></strong></em></p>\n",
+      "date_published": "2021-02-19T04:52:14+00:00",
+      "date_modified": "2021-02-20T00:51:55+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/18/fowler-tv-privacy",
+      "url": "https://daringfireball.net/linked/2021/02/18/fowler-tv-privacy",
+      "external_url": "https://www.washingtonpost.com/technology/2019/09/18/you-watch-tv-your-tv-watches-back/",
+      "title": "‘Smart’ TVs Track Everything You Watch",
+      "content_html": "\n<p>Geoffrey Fowler, writing for The Washington Post back in September 2019:</p>\n\n<blockquote>\n  <p>Lately I’ve been on the hunt for what happens to my data behind\nthe cloak of computer code and privacy policies. So I ran an\nexperiment on my own Internet-connected Samsung, as well as new\n“smart TV” models from four of the best-selling brands: Samsung,\nTCL Roku TV, Vizio and LG.</p>\n\n<p>I set up each smart TV as most people do: by tapping “OK” with the\nremote to each on-screen prompt. Then using software from\nPrinceton University called the IoT Inspector, I watched how each\nmodel transmitted data. Lots went flying from streaming apps and\ntheir advertising partners. But even when I switched to a live\nbroadcast signal, I could see each TV sending out reports as often\nas once per second.</p>\n\n<p>When tracking is active, some TVs record and send out everything\nthat crosses the pixels on your screen. It doesn’t matter whether\nthe source is cable, an app, your DVD player or streaming box.</p>\n</blockquote>\n\n<p>Every damn second. Disconnect your TV from the internet and use a set top box or stick with some degree of privacy you can control. Even if you’re not worried about the privacy angle, it’s just a waste of bandwidth. And even if you’re not that concerned with the bandwidth, per se, it’s just obnoxious. It should bother you on an aesthetic sense alone to have a TV set needlessly phoning home <em>constantly</em> to send analytics that don’t help <em>you</em> at all.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.washingtonpost.com/technology/2019/09/18/you-watch-tv-your-tv-watches-back/\">washingtonpost.com/technology/2019/09/18/you-watch-tv-your…</a></strong></em></p>\n",
+      "date_published": "2021-02-19T04:15:38+00:00",
+      "date_modified": "2021-02-19T19:09:27+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/18/roku-privacy",
+      "url": "https://daringfireball.net/linked/2021/02/18/roku-privacy",
+      "external_url": "https://foundation.mozilla.org/en/privacynotincluded/roku-streaming-sticks/",
+      "title": "Roku Streaming Devices Default to ‘Scary’ Privacy",
+      "content_html": "\n<p>Mozilla’s Privacy Not Included project’s take on Roku:</p>\n\n<blockquote>\n  <p>Roku is the nosey, gossipy neighbor of connected devices. They\ntrack just about everything! And then they share that data with\nway too many people. According to Roku’s privacy policy, they\nshare your personal data with advertisers to show you targeted ads\nand create profiles about you over time and across different\nservices and devices. Roku also gives advertisers detailed data\nabout your interactions with advertisements, your demographic\ndata, and audience segment. Roku shares viewing data with\nmeasurement providers who may target you with ads. Roku may share\nyour personal information with third parties for their own\nmarketing purposes. One of the researchers working on this guide\nsaid, “It had such a scary privacy policy, I didn’t even connect\nit to my TV.” Another researcher referred to Roku as a “privacy\nnightmare.”</p>\n</blockquote>\n\n<p>You can opt-out, but they won’t ask you. You have to go look for it, which means most Roku users don’t even know they’re being snooped on this way.</p>\n\n<p>Most (all?) major smart TVs are privacy disasters too. Privacy is probably the main Apple TV advantage I didn’t mention the other day <a href=\"https://daringfireball.net/linked/2021/02/14/why-does-apple-tv-still-exist\">when speculating on why Apple TV even still exists</a>. But even on an Apple TV box, you’re at the mercy of each app you use, and the major streaming services all collect information on everything you do. I mean, how else would their recommendation algorithms work? Or even just picking from where you left off in a movie you paused a day or two ago?</p>\n\n<p>But Roku (and similar boxes, and smart TVs) track you at the system level.</p>\n\n<p>I don’t let my LG TV connect to the internet. I mean why would I, if I don’t use its built-in apps for anything?</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://foundation.mozilla.org/en/privacynotincluded/roku-streaming-sticks/\">foundation.mozilla.org/en/privacynotincluded/roku-streaming…</a></strong></em></p>\n",
+      "date_published": "2021-02-19T04:11:20+00:00",
+      "date_modified": "2021-02-19T06:01:49+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/18/apple-tv-google-tv",
+      "url": "https://daringfireball.net/linked/2021/02/18/apple-tv-google-tv",
+      "external_url": "https://blog.google/products/google-tv/apple-tv-now-available/",
+      "title": "Apple TV+ Is Now Available on Google TV",
+      "content_html": "\n<p>Jonathan Zepp, writing on the Google Blog:</p>\n\n<blockquote>\n  <p>Starting today, the Apple TV app, including Apple TV+, is now\nglobally available on the new Chromecast with Google TV, with more\nGoogle TV devices to come. To access the Apple TV app, navigate to\nthe Apps tab or the apps row in the For you tab.</p>\n</blockquote>\n\n<p>What’s left on the list of devices where Apple TV <em>could</em> be available but isn’t? Nintendo Switch — but they don’t even have Netflix. What else?</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://blog.google/products/google-tv/apple-tv-now-available/\">blog.google/products/google-tv/apple-tv-now-available/</a></strong></em></p>\n",
+      "date_published": "2021-02-19T03:56:43+00:00",
+      "date_modified": "2021-02-19T03:56:44+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/18/newton-facebook-australian",
+      "url": "https://daringfireball.net/linked/2021/02/18/newton-facebook-australian",
+      "external_url": "https://www.platformer.news/p/facebook-calls-australias-bluff",
+      "title": "‘Facebook Calls Australia’s Bluff’",
+      "content_html": "\n<p>Casey Newton, writing at Platformer:</p>\n\n<blockquote>\n  <p>On Wednesday morning, the splintering arrived: Google cut a deal\nwith News Corp. that will ensure its services continue to be\nprovided in Australia, and Facebook walked away from the\nbargaining table and began preventing people from sharing news\nlinks from Australian publishers around the world.</p>\n\n<p>I think Facebook basically did the right thing, and Google\nbasically did the wrong thing, even though Google had a much\ntougher call to make. Today, let’s talk about why the tech giants\nmade the decisions that they did, why Australia’s shakedown is\nrotten, and what’s likely to happen next.</p>\n</blockquote>\n\n<p>Calling Australia’s bluff is exactly the right framing. What’s surprising is that Australian government officials (and others around the world, <a href=\"https://twitter.com/davidcicilline/status/1362172969699704833\">like David Cicilline</a>, chairman of the U.S. House Antitrust Subcommittee), didn’t even see it as a bluff that could be called. The mindset behind this law seemed to be that Australia could demand whatever crazy stuff they wanted (like Facebook being required to pay major news organizations just for <em>links</em> to their articles — which the news organizations themselves would be free to post to their own Facebook accounts) and Facebook and Google would just say “OK, sure.”</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.platformer.news/p/facebook-calls-australias-bluff\">platformer.news/p/facebook-calls-australias-bluff</a></strong></em></p>\n",
+      "date_published": "2021-02-19T03:53:12+00:00",
+      "date_modified": "2021-02-19T03:53:13+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/18/masnick-facebook-australia",
+      "url": "https://daringfireball.net/linked/2021/02/18/masnick-facebook-australia",
+      "external_url": "https://www.techdirt.com/articles/20210217/22383446265/bizarre-reaction-to-facebooks-decision-to-get-out-news-business-australia.shtml",
+      "title": "‘The Bizarre Reaction to Facebook’s Decision to Get Out of the News Business in Australia’",
+      "content_html": "\n<p>Mike Masnick, writing at Techdirt:</p>\n\n<blockquote>\n  <p>First is the link tax. This is fundamentally against the\nprinciples of an open internet. The government saying that you\ncan’t link to a news site unless you pay a tax should be seen as\ninherently problematic for a long list of reasons. At a most\nbasic level, it’s demanding payment <em>for traffic</em>. […] This is\nlike saying that not only should NBC have to run an\nadvertisement for Techdirt, but it should have to pay me for it.\nIf that seems totally nonsensical, that’s because it is. The\nlink tax makes no sense.</p>\n\n<p>And, most importantly, as any economist will tell you, taxing\nsomething doesn’t just bring in revenue, it decreases whatever you\ntax. This is why we have things like cigarette taxes and pollution\ntaxes. It’s a tool to get less of something. So, in this case,\nAustralia is saying it wants to tax links to news on Facebook, and\nFacebook responds in the exact way any reasonable economist would\npredict: it says that’s just not worth it and bans links. That’s\nnot incompatible with democracy. It’s not bringing a country to\nits knees. The country said “this is how much news links cost” and\nFacebook said “oh, that’s too expensive, so we’ll stop.”</p>\n\n<p>Contrary to the idea that this is an “attack” on journalism or\nnews in Australia, it’s not. The news still exists in Australia.\nNews companies still have websites. People can still visit those\nwebsites.</p>\n</blockquote>\n\n<p>Facebook’s doing the right thing here. Australia’s law is a bad one — it might as well have been written by Rupert Murdoch himself.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.techdirt.com/articles/20210217/22383446265/bizarre-reaction-to-facebooks-decision-to-get-out-news-business-australia.shtml\">techdirt.com/articles/20210217/22383446265/bizarre-reaction…</a></strong></em></p>\n",
+      "date_published": "2021-02-19T03:45:47+00:00",
+      "date_modified": "2021-02-19T03:45:48+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/17/i-miss-my-bar",
+      "url": "https://daringfireball.net/linked/2021/02/17/i-miss-my-bar",
+      "external_url": "http://imissmybar.com/",
+      "title": "‘I Miss My Bar’",
+      "content_html": "\n<p>What a beautiful, fun little website. Love the typography, love the colors, love that the whole thing is such a fun dumb concept. Make something cool and share it with the world.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"http://imissmybar.com/\">imissmybar.com/</a></strong></em></p>\n",
+      "date_published": "2021-02-18T02:51:33+00:00",
+      "date_modified": "2021-02-18T03:00:33+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/17/bookfeed",
+      "url": "https://daringfireball.net/linked/2021/02/17/bookfeed",
+      "external_url": "http://ignorethecode.net/blog/2021/02/16/bookfeed_io/",
+      "title": "Bookfeed.io",
+      "content_html": "\n<p>Lukas Mathis:</p>\n\n<blockquote>\n  <p><a href=\"http://bookfeed.io/\">Bookfeed.io</a> is a simple tool that allows you to specify a list\nof authors, and generates an RSS feed with each author’s most\nrecently released book. I made this because I don’t want a\nrecommendation algorithm to tell me what to read, I just want to\nknow when my favorite authors release new books.</p>\n</blockquote>\n\n<p>What a great idea. Make something cool and share it with the world.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"http://ignorethecode.net/blog/2021/02/16/bookfeed_io/\">ignorethecode.net/blog/2021/02/16/bookfeed_io/</a></strong></em></p>\n",
+      "date_published": "2021-02-17T19:06:28+00:00",
+      "date_modified": "2021-02-18T02:49:07+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/17/carlson-webcams",
+      "url": "https://daringfireball.net/linked/2021/02/17/carlson-webcams",
+      "external_url": "https://reincubate.com/support/how-to/why-are-webcams-bad/#razer-kiyo",
+      "title": "Jeff Carlson on Why Webcams Suck",
+      "content_html": "\n<p>Jeff Carlson, in a comprehensive — thousands of words, dozens of example images and videos — piece for the Reincubate blog:</p>\n\n<blockquote>\n  <p>After consulting numerous webcam buying guides and reviews, purchasing a handful of the most popular models, and testing them in varying lighting situations, I can’t escape the grim truth: there are no good webcams. Even webcams recommended by reputable outlets produce poor quality imagery—a significant failing, given it’s the one job they’re supposed to provide.</p>\n\n<p>Uneven color. Blown highlights. Smudgy detail, especially in low light. Any affordable webcam (even at the high end of affordability, $100+), uses inadequate and typically years-old hardware backed by mediocre software that literally makes you look bad. You might not notice this if you’re using video software that makes your own image small, but it will be obvious to other people on the call.</p>\n</blockquote>\n\n<p>Reincubate makes <a href=\"https://reincubate.com/camo/\">Camo</a>, a good app that lets you use an iPhone as a live webcam with your Mac, so you might think, well, <em>of course</em> an article on the Reincubate blog is going to conclude that an iPhone provides better image quality than a webcam. But you know and I know it’s true: iPhone camera image quality is <em>way</em> higher than that of even “good” webcams. Carlson has taken the time here to explain why and prove it.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://reincubate.com/support/how-to/why-are-webcams-bad/#razer-kiyo\">reincubate.com/support/how-to/why-are-webcams-bad/#razer…</a></strong></em></p>\n",
+      "date_published": "2021-02-17T16:12:14+00:00",
+      "date_modified": "2021-02-17T16:20:16+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/2021/02/volkswagen_ceo_apple_car",
+      "url": "https://daringfireball.net/2021/02/volkswagen_ceo_apple_car",
+      "title": "★ Volkswagen CEO Herbert Diess on Apple’s Purported Interest in Making Cars",
+      "content_html": "\n<p>Reuters: “<a href=\"https://finance.yahoo.com/news/volkswagen-ceo-diess-not-afraid-150200219.html\">Volkswagen CEO Diess ‘Not Afraid’ of an Apple Electric Car</a>”:</p>\n\n<blockquote>\n  <p>Germany’s Volkswagen is not concerned by any Apple plans for a\npassenger vehicle that could include the iPhone maker’s battery\ntechnology, its chief executive Herbert Diess said. […]</p>\n\n<p>“The car industry is not a typical tech-sector that you could take\nover at a single stroke,” Diess was quoted as saying an interview\nwith Frankfurter Allgemeine Sonntagszeitung. “Apple will not\nmanage that overnight,” he added.</p>\n\n<p>While Apple’s plans are not public, Diess said its intentions as\nsuch were “logical” because the company had expertise in\nbatteries, software and design, and that it had deep pockets to\nbuild on these competencies.</p>\n\n<p>“Still, we are not afraid,” he said.</p>\n</blockquote>\n\n<p>I’d like to think that no one has made more hay over Ed Colligan’s infamous <a href=\"https://daringfireball.net/2006/11/colligan_head_stuck\" title=\"Daring Fireball: Palm CEO Ed Colligan’s Head Seems to be Stuck Somewhere\">“PC guys are not going to just figure this out. They’re not going to just walk in” quote</a> — just a few weeks before the unveiling of the iPhone — than yours truly. So I feel like I’m in a position to declare that these remarks by Herbert Diess are not an Ed Colligan moment. Ed Colligan, as the CEO of Palm, should have known that in 2006, the future of phones was <a href=\"https://daringfireball.net/2008/05/blackberry_vs_iphone\" title=\"Daring Fireball: BlackBerry vs. iPhone\">gadget-like computers, not the computer-like gadgets</a> the industry (including Palm) had been making until then. The iPod proved that Apple was the best designer and maker of gadget-like computers in the world. (They’ve only increased their lead in the intervening years.) Colligan should have been fearful of an Apple phone — <em>any</em> Apple phone, even an iPod phone, let alone the pocket-sized Unix computer with a gorgeous touchscreen interface they actually managed to make.</p>\n\n<p>Apple hasn’t shown anything that suggests they’ll be good at designing and producing cars. The dashboard interface? Sure. But the <em>car</em> part of the car? Nothing Apple has ever done is like that. I’m not betting against them, but I don’t think Diess’s remarks are the least bit clueless. </p>\n\n<p>I mean, what do you want him to say? That Volkswagen executives are soiling their lederhosen at the thought that Apple might enter the car market? That they’ll just pack up their bags and call it quits if Apple does?</p>\n\n<p>I would have suggested adding something along the lines of “I welcome Apple as a competitor, and I’m sure they’ll bring some interesting new ideas to the market.” Like coaches of sports teams, who inevitably talk their next opponent <em>up</em>, not down. “<em>They’re a tough team with some really talented players</em>”, says every coach playing the hapless New York Jets the next week.</p>\n\n<p>The part of Diess’s remarks that jumps out at me isn’t the “We are not afraid” bit, but the “take over at a single stroke” bit. No market gets taken over overnight. The iPod spent its first two years as a Mac-only peripheral with a FireWire port. The iPhone <a href=\"http://www.asymco.com/2010/10/21/turning-up-the-volume-iphone-overtakes-ipod/\">took three years</a> just to overtake the iPod in sales. In 2011, four years after launching, Business Insider’s Henry Blodget declared the iPhone “<a href=\"https://daringfireball.net/linked/2011/04/26/blodget\">dead in the water</a>”. <a href=\"https://daringfireball.net/linked/2015/01/27/iphone-claim-chowder\">Even as late as 2013</a>, the consensus on Wall Street was that Samsung was going to eat Apple’s lunch in the phone market. (That was the year of Phil Schiller’s “Can’t innovate any more, my ass” remark at WWDC.)</p>\n\n<p>Then there’s Apple Watch. Circa 2017, there were plenty of articles like this one by Mike Murphy at Quartz: “<a href=\"https://daringfireball.net/2017/04/apple_watch_success\">Two Years After Its Launch, the Apple Watch Hasn’t Made a Difference at Apple</a>”.</p>\n\n<p>Even if Apple indeed enters the car market, <em>and</em> its cars prove to be so stunningly innovative and popular as to do to the car market what they did to the phone market — a hypothetical best-case scenario — it will take many years. Probably more years than the phone, because people hold onto their cars longer than they do their cell phones. That’s the best case scenario. There are a lot of less-than-best-but-still-good scenarios for a hypothetical Apple car where it takes even longer to declare it a success. Or where Apple winds up with a hugely successful business, but never redefines the industry.</p>\n\n<p>There is no such thing as a “typical tech-sector that you could take over at a single stroke”. That Diess seems to think that’s how <em>any</em> of the markets where Apple currently competes work — that’s the thing that would worry me if I were at Volkswagen.</p>\n\n<p><strong>Postscript:</strong> <a href=\"https://twitter.com/robert_cassidy/status/1361057209568817152\">This tweet from Robert Cassidy</a> sums it up perfectly:</p>\n\n<blockquote>\n  <p>Apple doesn’t do overnight. They walk into your market, and a few\nyears in you realize they’ve quietly redefined your market and now\nyou’re years behind.</p>\n</blockquote>\n\n<p>Apple enters the market and <a href=\"https://www.youtube.com/watch?v=qycUOENFIBs\">all that the established entrants see</a> is how Apple’s new product doesn’t measure up to the market’s current definition. </p>\n\n\n\n    ",
+      "date_published": "2021-02-17T01:53:54+00:00",
+      "date_modified": "2021-02-17T18:45:44+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/16/microsoft-brooks-law-solarwinds",
+      "url": "https://daringfireball.net/linked/2021/02/16/microsoft-brooks-law-solarwinds",
+      "external_url": "https://www.cbsnews.com/news/solarwinds-hack-russia-cyberattack-60-minutes-2021-02-14/",
+      "title": "Microsoft Claims Russian SolarWinds Hackers Have Defeated Brooks’s Law",
+      "content_html": "\n<p>60 Minutes did a segment on the SolarWinds hack, and spoke with Microsoft president Brad Smith:</p>\n\n<blockquote>\n  <p>“SolarWinds Orion” is one of the most ubiquitous software products\nyou probably never heard of, but to thousands of I.T. departments\nworldwide, it’s indispensable. It’s made up of millions of lines\nof computer code. 4,032 of them were clandestinely re-written and\ndistributed to customers in a routine update, opening up a secret\nbackdoor to the 18,000 infected networks. Microsoft has assigned\n500 engineers to dig in to the attack. One compared it to a\nRembrandt painting, the closer they looked, the more details\nemerged.</p>\n\n<p>Brad Smith: “When we analyzed everything that we saw at Microsoft,\nwe asked ourselves how many engineers have probably worked on\nthese attacks. And the answer we came to was, well, certainly more\nthan 1,000.”</p>\n</blockquote>\n\n<p>One can only assume that “thousand engineers” who Microsoft claims worked on the hack for Russia did more than rewrite those 4,032 lines of code. Presumably, those 4,000+ lines of code enabled the backdoor, and much of the Russians’ engineering efforts went into code that was executed after breaking in to these exploited SolarWinds installations.</p>\n\n<p>But, still, 1,000 engineers? That seems contrary to Fred Brooks’s famed maxim that “adding manpower to a late software project makes it later”. Same goes with Microsoft putting 500 engineers on the job of investigating the hack. No matter how bad the crime, putting 500 detectives on the case isn’t going to work.</p>\n\n<p>I don’t know jack shit about the details of this SolarWinds case, but I know I’m a <em>lot</em> more worried about a small team of truly talented hackers — a team so small they could fit in a car — than a 1,000-person initiative. Brooks’s Law aside, how is a 1,000-person team <a href=\"https://www.brainyquote.com/quotes/benjamin_franklin_162078\">expected to keep something like this hack secret</a>?</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.cbsnews.com/news/solarwinds-hack-russia-cyberattack-60-minutes-2021-02-14/\">cbsnews.com/news/solarwinds-hack-russia-cyberattack-60…</a></strong></em></p>\n",
+      "date_published": "2021-02-17T00:14:29+00:00",
+      "date_modified": "2021-02-23T00:16:56+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/15/klain-twitter",
+      "url": "https://daringfireball.net/linked/2021/02/15/klain-twitter",
+      "external_url": "https://twitter.com/WHCOS",
+      "title": "White House Chief of Staff Ron Klain on Twitter",
+      "content_html": "\n<p>Speaking of the Biden administration, I’ve been greatly enjoying the Twitter feed of chief of staff Ron Klain. He’s put his personal account (<a href=\"https://twitter.com/RonaldKlain\">@RonaldKlain</a>) mostly on ice, and primarily tweets from the official @WHCOS account. He’s very good at Twitter — I began following him early in the campaign.</p>\n\n<p>Klain’s use of Twitter is a fascinating contrast with Trump’s. For many of you, I’m sure, there are nothing but bad connotations when it comes to the use of Twitter from the White House. But Klain’s use of Twitter strikes me as nearing the canonical ideal of how Jack Dorsey might have imagined Twitter being used by, say, the White House. It harks back to the early days of Twitter, when the prompt was “What are you doing?” Except Klain is tweeting not about what he, personally, is doing, but rather what the administration is doing. What they see as their accomplishments, drip by drip, and what issues they deem their highest priorities. (COVID vaccinations, decreasing the spread of COVID, and economic stimulus, I think it’s fair to say in that order — but all three of them are inexorably related.)</p>\n\n<p>Following Klain is of course in no way a substitute for reading news coverage of the administration. Of course Klain is biased — he’s the White House chief of staff. But just as it’s important to follow news coverage and analysis from outside observers, it’s useful to see what the Biden administration itself — unfiltered — deems important. Klain’s Twitter feed is an hour-by-hour log of what they see as their accomplishments and what they see as important.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://twitter.com/WHCOS\">twitter.com/WHCOS</a></strong></em></p>\n",
+      "date_published": "2021-02-16T00:50:09+00:00",
+      "date_modified": "2021-02-16T01:30:13+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/15/biden-routine",
+      "url": "https://daringfireball.net/linked/2021/02/15/biden-routine",
+      "external_url": "https://www.cnn.com/2021/02/15/politics/joe-biden-presidential-routine/index.html",
+      "title": "Biden’s Daily Routine",
+      "content_html": "\n<p>Kevin Liptak, writing for CNN:</p>\n\n<blockquote>\n  <p>As Biden settles into a job he has been seeking on-and-off for three decades, the daily routine of being president — with a phalanx of Secret Service agents, regular updates on the nation’s top secrets and an ever-present press corps — has come more naturally for him than for his more recent predecessors.</p>\n\n<p>He has established a regular schedule, including coffee in the mornings with the first lady, meetings and phone calls from the Oval Office starting just after 9 a.m. and a return to his residence by 7 p.m. As he walks home along the Colonnade, he’s often seen carrying a stack of binders or manila folders under one arm. He still brings a brown leather briefcase into the office.</p>\n</blockquote>\n\n<p>I love stories like this, about the mundane details of how people work, like that Biden digs a real fire in the Oval Office fireplace.</p>\n\n<p>(<a href=\"https://politicalwire.com/2021/02/15/biden-settles-into-his-daily-routine/\">Via Taegan Goddard</a>.)</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.cnn.com/2021/02/15/politics/joe-biden-presidential-routine/index.html\">cnn.com/2021/02/15/politics/joe-biden-presidential-routine…</a></strong></em></p>\n",
+      "date_published": "2021-02-16T00:42:26+00:00",
+      "date_modified": "2021-02-16T00:46:04+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/15/fool-and-his-money",
+      "url": "https://daringfireball.net/linked/2021/02/15/fool-and-his-money",
+      "external_url": "https://www.washingtonpost.com/investigations/true-vote-lawsuit-fraud-eshelman/2021/02/15/a7017adc-6724-11eb-886d-5264d4ceb46d_story.html",
+      "title": "A Fool and His Money…",
+      "content_html": "\n<p>Shawn Boburg and Jon Swaine, reporting for The Washington Post:</p>\n\n<blockquote>\n  <p>Like many Trump supporters, conservative donor Fred Eshelman awoke the day after the presidential election with the suspicion that something wasn’t right. His candidate’s apparent lead in key battleground states had evaporated overnight. The next day, the North Carolina financier and his advisers reached out to a small conservative nonprofit group in Texas that was seeking to expose voter fraud. After a 20-minute talk with the group’s president, their first-ever conversation, Eshelman was sold.</p>\n\n<p>“I’m in for 2,” he told the president of True the Vote, according to court documents and interviews with Eshelman and others.</p>\n\n<p>“$200,000?” one of his advisers on the call asked.</p>\n\n<p>“$2 million,” Eshelman responded.</p>\n\n<p>Over the next 12 days, Eshelman came to regret his donation and to doubt conspiracy theories of rampant illegal voting, according to court records and interviews.</p>\n\n<p>Now, he wants his money back.</p>\n</blockquote>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.washingtonpost.com/investigations/true-vote-lawsuit-fraud-eshelman/2021/02/15/a7017adc-6724-11eb-886d-5264d4ceb46d_story.html\">washingtonpost.com/investigations/true-vote-lawsuit-fraud…</a></strong></em></p>\n",
+      "date_published": "2021-02-16T00:32:34+00:00",
+      "date_modified": "2021-02-16T00:35:34+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/feeds/sponsors/2021/02/mux_video_1",
+      "url": "https://daringfireball.net/feeds/sponsors/2021/02/mux_video_1",
+      "external_url": "https://get.mux.com/3b5E55d",
+      "title": "[Sponsor] Mux Video",
+      "content_html": "\n<p>Mux Video is an API to powerful video streaming (like Stripe for video), built by the founders of Zencoder and creators of Video.js, and a team of ex-YouTube and Twitch engineers. Take any video file or live stream and make it play beautifully at scale on any device, powered by magical-feeling features like automatic thumbnails, animated GIFs, and data-driven encoding decisions. Spend your time building what people want, not drudging through ffmpeg documentation.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://get.mux.com/3b5E55d\">get.mux.com/3b5E55d</a></strong></em></p>\n",
+      "date_published": "2021-02-15T20:25:54-05:00",
+      "date_modified": "2021-02-15T20:25:54-05:00",
+      "authors": [
+        {
+          "name": "Daring Fireball Department of Commerce"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/15/ben-smith-times-mcneil",
+      "url": "https://daringfireball.net/linked/2021/02/15/ben-smith-times-mcneil",
+      "external_url": "https://www.nytimes.com/2021/02/14/business/media/new-york-times-donald-mcneil.html",
+      "title": "‘Postcard From Peru: Why the Morality Plays Inside the Times Won’t Stop’",
+      "content_html": "\n<p>Good piece from Times media columnist Ben Smith on <em>l’affaire</em> McNeil:</p>\n\n<blockquote>\n  <p>The questions about The Times’s identity and political leanings are real; the differences inside the newsroom won’t be easily resolved. But the paper needs to figure out how to resolve these issues more clearly: Is The Times the leading newspaper for like-minded, left-leaning Americans? Or is it trying to hold what seems to be a disappearing center in a deeply divided country? Is it Elizabeth Warren or Joe Biden? One thing that’s clear is that these questions probably aren’t best arbitrated through firings or resignations freighted with symbolic meaning, or hashed out inside the human resources department.</p>\n</blockquote>\n\n<p>One thing is clear: Don McNeil was an absolutely bizarre choice to lead a two-week expedition to Peru with a group of wealthy private school teenagers.</p>\n\n<p><strong>Update:</strong> Alex Leo, on Twitter, summing up what a bad idea this was:</p>\n\n<blockquote>\n  <p>“I’ve got a great idea: we charge teenagers $6,000 for two weeks\nand we send Archie Bunker to watch over them.”</p>\n</blockquote>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.nytimes.com/2021/02/14/business/media/new-york-times-donald-mcneil.html\">nytimes.com/2021/02/14/business/media/new-york-times-donald…</a></strong></em></p>\n",
+      "date_published": "2021-02-15T20:18:58+00:00",
+      "date_modified": "2021-02-18T02:56:57+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/linked/2021/02/15/clubhouse-iphone-primacy",
+      "url": "https://daringfireball.net/linked/2021/02/15/clubhouse-iphone-primacy",
+      "external_url": "https://www.joinclubhouse.com/welcoming-more-voices",
+      "title": "Clubhouse and the Primacy of iPhone",
+      "content_html": "\n<p>From a post on Clubhouse’s blog a few weeks ago, laying out their plans for 2021:</p>\n\n<blockquote>\n  <p>From the earliest days, we’ve wanted to build Clubhouse for everyone. With this in mind, we are thrilled to begin work on our Android app soon, and to add more accessibility and localization features so that people all over the world can experience Clubhouse in a way that feels native to them.</p>\n</blockquote>\n\n<p>Clubhouse, though it remains invitation-only, is growing fast, and has a <em>lot</em> of buzz. And it remains iPhone-only. They’ve only just begun working on an Android app. Nothing in this regard has changed in the 10 years since Instagram launched as an iPhone-only app in October 2010. Expanding to Android is inevitable, but it can wait. Conversely, if Clubhouse were Android-only, it’s likely almost no one would have heard of it today. I don’t really even see anyone talking about this with Clubhouse. It just goes unnoticed, like the oxygen we breathe, that iPhone is dominant, culturally.</p>\n\n<p><strong>See also:</strong> Ben Thompson: “<a href=\"https://stratechery.com/2021/clubhouses-inevitability/\">Clubhouse’s Inevitability</a>”.</p>\n\n<p style=\"padding-top: 1.5em;\"><em>Link: <strong><a href=\"https://www.joinclubhouse.com/welcoming-more-voices\">joinclubhouse.com/welcoming-more-voices</a></strong></em></p>\n",
+      "date_published": "2021-02-15T19:38:01+00:00",
+      "date_modified": "2021-02-15T19:47:10+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/2021/02/apple_silicon_dtk_saga",
+      "url": "https://daringfireball.net/2021/02/apple_silicon_dtk_saga",
+      "title": "★ The Two-Day Saga of the Apple Silicon DTK Exchange Program",
+      "content_html": "\n<p><a href=\"https://mjtsai.com/blog/2021/02/04/apple-wants-developer-transition-kits-back/\">Michael Tsai has a detailed rundown</a> (as ever) of last week’s brief controversy over Apple asking developers to return their Apple Silicon Mac developer transition kits (DTKs). See his post for all the details, but let me try to summarize the whole thing, in order, because it’s a good story.</p>\n\n<p>In June 2005, when Apple announced the Mac transition from PowerPC to Intel, they offered developers Intel-based DTK hardware. They looked like<sup id=\"fnr1-2021-02-11\"><a href=\"#fn1-2021-02-11\">1</a></sup> the then-current “cheese grater” Power Mac G5s, but the innards were Intel PCs. You paid Apple $1000, they sent you a DTK to use for a year to port PowerPC Mac software to Intel, and when the year was up you were required to send the DTKs back to Apple. But in January 2006, shortly after the announcement of the first batch of Intel-based Macs, Apple made a surprise announcement. <a href=\"https://daringfireball.net/linked/2006/01/10/dtk\">As I wrote then</a>:</p>\n\n<blockquote>\n  <p>Apple is exchanging the $1000 Developer Transition Kit machines\nfor 17-inch Intel iMacs, one for one, cross-shipped, shipping\ncosts paid both ways. Pretty sweet deal, considering everyone\nthought they’d have to send back the DTKs in exchange for a\nsteaming pile of corporate gratitude. (Thanks to Nat Irons for\nthat turn of phrase.)</p>\n</blockquote>\n\n<p>(I had to keep that parenthetical in there, because damn that is a good turn of phrase.)</p>\n\n<p>When Apple announced DTK hardware last June for the Apple Silicon transition, the terms were different mainly in that the DTKs were only $500, not $1000. But Apple still wanted them back after a year, and expressly reserved the right to ask for them back before the year was up. Not only was there no mention of any sort of exchange credit when the DTKs were returned, the terms made it clear that Apple wasn’t even providing a warranty for the DTKs. If you paid for one, and it went belly-up, Apple owed you nothing. <a href=\"https://developer.apple.com/terms/universal-app-quick-start-program/Developer-Universal-App-Quick-Start-Program.pdf\">Really, no warranty</a>:<sup id=\"fnr2-2021-02-11\"><a href=\"#fn2-2021-02-11\">2</a></sup></p>\n\n<blockquote>\n  <ol>\n<li>No Warranty</li>\n</ol>\n\n<p>The Developer Transition Kit is not fully tested and is to be used\nonly for limited testing and development purposes as set forth in\nSection 2. The Developer Transition Kit may contain errors that\ncould cause failures or loss of data and may be incomplete or\ncontain inaccuracies. The Developer Transition Kit is provided to\nYou solely on an “AS IS” and “AS AVAILABLE” basis. USE OF THE\nDEVELOPER TRANSITION KIT IS AT YOUR SOLE RISK AND THE ENTIRE RISK\nAS TO SATISFACTORY QUALITY, PERFORMANCE, ACCURACY, RELIABILITY,\nAND EFFORT IS WITH YOU.</p>\n</blockquote>\n\n<p>That’s just the <em>start</em> of the “APPLE MAKES NO WARRANTIES, EXPRESS OR IMPLIED…” section, but there’s only so much all-caps legalese I can bear to quote. Suffice it to say, the terms were very clear:</p>\n\n<ol>\n<li>You apply for the program.</li>\n<li>If accepted, you pay Apple $500.</li>\n<li>Apple sends you a DTK.</li>\n<li>No warranty.</li>\n<li>Apple can ask for it back at any time, and when they do, you have 30 days to return it.</li>\n</ol>\n\n<p>That’s it.</p>\n\n<p>That, however, didn’t stop people from assuming that once Apple Silicon Macs were announced, Apple would announce an exchange program similar to the previous one during the Intel transition.</p>\n\n<p>A week ago, <a href=\"https://9to5mac.com/2021/02/03/apple-asking-developers-to-return-dtk-mac-mini-offers-200-credit-for-buying-m1-macs/\">they did announce an exchange program</a>. Apple said developers could get $200 credit that was usable only for the purchase of an M1 Mac (MacBook Air, MacBook Pro, or Mac Mini) but would expire May 31.</p>\n\n<p>Developers had quite a few objections to this offer:</p>\n\n<ul>\n<li>Many developers are waiting for subsequent Apple Silicon Macs — 16-inch MacBook Pros, iMacs, or even just higher-end 13-inch MacBooks or Mac Minis.</li>\n<li>An expiration date of May 31 precludes any Macs set to be announced at WWDC, which everyone reasonably presumes will be held in June.</li>\n<li>A $200 credit for a $500 DTK rental seemed miserly coming from the richest company in the world, when, 15 years ago — at a time when Apple was very, very far from the richest company in the world — they exchanged $1000 DTKs for $1300 iMacs.</li>\n<li>Some developers have already purchased M1 Macs, have no desire for another, and were annoyed, justifiably, that this credit wasn’t offered back in November or December when the M1 Macs were announced.</li>\n<li>Developers used those DTKs to help Apple as much or more than to help themselves. It was in Apple’s interests for as much third-party software to be Apple Silicon native at, or soon after, the launch of the M1 Macs.</li>\n</ul>\n\n<p>The objection to those objections is rather obvious, though: every developer who paid for one of these DTKs agreed to very clear terms that promised nothing at all except, well, an implied steaming pile of corporate gratitude.</p>\n\n<p>After just two days, <a href=\"https://twitter.com/gruber/status/1357921261058482176\">Apple sent developers an email with the subject, “We heard you and we agree”</a>:</p>\n\n<blockquote>\n  <p>We heard your feedback regarding the 200 USD appreciation credit\nmentioned in our last email. Our intention was to recognize the\ntremendous effort that you have put into creating amazing\nuniversal apps. By partnering with us early, you showed your\ncommitment to our platform and a willingness to be trailblazers.</p>\n\n<p>So instead of the 200 USD credit that expires in May, we are\ngiving you a 500 USD Apple credit and extending the time you can\nuse it to get a new M1 Mac through the end of the year. If you\nalready purchased a new M1 Mac, the Apple credit gives you the\nflexibility to purchase any Apple product to help with your app\ndevelopment work.</p>\n</blockquote>\n\n<p>I would file this email under “Making Things Right”:</p>\n\n<ul>\n<li>Developers who paid for the DTKs get credit for the full $500.</li>\n<li>The expiration goes through the end of the year, by which point, surely, there will be a broad range of additional Apple Silicon Macs.</li>\n<li>If a developer in the DTK program has already bought an M1 Mac, they can use the $500 credit toward any other product.</li>\n</ul>\n\n<p>So what happened? I think it’s exactly what Apple’s second email states: someone at Apple thought $200 credit was a generous offer, the offer went out, Apple realized they made a mistake based on developer reaction, and they issued a new offer — 2.5× more costly in dollars, but clearly worth it to Apple in goodwill — within one day. My quibble isn’t that Apple made a mistake with the amount of the “appreciation credit”, but with why it took them so long to make the initial offer. Why not have it ready in December — especially given that the DTKs really are sort of crummy machines, and the M1 Macs are vastly superior in both performance and reliability? Apple should have done whatever it could to get developers to move from DTKs to production M1 Macs as soon as possible.</p>\n\n<p>Make few mistakes, but recognize the mistakes you do make quickly, admit to them, and fix them. That’s the recipe.</p>\n\n<div class=\"footnotes\">\n<hr />\n<ol>\n\n<li id=\"fn1-2021-02-11\">\n<p>My favorite story about the Intel DTKs <a href=\"https://daringfireball.net/2008/04/big_fan\">was about what they <em>sounded</em> like</a>, not what they looked like.&nbsp;<a href=\"#fnr1-2021-02-11\"  class=\"footnoteBackLink\"  title=\"Jump back to footnote 1 in the text.\">&#x21A9;&#xFE0E;</a></p>\n</li>\n\n<li id=\"fn2-2021-02-11\">\n<p><a href=\"https://daringfireball.net/linked/2020/08/17/apple-developer-program-license-agreement\">Another</a> legal PDF from Apple typeset in Arial. What the hell is going on in Apple’s legal department?&nbsp;<a href=\"#fnr2-2021-02-11\"  class=\"footnoteBackLink\"  title=\"Jump back to footnote 2 in the text.\">&#x21A9;&#xFE0E;︎</a></p>\n</li>\n\n</ol>\n</div>\n\n\n\n    ",
+      "date_published": "2021-02-12T00:18:44+00:00",
+      "date_modified": "2021-02-12T19:48:55+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/2021/02/whats_the_downside",
+      "url": "https://daringfireball.net/2021/02/whats_the_downside",
+      "title": "★ 2020 Quote of the Year: ‘What’s the Downside for Humoring Him?’",
+      "content_html": "\n<p><a href=\"https://www.washingtonpost.com/politics/2020/11/10/whats-downside-humoring-him-gop-officials-unintentionally-revealing-quote-about-trump-era/\">Aaron Blake, writing for The Washington Post back on November 10</a>:</p>\n\n<blockquote>\n  <p>When the history of the Trump era is written, we’ll struggle to\nfind quotes that are as revealing as one recorded Monday evening\n<a href=\"https://www.washingtonpost.com/politics/trump-republicans-election-challenges/2020/11/09/49e2c238-22c4-11eb-952e-0c475972cfc0_story.html\">by The Washington Post’s Amy Gardner, Ashley Parker, Josh Dawsey\nand Emma Brown</a>.</p>\n\n<p>Speaking about President Trump’s and his legal team’s myriad and\nbaseless claims of massive voter fraud, an anonymous senior\nRepublican official offered a rhetorical shrug.</p>\n\n<p>“What is the downside for humoring him for this little bit of\ntime? No one seriously thinks the results will change,” the\nofficial said. “He went golfing this weekend. It’s not like he’s\nplotting how to prevent Joe Biden from taking power on Jan. 20.\nHe’s tweeting about filing some lawsuits, those lawsuits will\nfail, then he’ll tweet some more about how the election was\nstolen, and then he’ll leave.”</p>\n</blockquote>\n\n<p>It’s fair to just straight up dunk on this quote. It did not age well. But it’s important to consider that we, collectively, are not good at imagining norm-shattering consequences. U.S. politicians don’t undermine democracy. Presidential successions have always been peaceful. We easily conflate things that merely <em>haven’t</em> happened with things that “can’t” happen.</p>\n\n<p>Trump lied, his supporters believed him (and continue to), and they acted upon that belief. If you truly believe that an election was stolen, riotous dissent is a reasonable course of action. You take to the streets. The downside for “humoring him for this little bit of time” should have been obvious to all: a historic, violent, calamity.</p>\n\n<p>This sort of “What’s the downside?” thinking extends far outside the Republican Party. I think it explains, for example, <a href=\"https://daringfireball.net/linked/2021/02/02/facebook-wingnut-groups\">the aforelinked post today about how Facebook’s leadership ignored warnings from the company’s own data scientists</a> that blatant misinformation was leading to calls for violence in Facebook’s “Groups” in the weeks running up to the election. <em>This stuff is loony, but it keeps them engaged. People post all sorts of crazy stuff, but they’re not really going to riot, right?</em></p>\n\n<p>Yes, actually, they were.</p>\n\n<p>“What’s the downside?” <em>is</em> the right question. The problem is the way the Republican Party, and to a lesser extent, Facebook and Twitter, approached the answer. There are some ideas that should never be humored. Prank calls to 911. Bomb threat “jokes” in the airport security line. Threats of violence against political leaders. Add to the list: <a href=\"https://twitter.com/TimothyDSnyder/status/1349046338927919105\">a Big Lie</a> about a fair election having been rigged.</p>\n\n\n\n    ",
+      "date_published": "2021-02-03T00:36:40+00:00",
+      "date_modified": "2021-02-03T00:46:54+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    },
+    {
+      "id": "https://daringfireball.net/2021/01/my_2020_apple_report_card",
+      "url": "https://daringfireball.net/2021/01/my_2020_apple_report_card",
+      "title": "★ My 2020 Apple Report Card",
+      "content_html": "\n<p>Jason Snell has published his annual <a href=\"https://sixcolors.com/post/2021/01/apple-in-2020-the-six-colors-report-card/\">Six Colors Apple Report Card for 2020</a>. This year 55 voters (hand-selected by Snell) graded Apple in 12 areas. I was one of them, and, <a href=\"https://daringfireball.net/2020/02/my_2019_apple_report_card\">once</a> <a href=\"https://daringfireball.net/2019/02/my_2018_apple_report_card\">again</a>, thought it only fair to publish my grades and remarks here at Daring Fireball. Comments in [brackets] are additional commentary I wrote now, and were not included in what I submitted to Snell.</p>\n\n<h2>Mac: A</h2>\n\n<p>This one is easy. The M1 Macs mark the best moment in Mac hardware history. Apple Silicon is that big a deal. MacOS 11 Big Sur is a success too. I think it’s fair to say we all have some gripes about certain visual aspects of the Big Sur user interface, but almost all of my issues are cosmetic. Structurally, Big Sur debuted as a more stable, more reliable OS than 10.15 Catalina ever was.</p>\n\n<h2>iPhone: A</h2>\n\n<p>I have one major complaint about iPhone in 2020: the iPhone 12 Pro and Pro Max are too heavy. But even that’s more of a wish than a complaint. We finally got a small iPhone again with the 12 Mini, and it’s a great device — a technical peer to the regular-sized iPhone 12 in every regard but (understandably) battery life. iOS 14 is a really nifty update, with a focus on enthusiast/power user features like Shortcuts and home screen widgets. You can see the bones of a conceptual system that will last for decades, just like MacOS has.</p>\n\n<h2>iPad: A</h2>\n\n<p>What a strange year the iPad had. (What a strange year we all had….) Hardware wise, iPad Pro got a very unusual <a href=\"https://daringfireball.net/2020/03/the_2020_ipad_pros\">“speed bump” update</a> early in the year, adding one extra GPU core and a lidar sensor on the camera system that doesn’t seem to have many practical uses. The new iPad Air <a href=\"https://daringfireball.net/2020/10/the_2020_ipad_air\">introduced in the fall</a> is nice — bringing the modern no-more-Home-button conceptual design to the non-Pro lineup. But the biggest thing to happen in iPadland in 2020 was the introduction of full mouse and keyboard support, in March, <a href=\"https://daringfireball.net/2020/04/the_ipad_magic_keyboard\">along with the excellent (albeit expensive) Magic Keyboard</a>. This is the single biggest addition to iPad in memory — it completely changes the number of tasks and sort of apps iPad is “good for”. And it came not at WWDC or alongside splashy new hardware models, but in an iPadOS 13.4 update released in the middle of what’s usually a pretty quiet stretch of the calendar for Apple.</p>\n\n<p>I am absolutely certain that the addition of excellent mouse pointer support throughout iPadOS changed my daily routine — I spend far more time using mine now because I’m far more productive for things like email and messaging and actual writing.</p>\n\n<h2>Apple Watch: B</h2>\n\n<h2>Wearables (Including Apple Watch): A</h2>\n\n<p>My only complaint about AirPods is that they remain so expensive. I’d really like to see Apple get them down to $99, or at least closer. It’s a bit odd, to me, that they haven’t come down in price at all since they were introduced. I’m not naive — I understand profit motive — but I just know, anecdotally, that for all the millions of happy AirPods users out there, there’s a lot of resistance to spending $159 “just for headphones”.</p>\n\n<h2>Apple TV (Hardware/OS): D</h2>\n\n<p>It’s very odd to me that Apple clearly cares a <em>lot</em> about TV content, but seemingly doesn’t have a coherent strategy for the hardware. It’s not expensive per se, but it is very expensive compared to other “streaming boxes”, and yet hasn’t been updated since 2017. Lots of people spend lots of time playing video games on boxes connected to their TVs, and Apple TV is a full-fledged part of Apple Arcade, but I don’t know anyone who plays video games on Apple Arcade. (Selling a would-be game box without a gaming controller probably isn’t a good strategy.)</p>\n\n<p>But you can’t chalk it up to “Well Apple just doesn’t care about TV” because the success of Apple TV+ and continuing excellence of the iTunes Store show they clearly do.</p>\n\n<h2>Services: B</h2>\n\n<p>Apple One is a good bundle at a compelling price.</p>\n\n<h2>HomeKit/Home: B</h2>\n\n<p>It feels like this whole effort is on the cusp of being more practically useful and less of a hobbyist endeavor.</p>\n\n<h2>Overall Reliability of Apple’s Hardware: A</h2>\n\n<p>None of my stuff broke so I’m happy. I had a pair of AirPods Pro get the dreaded “static during phone calls” thing, but Apple is doing the right thing with their <a href=\"https://support.apple.com/airpods-pro-service-program-sound-issues\">repair program</a>.</p>\n\n<h2>Apple Software Quality: B</h2>\n\n<p>Apple, famously, doesn’t like to explain itself, but the evidence seems clear that they’ve subtly moved to a model where major new OS features are released when they are ready, scattered over the course of the year. They’ve found a better balance between wanting to make big new tentpole feature announcements at WWDC, and shipping those features when they’re actually ready, not just when the 1.0 version of the OS is released.</p>\n\n<p>[If I had it to do all over again, I’d change this grade from a B to a C. At the time I voted, I was thinking only in terms of reliability and bugginess, and I do think 2020 was a decent year for Apple on that front. But as I revise these remarks today, I’m reminded of all the UI and interaction designs and changes in iOS and MacOS that are just bad. There’s a real sense that Apple’s current HI team, under Alan Dye, is a “<em>design is what it looks like</em>” group, not a “<em><a href=\"https://twitter.com/kocienda/status/1355555626928099329\">design is how it works</a></em>” group. Exhibit A: <a href=\"https://mjtsai.com/blog/2020/10/05/big-surs-hidden-document-proxy-icon/\">What MacOS 11 Big Sur has done to document proxy icons</a>. Arguably it looks better to hide them. (I disagree, but I can see the counterargument.) Inarguably, they work far worse now — harder to use for people who use them, and <em>much</em> harder to discover for people who don’t yet know about them.]</p>\n\n<h2>Social/Societal Impact: B</h2>\n\n<p>[I think Apple genuinely believes in the causes it supports: environmentalism, <a href=\"https://www.apple.com/newsroom/2021/01/apple-launches-major-new-racial-equity-and-justice-initiative-projects-to-challenge-systemic-racism-advance-racial-equity-nationwide/\">racial equity and justice</a>, and <a href=\"https://www.apple.com/newsroom/2020/12/a-landmark-year-of-giving-from-apple/\">more</a>. Anything beats <a href=\"https://daringfireball.net/2019/11/cook_trump_campaign_ad\">last year</a>, though.]</p>\n\n<h2>Developer Relations: C</h2>\n\n<p>You can look at <a href=\"https://daringfireball.net/2020/06/hey_app_store_rejection_flimsiness\">the “Hey” fiasco</a> right before WWDC and see it as a disaster, the perfect storm illustrating the problems with Apple’s tight control over the App Store, or look at it as an example of the system working. Apple made mistakes, then corrected the mistakes. I think the core problem is that Apple needs to recognize that a happy developer base is an incredible asset for the company. It’s not in Apple’s interests to squeeze every last cent out of the App Store. They’ve caught the attention of government regulators around the world, and developers, rightly or wrongly, feel like they’re being squeezed. There’s a palpable sense of resentment.</p>\n\n<p>It’s in Apple’s interests to foster a broad community of “Apple platform developers”. To inspire and encourage developers to rely on Apple’s platforms to build apps that are exclusive to those platforms. Apple benefits promotionally from such exclusivity, and users benefit from apps that are crafted to take advantage of native platform features. But the power dynamics of the App Store are such that developers feel like they need to do the opposite: to build cross-platform apps and systems to avoid relying on Apple.</p>\n\n<p>The <a href=\"https://developer.apple.com/app-store/small-business-program/\">App Store Small Business Program</a> introduced at the end of the year is a step in the right direction. But just a step.</p>\n\n\n\n    ",
+      "date_published": "2021-01-31T01:41:11+00:00",
+      "date_modified": "2021-02-05T20:02:39+00:00",
+      "authors": [
+        {
+          "name": "John Gruber"
+        }
+      ]
+    }
+  ]
+}

@@ -91,7 +91,12 @@ namespace JsonFeedNet
         /// If not specified, then the top-level author, if present, is the author of the item.
         /// </summary>
         [JsonProperty("author")]
+        [Obsolete("obsolete by specification version 1.1. Use `Authors`")]
         public JsonFeedAuthor Author { get; set; } //optional
+
+
+        [JsonProperty("authors")]
+        public JsonFeedAuthor[] Authors { get; set; } //optional
 
         /// <summary>
         /// Tags associated with the feed item.
@@ -100,6 +105,14 @@ namespace JsonFeedNet
         /// </summary>
         [JsonProperty("tags")]
         public List<string> Tags { get; set; } //optional
+
+        /// <summary>
+        ///  the language for this item in the format specified in RFC 5646.
+        /// The value is usually a 2-letter language tag from ISO 639-1, optionally followed by a region tag.
+        /// (Examples: en or en-US.)
+        /// </summary>
+        [JsonProperty("language")]
+        public string Language { get; set; } //optional
 
         /// <summary>
         /// Related resources for the feed item.
