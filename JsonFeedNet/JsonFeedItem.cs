@@ -1,4 +1,7 @@
-﻿using System;
+﻿// ReSharper disable UnusedMember.Global
+// ReSharper disable UnusedAutoPropertyAccessor.Global
+
+using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
@@ -27,7 +30,7 @@ namespace JsonFeedNet
 
         /// <summary>
         /// The URL of a page elsewhere.
-        /// This is especially useful for linkblogs.
+        /// This is especially useful for link blogs.
         /// </summary>
         [JsonProperty("external_url")]
         public string ExternalUrl { get; set; } //optional
@@ -68,7 +71,7 @@ namespace JsonFeedNet
 
         /// <summary>
         /// The URL of an image to use as a banner.
-        /// Some blogging systems (such as Medium) display a different banner image chosen to go with each post, but that image wouldn’t otherwise appear in the ContentHtml.
+        /// Some blogging systems (such as Medium) display a different banner image chosen to go with each post, but that image would not otherwise appear in the ContentHtml.
         /// A feed reader with a detail view may choose to show this banner image at the top of the detail view, possibly with the title overlaid.
         /// </summary>
         [JsonProperty("banner_image")]
@@ -116,7 +119,7 @@ namespace JsonFeedNet
 
         /// <summary>
         /// Related resources for the feed item.
-        /// Podcasts, for instance, would include an attachment that’s an audio or video file. 
+        /// Podcasts, for instance, would include an attachment that’s an audio or video file.
         /// </summary>
         [JsonProperty("attachments")]
         public List<JsonFeedAttachment> Attachments { get; set; } //optional

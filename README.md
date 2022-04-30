@@ -1,4 +1,4 @@
-JsonFeed.NET v0.2.1
+JsonFeed.NET v1.1.0
 ==============
 
 JsonFeed.NET is a portable .NET library for generating and consuming [JSON Feed](https://jsonfeed.org/) compliant site feeds.
@@ -41,19 +41,21 @@ var jsonFeed = new JsonFeed
 {
     Title = "Dan Rigby",
     Description = "Mobile App Development & More.",
-    HomePageUrl = @"http://danrigby.com",
-    FeedUrl = @"http://danrigby.com/feed.json",
-    Author = new JsonFeedAuthor
-    {
-        Name = "Dan Rigby",
-        Url = @"https://twitter.com/DanRigby",
+    HomePageUrl = @"https://danrigby.com",
+    FeedUrl = @"https://danrigby.com/feed.json",
+    Authors = new[] {
+        new JsonFeedAuthor
+        {
+            Name = "Dan Rigby",
+            Url = @"https://twitter.com/DanRigby",
+        }
     },
     Items = new List<JsonFeedItem>
     {
         new JsonFeedItem
         {
-            Id = @"http://danrigby.com/2015/09/12/inotifypropertychanged-the-net-4-6-way/",
-            Url = @"http://danrigby.com/2015/09/12/inotifypropertychanged-the-net-4-6-way/",
+            Id = @"https://danrigby.com/2015/09/12/inotifypropertychanged-the-net-4-6-way/",
+            Url = @"https://danrigby.com/2015/09/12/inotifypropertychanged-the-net-4-6-way/",
             Title = "INotifyPropertyChanged, The .NET 4.6 Way",
             ContentText = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             DatePublished = new DateTime(2015, 09, 12)
@@ -73,6 +75,6 @@ jsonFeed.Write(stream);
 
 ## License
 
-Copyright (c) 2017 Dan Rigby
+Copyright (c) 2022 Dan Rigby
 
 Licensed under the [MIT license](https://github.com/DanRigby/JsonFeed.Net/blob/master/LICENSE).

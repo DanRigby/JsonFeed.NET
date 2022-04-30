@@ -1,45 +1,33 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <ProjectGuid>{06D49D6D-5801-4EA8-8A85-B04E29B5B500}</ProjectGuid>
-    <DefaultLanguage>en-US</DefaultLanguage>
-    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
+    <OutputType>Library</OutputType>
     <AssemblyTitle>JsonFeed.NET</AssemblyTitle>
     <Product>JsonFeedNet</Product>
-    <NeutralLanguage>en</NeutralLanguage>
     <Description>Portable .NET library for generating and consuming JSON Feed (jsonfeed.org) compliant feeds.</Description>
-    <Copyright>Copyright 2017</Copyright>
+    <Copyright>Copyright 2022</Copyright>
     <Version>1.1.0.0</Version>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
-    <AssemblyTitle>JsonFeed.NET</AssemblyTitle>
-    <Product>JsonFeedNet</Product>
-    <NeutralLanguage>en</NeutralLanguage>
-    <Description>Portable .NET library for generating and consuming JSON Feed (jsonfeed.org) compliant feeds.</Description>
-    <Copyright>Copyright 2017</Copyright>
-    <Version>1.1.0.0</Version>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
-    <Description>Portable .NET library for generating and consuming JSON Feed (jsonfeed.org) compliant feeds.</Description>
-    <Copyright>Copyright 2017</Copyright>
-    <Version>1.1.0.0</Version>
-    <OutputPath>bin\$(Configuration)\</OutputPath>
     <Authors>Dan Rigby, RouR</Authors>
     <PackageId>JsonFeed.NET</PackageId>
-    <PackageLicenseUrl>https://github.com/DanRigby/JsonFeed.Net/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/DanRigby/JsonFeed.Net</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
-      Fix bad rename on JsonFeedItem.
+      Implemented 1.1 spec of JsonFeed.
     </PackageReleaseNotes>
     <PackageTags>jsonfeed jsonfeed.net jsonfeed.org</PackageTags>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugType>full</DebugType>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-  </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\LICENSE" Pack="false" />
+  </ItemGroup>
+
 </Project>

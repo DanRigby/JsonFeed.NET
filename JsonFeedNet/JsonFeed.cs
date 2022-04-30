@@ -1,4 +1,8 @@
-﻿using System;
+﻿// ReSharper disable UnusedAutoPropertyAccessor.Global
+// ReSharper disable CollectionNeverUpdated.Global
+// ReSharper disable MemberCanBePrivate.Global
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
@@ -115,7 +119,7 @@ namespace JsonFeedNet
         [JsonProperty("items")]
         public List<JsonFeedItem> Items { get; set; } //required
 
-        private static readonly JsonSerializerSettings _serializerSettings = new JsonSerializerSettings
+        private static readonly JsonSerializerSettings SerializerSettings = new JsonSerializerSettings
         {
             Formatting = Formatting.Indented,
             NullValueHandling = NullValueHandling.Ignore,
@@ -141,7 +145,7 @@ namespace JsonFeedNet
         /// <returns>A JsonFeed object representing the parsed feed.</returns>
         public static async Task<JsonFeed> ParseFromUriAsync(Uri jsonFeedUri, HttpMessageHandler httpMessageHandler = null)
         {
-            var client = new HttpClient(httpMessageHandler ?? new HttpClientHandler());
+            HttpClient client = new HttpClient(httpMessageHandler ?? new HttpClientHandler());
             string jsonDocument = await client.GetStringAsync(jsonFeedUri);
 
             return Parse(jsonDocument);
@@ -162,8 +166,8 @@ namespace JsonFeedNet
         /// <param name="stream">The stream to write the JSON to.</param>
         public void Write(Stream stream)
         {
-            var encoding = new UTF8Encoding(false);
-            var writer = new StreamWriter(stream, encoding);
+            UTF8Encoding encoding = new UTF8Encoding(false);
+            StreamWriter writer = new StreamWriter(stream, encoding);
             writer.Write(this);
             writer.Flush();
         }
@@ -174,7 +178,7 @@ namespace JsonFeedNet
         /// <returns>A string containing the generated feed JSON.</returns>
         public override string ToString()
         {
-            string jsonString = JsonConvert.SerializeObject(this, _serializerSettings);
+            string jsonString = JsonConvert.SerializeObject(this, SerializerSettings);
             return jsonString;
         }
     }
