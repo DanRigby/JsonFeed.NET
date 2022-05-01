@@ -1,9 +1,9 @@
-JsonFeed.NET v1.1.0
+JsonFeed.NET
 ==============
 
 JsonFeed.NET is a portable .NET library for generating and consuming [JSON Feed](https://jsonfeed.org/) compliant site feeds.
 
- [![NuGet Pre Release](https://img.shields.io/nuget/vpre/JsonFeed.NET.svg?style=plastic)](https://www.nuget.org/packages/JsonFeed.NET) [![Twitter Follow](https://img.shields.io/twitter/follow/DanRigby.svg?style=plastic)](https://twitter.com/DanRigby)
+[![build](https://img.shields.io/github/workflow/status/DanRigby/JsonFeed.NET/build)](https://github.com/DanRigby/JsonFeed.NET/actions/workflows/build.yml) [![NuGet Pre Release](https://img.shields.io/nuget/vpre/JsonFeed.NET.svg)](https://www.nuget.org/packages/JsonFeed.NET) [![Twitter Follow](https://img.shields.io/twitter/follow/DanRigby.svg)](https://twitter.com/DanRigby)
 
 #### Supported platforms
 * .NET Framework 4.5.1+
