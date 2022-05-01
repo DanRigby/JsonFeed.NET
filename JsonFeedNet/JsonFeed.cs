@@ -5,9 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Net.Http;
 using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace JsonFeedNet
@@ -133,22 +131,7 @@ namespace JsonFeedNet
         /// <returns>A JsonFeed object representing the parsed feed.</returns>
         public static JsonFeed Parse(string jsonFeedString)
         {
-            JsonFeed jsonFeed = JsonConvert.DeserializeObject<JsonFeed>(jsonFeedString);
-            return jsonFeed;
-        }
-
-        /// <summary>
-        /// Retrieves a remote feed from the specified Uri and parses it into a JsonFeed object for use by code.
-        /// </summary>
-        /// <param name="jsonFeedUri">The Uri of the JSON Feed to retrieve and parse.</param>
-        /// <param name="httpMessageHandler">Optional: A customer HttpMessageHandler implementation to use for the network requests(s).</param>
-        /// <returns>A JsonFeed object representing the parsed feed.</returns>
-        public static async Task<JsonFeed> ParseFromUriAsync(Uri jsonFeedUri, HttpMessageHandler httpMessageHandler = null)
-        {
-            HttpClient client = new HttpClient(httpMessageHandler ?? new HttpClientHandler());
-            string jsonDocument = await client.GetStringAsync(jsonFeedUri);
-
-            return Parse(jsonDocument);
+            return JsonConvert.DeserializeObject<JsonFeed>(jsonFeedString);
         }
 
         /// <summary>
@@ -166,10 +149,12 @@ namespace JsonFeedNet
         /// <param name="stream">The stream to write the JSON to.</param>
         public void Write(Stream stream)
         {
-            UTF8Encoding encoding = new UTF8Encoding(false);
-            StreamWriter writer = new StreamWriter(stream, encoding);
-            writer.Write(this);
-            writer.Flush();
+            var encoding = new UTF8Encoding(false);
+            using (var writer = new StreamWriter(stream, encoding))
+            {
+                writer.Write(this);
+                writer.Flush();
+            }
         }
 
         /// <summary>
@@ -178,8 +163,7 @@ namespace JsonFeedNet
         /// <returns>A string containing the generated feed JSON.</returns>
         public override string ToString()
         {
-            string jsonString = JsonConvert.SerializeObject(this, SerializerSettings);
-            return jsonString;
+            return JsonConvert.SerializeObject(this, SerializerSettings);
         }
     }
 }
