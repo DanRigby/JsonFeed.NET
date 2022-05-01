@@ -9,28 +9,18 @@ namespace JsonFeedNet.Tests;
 
 public class JsonFeedTests
 {
-    [Fact]
-    public void JsonFeedAuthorEquality()
+    [Theory]
+    [ClassData(typeof(JsonFeedEqualityTestData))]
+    public void JsonFeedEquality(JsonFeed a, JsonFeed b, bool expectedEquals)
     {
-        //Given
-        var author1 = new JsonFeedAuthor
+        if (expectedEquals)
         {
-            Avatar = "Avatar",
-            Name = "Name",
-            Url = "Url"
-        };
-
-        var author2 = new JsonFeedAuthor
+            Assert.Equal(a, b);
+        }
+        else
         {
-            Avatar = "Avatar",
-            Name = "Name",
-            Url = "Url"
-        };
-
-        //When
-
-
-        //Then
+            Assert.NotEqual(a, b);
+        }
     }
 
     [Theory]

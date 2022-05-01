@@ -6,6 +6,7 @@ public class JsonFeedEqualityTestData : TheoryData<JsonFeed, JsonFeed, bool>
 {
     public JsonFeedEqualityTestData()
     {
+        var dateTime = DateTimeOffset.UtcNow;
         Add(new JsonFeed
         {
             Version = "version",
@@ -55,8 +56,8 @@ public class JsonFeedEqualityTestData : TheoryData<JsonFeed, JsonFeed, bool>
                     Image = "image",
                     BannerImage = "bannerImage",
                     Language = "language",
-                    DateModified = DateTimeOffset.UtcNow,
-                    DatePublished = DateTimeOffset.UtcNow,
+                    DateModified = dateTime,
+                    DatePublished =dateTime,
                     Author = new JsonFeedAuthor
                     {
                         Avatar = "Avatar",
@@ -138,8 +139,8 @@ public class JsonFeedEqualityTestData : TheoryData<JsonFeed, JsonFeed, bool>
                     Image = "image",
                     BannerImage = "bannerImage",
                     Language = "language",
-                    DateModified = DateTimeOffset.UtcNow,
-                    DatePublished = DateTimeOffset.UtcNow,
+                    DateModified = dateTime,
+                    DatePublished =dateTime,
                     Author = new JsonFeedAuthor
                     {
                         Avatar = "Avatar",
