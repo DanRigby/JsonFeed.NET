@@ -1,183 +1,138 @@
 ﻿// ReSharper disable StringLiteralTypo
 
-using System.Reflection;
+using JustEat.HttpClientInterception;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Xunit;
 
-namespace JsonFeedNet.Tests
+namespace JsonFeedNet.Tests;
+
+public class JsonFeedTests
 {
-    public class JsonFeedTests
+    [Fact]
+    public void JsonFeedAuthorEquality()
     {
-        [Fact]
-        public void RoundtripSimple()
+        //Given
+        var author1 = new JsonFeedAuthor
         {
-            string inputJsonFeed = GetResourceAsString("Simple.json").NormalizeEndings();
-            JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
-            string outputJsonFeed = jsonFeed.Write().NormalizeEndings();
+            Avatar = "Avatar",
+            Name = "Name",
+            Url = "Url"
+        };
 
-            Assert.Equal(inputJsonFeed, outputJsonFeed);
-        }
-
-        [Fact]
-        public void RoundtripDaringFireballBlog()
+        var author2 = new JsonFeedAuthor
         {
-            string inputJsonFeed = GetResourceAsString("DaringFireballBlog.json").NormalizeEndings();
-            JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
-            string outputJsonFeed = jsonFeed.Write().NormalizeEndings();
+            Avatar = "Avatar",
+            Name = "Name",
+            Url = "Url"
+        };
 
-            Assert.Equal(inputJsonFeed.Length, outputJsonFeed.Length);
-        }
+        //When
 
-        [Fact]
-        public void RoundtripHyperCriticalBlog()
+
+        //Then
+    }
+
+    [Theory]
+    [ClassData(typeof(JsonFeedSerializationTestData))]
+    public void JsonFeedParseDeserializesDocumentCorrectly(string inputJsonFeed)
+    {
+        //Given
+        var jObjectJsonFeed = JObject.Parse(inputJsonFeed);
+
+        //When
+        var jsonFeed = JsonFeed.Parse(inputJsonFeed);
+
+        //Then
+        var props = typeof(JsonFeed).GetProperties();
+        foreach (var prop in props)
         {
-            string inputJsonFeed = GetResourceAsString("HyperCriticalBlog.json").NormalizeEndings();
-            JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
-            string outputJsonFeed = jsonFeed.Write().NormalizeEndings();
-
-            Assert.Equal(inputJsonFeed.Length, outputJsonFeed.Length);
-        }
-
-        [Fact]
-        public void RoundtripMaybePizzaBlog()
-        {
-            string inputJsonFeed = GetResourceAsString("MaybePizzaBlog.json").NormalizeEndings();
-            JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
-            string outputJsonFeed = jsonFeed.Write().NormalizeEndings();
-
-            Assert.Equal(inputJsonFeed.Length, outputJsonFeed.Length);
-        }
-
-        [Fact]
-        public void RoundtripTheRecordPodcast()
-        {
-            string inputJsonFeed = GetResourceAsString("TheRecordPodcast.json").NormalizeEndings();
-            JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
-            string outputJsonFeed = jsonFeed.Write().NormalizeEndings();
-
-            Assert.Equal(inputJsonFeed.Length, outputJsonFeed.Length);
-        }
-
-        [Fact]
-        public void RoundtripTimeTablePodcast()
-        {
-            string inputJsonFeed = GetResourceAsString("TimeTablePodcast.json").NormalizeEndings();
-            JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
-            string outputJsonFeed = jsonFeed.Write().NormalizeEndings();
-
-            Assert.Equal(inputJsonFeed.Length, outputJsonFeed.Length);
-        }
-
-        [Fact]
-        public void Version_1_1()
-        {
-            string inputJsonFeed = GetResourceAsString("json_v1.1.json").NormalizeEndings();
-            JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
-            string outputJsonFeed = jsonFeed.Write().NormalizeEndings();
-
-            Assert.Single(jsonFeed.Authors);
-            Assert.Equal("John Gruber", jsonFeed.Authors[0].Name);
-            Assert.Equal("https://twitter.com/gruber", jsonFeed.Authors[0].Url);
-            Assert.Equal(48, jsonFeed.Items.Count);
-            Assert.Single(jsonFeed.Items[0].Authors);
-            Assert.Equal("John Gruber", jsonFeed.Items[0].Authors[0].Name);
-
-            Assert.Equal(inputJsonFeed, outputJsonFeed);
-            Assert.Equal(inputJsonFeed.Length, outputJsonFeed.Length);
-        }
-
-        [Fact]
-        public async Task ParseFromUri()
-        {
-            JsonFeed jsonFeed = await JsonFeed.ParseFromUriAsync(new Uri("https://jsonfeed.org/feed.json"));
-            string outputJsonFeed = jsonFeed.Write();
-
-            Assert.NotEmpty(outputJsonFeed);
-        }
-
-        [Fact]
-        public async Task ParseFromUriWithCustomHttpMessageHandler()
-        {
-            JsonFeed jsonFeed = await JsonFeed.ParseFromUriAsync(new Uri("https://jsonfeed.org/feed.json"), new HttpClientHandler());
-            string outputJsonFeed = jsonFeed.Write();
-
-            Assert.NotEmpty(outputJsonFeed);
-        }
-
-        [Fact]
-        public void WriteFeedToString()
-        {
-            JsonFeed jsonFeed = new()
+            var attrs = prop.GetCustomAttributes(true);
+            foreach (var attr in attrs)
             {
-                Title = "Dan Rigby",
-                Description = "Mobile App Development & More.",
-                HomePageUrl = @"https://danrigby.com",
-                FeedUrl = @"https://danrigby.com/feed.json",
-                Authors = new[] {
-                    new JsonFeedAuthor
-                    {
-                        Name = "Dan Rigby",
-                        Url = @"https://twitter.com/DanRigby",
-                    }
-                },
-                Items = new List<JsonFeedItem>
+                var jsonProperty = attr as JsonPropertyAttribute;
+                if (jsonProperty == null)
                 {
-                    new()
-                    {
-                        Id = @"https://danrigby.com/2015/09/12/inotifypropertychanged-the-net-4-6-way/",
-                        Url = @"https://danrigby.com/2015/09/12/inotifypropertychanged-the-net-4-6-way/",
-                        Title = "INotifyPropertyChanged, The .NET 4.6 Way",
-                        ContentText = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                        DatePublished = new DateTime(2015, 09, 12)
-                    }
+                    //Continue if property doesnt have a Json Property Attribute
+                    continue;
                 }
-            };
 
-            string jsonFeedString = jsonFeed.Write();
+                var jsonPropertyName = jsonProperty.PropertyName;
+                var propertyValue = prop.GetValue(jsonFeed);
 
-            Assert.NotEmpty(jsonFeedString);
-        }
+                if (!jObjectJsonFeed.TryGetValue(jsonPropertyName, out var jToken))
+                {
+                    //Property not defined in json document
+                    Assert.Null(propertyValue);
+                    continue;
+                }
 
-        [Fact]
-        public void WriteFeedToStream()
-        {
-            string inputJsonFeed = GetResourceAsString("Simple.json").NormalizeEndings();
-            JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
-
-            using MemoryStream memoryStream = new();
-            jsonFeed.Write(memoryStream);
-            memoryStream.Position = 0;
-
-            using StreamReader reader = new(memoryStream);
-            string outputJsonFeed = reader.ReadToEnd().NormalizeEndings();
-
-            Assert.Equal(inputJsonFeed, outputJsonFeed);
-        }
-
-        private static string GetResourceAsString(string resourceName)
-        {
-            using Stream? stream = GetResourceAsStream(resourceName);
-            if (stream == null)
-            {
-                return string.Empty;
+                //Assert 
+                var jsonPropertyValue = jToken.ToObject(prop.PropertyType);
+                switch (jsonPropertyValue)
+                {
+                    case List<JsonFeedAuthor> authors:
+                        Assert.Equal(authors, propertyValue as List<JsonFeedAuthor>);
+                        break;
+                    case List<JsonFeedItem> feedItems:
+                        Assert.Equal(feedItems, propertyValue as List<JsonFeedItem>);
+                        break;
+                    case List<JsonFeedHub> feedHubs:
+                        Assert.Equal(feedHubs, propertyValue as List<JsonFeedHub>);
+                        break;
+                    default:
+                        Assert.Equal(jsonPropertyValue, propertyValue);
+                        break;
+                }
             }
-
-            using StreamReader reader = new(stream);
-            return reader.ReadToEnd();
-        }
-
-        private static Stream? GetResourceAsStream(string resourceName)
-        {
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            return assembly.GetManifestResourceStream($"JsonFeedNet.Tests.Resources.{resourceName}");
         }
     }
 
-    public static class TestExtensions
+    [Fact]
+    public async Task ParseFromUriAsyncMakesNetworkRequestAndDeserializesOutput()
     {
-        public static string NormalizeEndings(this string value)
-        {
-            string result = value.Replace("\r\n", "\n").Replace("\r", "\n");
-            return result;
-        }
+        //Given
+        var inputJsonFeed = TestExtensions.GetResourceAsString("Simple.json");
+        var expectedJsonFeed = JsonFeed.Parse(inputJsonFeed);
+        var contentUri = new Uri("https://jsonfeed.org/feed.json");
+        var options = new HttpClientInterceptorOptions();
+        var builder = new HttpRequestInterceptionBuilder();
+
+        builder
+            .Requests()
+            .ForGet()
+            .ForHttps()
+            .ForHost("jsonfeed.org")
+            .ForUri(contentUri)
+            .Responds()
+            .WithContent(inputJsonFeed)
+            .RegisterWith(options);
+
+        using var client = options.CreateHttpClient();
+
+        //When
+        var jsonFeed = await client.ParseFromUriAsync(contentUri);
+
+        //Then
+        Assert.Equal(expectedJsonFeed, jsonFeed);
+    }
+
+    [Fact]
+    public void WriteFeedToStream()
+    {
+        //Given
+        var inputJsonFeed = TestExtensions.GetResourceAsString("Simple.json").NormalizeEndings();
+        var jsonFeed = JsonFeed.Parse(inputJsonFeed);
+
+        using MemoryStream memoryStream = new();
+        //When
+        jsonFeed.Write(memoryStream);
+        memoryStream.Position = 0;
+
+        //Then
+        using StreamReader reader = new(memoryStream);
+        var outputJsonFeed = reader.ReadToEnd().NormalizeEndings();
+
+        Assert.Equal(inputJsonFeed, outputJsonFeed);
     }
 }
