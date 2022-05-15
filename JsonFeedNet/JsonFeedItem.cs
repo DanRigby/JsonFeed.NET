@@ -151,7 +151,9 @@ namespace JsonFeedNet
                 Language == other.Language &&
                 Nullable.Equals(DatePublished, other.DatePublished) &&
                 Nullable.Equals(DateModified, other.DateModified) &&
+                #pragma warning disable 0618
                 (Equals(Author, other.Author) || Author.Equals(other.Author)) &&
+                #pragma warning restore 0618
                 (Equals(Authors, other.Authors) || Authors.SequenceEqual(other.Authors)) &&
                 (Equals(Tags, other.Tags) || Tags.SequenceEqual(other.Tags)) &&
                 (Equals(Attachments, other.Attachments) || Attachments.SequenceEqual(other.Attachments));
@@ -192,7 +194,9 @@ namespace JsonFeedNet
                 hashCode = (hashCode * 397) ^ (BannerImage != null ? BannerImage.GetHashCode() : 0);
                 hashCode = (hashCode * 397) ^ DatePublished.GetHashCode();
                 hashCode = (hashCode * 397) ^ DateModified.GetHashCode();
+                #pragma warning disable 0618
                 hashCode = (hashCode * 397) ^ (Author != null ? Author.GetHashCode() : 0);
+                #pragma warning restore 0618
                 hashCode = (hashCode * 397) ^ (Authors != null ? Authors.GetHashCode() : 0);
                 hashCode = (hashCode * 397) ^ (Tags != null ? Tags.GetHashCode() : 0);
                 hashCode = (hashCode * 397) ^ (Language != null ? Language.GetHashCode() : 0);

@@ -149,7 +149,9 @@ namespace JsonFeedNet
                 FavIcon == other.FavIcon &&
                 Language == other.Language &&
                 Expired == other.Expired &&
+                #pragma warning disable 0618
                 (Equals(Author, other.Author) || Author.Equals(other.Author)) &&
+                #pragma warning restore 0618
                 (Equals(Authors, other.Authors) || Authors.SequenceEqual(other.Authors)) &&
                 (Equals(Hubs, other.Hubs) || Hubs.SequenceEqual(other.Hubs)) &&
                 (Equals(Items, other.Items) || Items.SequenceEqual(other.Items));
