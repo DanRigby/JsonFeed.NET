@@ -2,12 +2,7 @@
 // ReSharper disable CollectionNeverUpdated.Global
 // ReSharper disable MemberCanBePrivate.Global
 
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Net.Http;
 using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace JsonFeedNet
@@ -157,7 +152,7 @@ namespace JsonFeedNet
         /// <returns>A string containing the generated feed JSON.</returns>
         public string Write()
         {
-            return this.ToString();
+            return ToString();
         }
 
         /// <summary>

@@ -1,8 +1,6 @@
 ﻿// ReSharper disable UnusedMember.Global
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 
-using System;
-using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace JsonFeedNet
@@ -96,7 +94,6 @@ namespace JsonFeedNet
         [JsonProperty("author")]
         [Obsolete("obsolete by specification version 1.1. Use `Authors`")]
         public JsonFeedAuthor Author { get; set; } //optional
-
 
         [JsonProperty("authors")]
         public JsonFeedAuthor[] Authors { get; set; } //optional
