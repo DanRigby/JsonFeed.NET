@@ -68,7 +68,7 @@ namespace JsonFeedNet.Tests
         }
 
         [Fact]
-        public void Version_1_1()
+        public void VersionOneDotOne()
         {
             string inputJsonFeed = GetResourceAsString("json_v1.1.json").NormalizeEndings();
             JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);

@@ -13,10 +13,22 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Setup DotNet
+    - name: Setup DotNet 3.1
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '3.1.x'
+
+    - name: Setup DotNet 6.0
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: '6.0.x'
+
+    - name: Install Tools
+      run: |
+        dotnet new tool-manifest
+        dotnet tool install JetBrains.ReSharper.GlobalTools
+        dotnet tool install nvika
+        dotnet tool restore
 
     - name: Restore Dependencies
       run: dotnet restore
@@ -26,3 +38,9 @@ jobs:
 
     - name: Run Tests
       run: dotnet test --no-build --verbosity normal
+
+    - name: Run InspectCode
+      run: jb inspectcode --build --swea --severity=SUGGESTION --output=inspectcode.xml JsonFeed.Net.sln
+
+    - name: Run NVika
+      run: dotnet nvika parsereport inspectcode.xml
