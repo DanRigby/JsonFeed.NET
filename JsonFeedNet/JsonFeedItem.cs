@@ -104,8 +104,8 @@ namespace JsonFeedNet
         [Obsolete("obsolete by specification version 1.1. Use `Authors`")]
         public JsonFeedAuthor Author { get; set; } //optional
 
-
-        [JsonProperty("authors")] public List<JsonFeedAuthor> Authors { get; set; } //optional
+        [JsonProperty("authors")] 
+        public List<JsonFeedAuthor> Authors { get; set; } //optional
 
         /// <summary>
         ///     Tags associated with the feed item.
