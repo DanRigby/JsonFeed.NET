@@ -26,7 +26,7 @@ jobs:
     - name: Install Tools
       run: |
         dotnet new tool-manifest
-        dotnet tool install JetBrains.ReSharper.GlobalTools
+        dotnet tool install JetBrains.ReSharper.GlobalTools --tool-path dotnet-tools
         dotnet tool install nvika
         dotnet tool restore
 
@@ -40,7 +40,7 @@ jobs:
       run: dotnet test --no-build --verbosity normal
 
     - name: Run InspectCode
-      run: jb inspectcode --build --swea --severity=SUGGESTION --output=inspectcode.xml JsonFeed.Net.sln
+      run: dotnet-tools\jb inspectcode --build --swea --severity=SUGGESTION --output=inspectcode.xml JsonFeed.Net.sln
 
     - name: Run NVika
       run: dotnet nvika parsereport inspectcode.xml
