@@ -41,4 +41,4 @@ jobs:
       run: jb inspectcode --no-build --swea --severity=SUGGESTION --output=inspectcode.xml JsonFeed.Net.sln
 
     - name: Run NVika
-      run: NVika parsereport "inspectcode.xml"
+      run: dotnet nvika parsereport "inspectcode.xml"
