@@ -97,10 +97,10 @@ public class JsonFeedTests
             .WithContent(inputJsonFeed)
             .RegisterWith(options);
 
-        using HttpClient? client = options.CreateHttpClient();
+        using DelegatingHandler? handler = options.CreateHttpMessageHandler();
 
         //When
-        JsonFeed? jsonFeed = await client.ParseFromUriAsync(contentUri);
+        JsonFeed? jsonFeed = await JsonFeed.ParseFromUriAsync(contentUri, handler);
 
         //Then
         Assert.Equal(expectedJsonFeed, jsonFeed);

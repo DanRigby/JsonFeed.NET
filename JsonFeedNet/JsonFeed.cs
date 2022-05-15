@@ -168,6 +168,20 @@ namespace JsonFeedNet
         }
 
         /// <summary>
+        ///     Retrieves a remote feed from the specified Uri and parses it into a JsonFeed object for use by code.
+        /// </summary>
+        /// <param name="jsonFeedUri">The Uri of the JSON Feed to retrieve and parse.</param>
+        /// <param name="httpMessageHandler">Optional: A customer HttpMessageHandler implementation to use for the network requests(s).</param>
+        /// <returns>A JsonFeed object representing the parsed feed.</returns>
+        public static async Task<JsonFeed> ParseFromUriAsync(Uri jsonFeedUri, HttpMessageHandler httpMessageHandler = null)
+        {
+            HttpClient client = new HttpClient(httpMessageHandler ?? new HttpClientHandler());
+            string jsonDocument = await client.GetStringAsync(jsonFeedUri);
+
+            return Parse(jsonDocument);
+        }
+
+        /// <summary>
         ///     Serializes the JsonFeed object into a JSON string.
         /// </summary>
         /// <returns>A string containing the generated feed JSON.</returns>
