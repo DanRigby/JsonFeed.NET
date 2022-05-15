@@ -56,11 +56,12 @@ namespace JsonFeedNet
                 return true;
             }
 
-            return Url == other.Url &&
-                   MimeType == other.MimeType &&
-                   Title == other.Title &&
-                   SizeInBytes == other.SizeInBytes &&
-                   DurationInSeconds == other.DurationInSeconds;
+            return
+                Url == other.Url &&
+                MimeType == other.MimeType &&
+                Title == other.Title &&
+                SizeInBytes == other.SizeInBytes &&
+                DurationInSeconds == other.DurationInSeconds;
         }
 
         public override bool Equals(object obj)

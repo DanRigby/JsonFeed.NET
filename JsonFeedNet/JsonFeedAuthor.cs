@@ -42,7 +42,10 @@ namespace JsonFeedNet
                 return true;
             }
 
-            return Name == other.Name && Url == other.Url && Avatar == other.Avatar;
+            return
+                Name == other.Name &&
+                Url == other.Url &&
+                Avatar == other.Avatar;
         }
 
         public override bool Equals(object obj)
