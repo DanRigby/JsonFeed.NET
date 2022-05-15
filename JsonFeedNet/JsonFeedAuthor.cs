@@ -5,7 +5,7 @@ namespace JsonFeedNet
     /// <summary>
     ///     A feed author.
     /// </summary>
-    public class JsonFeedAuthor : IEquatable<JsonFeedAuthor>
+    public class JsonFeedAuthor
     {
         /// <summary>
         ///     The author's name.
@@ -27,58 +27,5 @@ namespace JsonFeedNet
         /// </summary>
         [JsonProperty("avatar")]
         public string Avatar { get; set; } //optional
-
-        #region IEquatable
-
-        public bool Equals(JsonFeedAuthor other)
-        {
-            if (ReferenceEquals(null, other))
-            {
-                return false;
-            }
-
-            if (ReferenceEquals(this, other))
-            {
-                return true;
-            }
-
-            return
-                Name == other.Name &&
-                Url == other.Url &&
-                Avatar == other.Avatar;
-        }
-
-        public override bool Equals(object obj)
-        {
-            if (ReferenceEquals(null, obj))
-            {
-                return false;
-            }
-
-            if (ReferenceEquals(this, obj))
-            {
-                return true;
-            }
-
-            if (obj.GetType() != GetType())
-            {
-                return false;
-            }
-
-            return Equals((JsonFeedAuthor)obj);
-        }
-
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                int hashCode = Name != null ? Name.GetHashCode() : 0;
-                hashCode = (hashCode * 397) ^ (Url != null ? Url.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (Avatar != null ? Avatar.GetHashCode() : 0);
-                return hashCode;
-            }
-        }
-
-        #endregion
     }
 }

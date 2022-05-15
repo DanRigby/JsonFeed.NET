@@ -8,7 +8,7 @@ namespace JsonFeedNet
     /// <summary>
     ///     An individual item in a feed.
     /// </summary>
-    public class JsonFeedItem : IEquatable<JsonFeedItem>
+    public class JsonFeedItem
     {
         /// <summary>
         ///     The unique identifier for the feed item.
@@ -123,88 +123,5 @@ namespace JsonFeedNet
         /// </summary>
         [JsonProperty("attachments")]
         public List<JsonFeedAttachment> Attachments { get; set; } //optional
-
-        #region IEquatable
-
-        public bool Equals(JsonFeedItem other)
-        {
-            if (ReferenceEquals(null, other))
-            {
-                return false;
-            }
-
-            if (ReferenceEquals(this, other))
-            {
-                return true;
-            }
-
-            return
-                Id == other.Id &&
-                Url == other.Url &&
-                ExternalUrl == other.ExternalUrl &&
-                Title == other.Title &&
-                ContentHtml == other.ContentHtml &&
-                ContentText == other.ContentText &&
-                Summary == other.Summary &&
-                Image == other.Image &&
-                BannerImage == other.BannerImage &&
-                Language == other.Language &&
-                Nullable.Equals(DatePublished, other.DatePublished) &&
-                Nullable.Equals(DateModified, other.DateModified) &&
-                #pragma warning disable 0618
-                (Equals(Author, other.Author) || Author.Equals(other.Author)) &&
-                #pragma warning restore 0618
-                (Equals(Authors, other.Authors) || Authors.SequenceEqual(other.Authors)) &&
-                (Equals(Tags, other.Tags) || Tags.SequenceEqual(other.Tags)) &&
-                (Equals(Attachments, other.Attachments) || Attachments.SequenceEqual(other.Attachments));
-        }
-
-        public override bool Equals(object obj)
-        {
-            if (ReferenceEquals(null, obj))
-            {
-                return false;
-            }
-
-            if (ReferenceEquals(this, obj))
-            {
-                return true;
-            }
-
-            if (obj.GetType() != GetType())
-            {
-                return false;
-            }
-
-            return Equals((JsonFeedItem)obj);
-        }
-
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                int hashCode = Id != null ? Id.GetHashCode() : 0;
-                hashCode = (hashCode * 397) ^ (Url != null ? Url.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (ExternalUrl != null ? ExternalUrl.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (Title != null ? Title.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (ContentHtml != null ? ContentHtml.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (ContentText != null ? ContentText.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (Summary != null ? Summary.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (Image != null ? Image.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (BannerImage != null ? BannerImage.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ DatePublished.GetHashCode();
-                hashCode = (hashCode * 397) ^ DateModified.GetHashCode();
-                #pragma warning disable 0618
-                hashCode = (hashCode * 397) ^ (Author != null ? Author.GetHashCode() : 0);
-                #pragma warning restore 0618
-                hashCode = (hashCode * 397) ^ (Authors != null ? Authors.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (Tags != null ? Tags.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (Language != null ? Language.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (Attachments != null ? Attachments.GetHashCode() : 0);
-                return hashCode;
-            }
-        }
-
-        #endregion
     }
 }

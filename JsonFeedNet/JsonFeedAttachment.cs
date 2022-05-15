@@ -7,7 +7,7 @@ namespace JsonFeedNet
     /// <summary>
     ///     A related resource to a feed.
     /// </summary>
-    public class JsonFeedAttachment : IEquatable<JsonFeedAttachment>
+    public class JsonFeedAttachment
     {
         /// <summary>
         ///     The location of the attachment.
@@ -41,62 +41,5 @@ namespace JsonFeedNet
         /// </summary>
         [JsonProperty("duration_in_seconds")]
         public long? DurationInSeconds { get; set; } //optional
-
-        #region IEquatable
-
-        public bool Equals(JsonFeedAttachment other)
-        {
-            if (ReferenceEquals(null, other))
-            {
-                return false;
-            }
-
-            if (ReferenceEquals(this, other))
-            {
-                return true;
-            }
-
-            return
-                Url == other.Url &&
-                MimeType == other.MimeType &&
-                Title == other.Title &&
-                SizeInBytes == other.SizeInBytes &&
-                DurationInSeconds == other.DurationInSeconds;
-        }
-
-        public override bool Equals(object obj)
-        {
-            if (ReferenceEquals(null, obj))
-            {
-                return false;
-            }
-
-            if (ReferenceEquals(this, obj))
-            {
-                return true;
-            }
-
-            if (obj.GetType() != GetType())
-            {
-                return false;
-            }
-
-            return Equals((JsonFeedAttachment)obj);
-        }
-
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                int hashCode = Url != null ? Url.GetHashCode() : 0;
-                hashCode = (hashCode * 397) ^ (MimeType != null ? MimeType.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (Title != null ? Title.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ SizeInBytes.GetHashCode();
-                hashCode = (hashCode * 397) ^ DurationInSeconds.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        #endregion
     }
 }

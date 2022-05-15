@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace JsonFeedNet
 {
-    public class JsonFeed : IEquatable<JsonFeed>
+    public class JsonFeed
     {
         private static readonly JsonSerializerSettings SerializerSettings = new JsonSerializerSettings
         {
@@ -122,42 +122,6 @@ namespace JsonFeedNet
         /// </summary>
         [JsonProperty("items")]
         public List<JsonFeedItem> Items { get; set; } //required
-
-        #region IEquatable
-
-        public bool Equals(JsonFeed other)
-        {
-            if (ReferenceEquals(null, other))
-            {
-                return false;
-            }
-
-            if (ReferenceEquals(this, other))
-            {
-                return true;
-            }
-
-            return
-                Version == other.Version &&
-                Title == other.Title &&
-                HomePageUrl == other.HomePageUrl &&
-                FeedUrl == other.FeedUrl &&
-                Description == other.Description &&
-                UserComment == other.UserComment &&
-                NextUrl == other.NextUrl &&
-                Icon == other.Icon &&
-                FavIcon == other.FavIcon &&
-                Language == other.Language &&
-                Expired == other.Expired &&
-                #pragma warning disable 0618
-                (Equals(Author, other.Author) || Author.Equals(other.Author)) &&
-                #pragma warning restore 0618
-                (Equals(Authors, other.Authors) || Authors.SequenceEqual(other.Authors)) &&
-                (Equals(Hubs, other.Hubs) || Hubs.SequenceEqual(other.Hubs)) &&
-                (Equals(Items, other.Items) || Items.SequenceEqual(other.Items));
-        }
-
-        #endregion
 
         /// <summary>
         ///     Parses a JsonFeed in an input string into a JsonFeed object for use by code.
