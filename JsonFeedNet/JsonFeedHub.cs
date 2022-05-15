@@ -1,6 +1,5 @@
 ﻿// ReSharper disable ClassNeverInstantiated.Global
 
-using System;
 using Newtonsoft.Json;
 
 namespace JsonFeedNet

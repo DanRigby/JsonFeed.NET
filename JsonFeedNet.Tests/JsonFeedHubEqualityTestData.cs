@@ -7,14 +7,14 @@ public class JsonFeedhubEqualityTestData : TheoryData<JsonFeedHub, JsonFeedHub, 
     public JsonFeedhubEqualityTestData()
     {
         Add(new JsonFeedHub
-            {
-                Type = "type",
-                Url = "url"
-            },
-            new JsonFeedHub
-            {
-                Type = "type",
-                Url = "url"
-            }, true);
+        {
+            Type = "type",
+            Url = "url"
+        },
+        new JsonFeedHub
+        {
+            Type = "type",
+            Url = "url"
+        }, true);
     }
 }

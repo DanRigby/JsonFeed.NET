@@ -1,9 +1,6 @@
 ﻿// ReSharper disable UnusedMember.Global
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Newtonsoft.Json;
 
 namespace JsonFeedNet
@@ -86,15 +83,12 @@ namespace JsonFeedNet
         ///     The date the feed item was published.
         /// </summary>
         [JsonProperty("date_published")]
-        public DateTimeOffset?
-            DatePublished { get; set; } //optional RFC 3339 format. (Example: 2010-02-07T14:04:00-05:00.)
-
+        public DateTimeOffset? DatePublished { get; set; } //optional - RFC 3339 format (Example: 2010-02-07T14:04:00-05:00.)
         /// <summary>
         ///     The date the feed item was modified.
         /// </summary>
         [JsonProperty("date_modified")]
-        public DateTimeOffset?
-            DateModified { get; set; } //optional RFC 3339 format. (Example: 2010-02-07T14:04:00-05:00.)
+        public DateTimeOffset? DateModified { get; set; } //optional - RFC 3339 format (Example: 2010-02-07T14:04:00-05:00.)
 
         /// <summary>
         ///     Feed item author.
@@ -104,7 +98,7 @@ namespace JsonFeedNet
         [Obsolete("obsolete by specification version 1.1. Use `Authors`")]
         public JsonFeedAuthor Author { get; set; } //optional
 
-        [JsonProperty("authors")] 
+        [JsonProperty("authors")]
         public List<JsonFeedAuthor> Authors { get; set; } //optional
 
         /// <summary>
@@ -144,22 +138,23 @@ namespace JsonFeedNet
                 return true;
             }
 
-            return Id == other.Id &&
-                   Url == other.Url &&
-                   ExternalUrl == other.ExternalUrl &&
-                   Title == other.Title &&
-                   ContentHtml == other.ContentHtml &&
-                   ContentText == other.ContentText &&
-                   Summary == other.Summary &&
-                   Image == other.Image &&
-                   BannerImage == other.BannerImage &&
-                   Language == other.Language &&
-                   Nullable.Equals(DatePublished, other.DatePublished) &&
-                   Nullable.Equals(DateModified, other.DateModified) &&
-                   (Equals(Author, other.Author) || Author.Equals(other.Author)) &&
-                   (Equals(Authors, other.Authors) || Authors.SequenceEqual(other.Authors)) &&
-                   (Equals(Tags, other.Tags) || Tags.SequenceEqual(other.Tags)) &&
-                   (Equals(Attachments, other.Attachments) || Attachments.SequenceEqual(other.Attachments));
+            return
+                Id == other.Id &&
+                Url == other.Url &&
+                ExternalUrl == other.ExternalUrl &&
+                Title == other.Title &&
+                ContentHtml == other.ContentHtml &&
+                ContentText == other.ContentText &&
+                Summary == other.Summary &&
+                Image == other.Image &&
+                BannerImage == other.BannerImage &&
+                Language == other.Language &&
+                Nullable.Equals(DatePublished, other.DatePublished) &&
+                Nullable.Equals(DateModified, other.DateModified) &&
+                (Equals(Author, other.Author) || Author.Equals(other.Author)) &&
+                (Equals(Authors, other.Authors) || Authors.SequenceEqual(other.Authors)) &&
+                (Equals(Tags, other.Tags) || Tags.SequenceEqual(other.Tags)) &&
+                (Equals(Attachments, other.Attachments) || Attachments.SequenceEqual(other.Attachments));
         }
 
         public override bool Equals(object obj)
@@ -186,7 +181,7 @@ namespace JsonFeedNet
         {
             unchecked
             {
-                var hashCode = Id != null ? Id.GetHashCode() : 0;
+                int hashCode = Id != null ? Id.GetHashCode() : 0;
                 hashCode = (hashCode * 397) ^ (Url != null ? Url.GetHashCode() : 0);
                 hashCode = (hashCode * 397) ^ (ExternalUrl != null ? ExternalUrl.GetHashCode() : 0);
                 hashCode = (hashCode * 397) ^ (Title != null ? Title.GetHashCode() : 0);

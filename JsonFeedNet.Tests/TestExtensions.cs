@@ -11,7 +11,7 @@ public static class TestExtensions
 
     public static string GetResourceAsString(string resourceName)
     {
-        using var stream = GetResourceAsStream(resourceName);
+        using Stream? stream = GetResourceAsStream(resourceName);
         if (stream == null)
         {
             return string.Empty;

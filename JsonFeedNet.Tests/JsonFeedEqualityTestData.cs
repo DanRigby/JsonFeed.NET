@@ -6,7 +6,7 @@ public class JsonFeedEqualityTestData : TheoryData<JsonFeed, JsonFeed, bool>
 {
     public JsonFeedEqualityTestData()
     {
-        var dateTime = DateTimeOffset.UtcNow;
+        DateTimeOffset dateTime = DateTimeOffset.UtcNow;
         Add(new JsonFeed
         {
             Version = "version",

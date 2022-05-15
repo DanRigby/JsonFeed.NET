@@ -1,5 +1,4 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace JsonFeedNet
 {
@@ -70,7 +69,7 @@ namespace JsonFeedNet
         {
             unchecked
             {
-                var hashCode = Name != null ? Name.GetHashCode() : 0;
+                int hashCode = Name != null ? Name.GetHashCode() : 0;
                 hashCode = (hashCode * 397) ^ (Url != null ? Url.GetHashCode() : 0);
                 hashCode = (hashCode * 397) ^ (Avatar != null ? Avatar.GetHashCode() : 0);
                 return hashCode;

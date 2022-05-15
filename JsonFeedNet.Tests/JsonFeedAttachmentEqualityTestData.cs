@@ -7,20 +7,20 @@ public class JsonFeedAttachmentEqualityTestData : TheoryData<JsonFeedAttachment,
     public JsonFeedAttachmentEqualityTestData()
     {
         Add(new JsonFeedAttachment
-            {
-                Url = "url",
-                MimeType = "mimeType",
-                Title = "title",
-                SizeInBytes = 0,
-                DurationInSeconds = 0
-            },
-            new JsonFeedAttachment
-            {
-                Url = "url",
-                MimeType = "mimeType",
-                Title = "title",
-                SizeInBytes = 0,
-                DurationInSeconds = 0
-            }, true);
+        {
+            Url = "url",
+            MimeType = "mimeType",
+            Title = "title",
+            SizeInBytes = 0,
+            DurationInSeconds = 0
+        },
+        new JsonFeedAttachment
+        {
+            Url = "url",
+            MimeType = "mimeType",
+            Title = "title",
+            SizeInBytes = 0,
+            DurationInSeconds = 0
+        }, true);
     }
 }

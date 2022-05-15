@@ -1,6 +1,5 @@
 ﻿// ReSharper disable ClassNeverInstantiated.Global
 
-using System;
 using Newtonsoft.Json;
 
 namespace JsonFeedNet
@@ -88,7 +87,7 @@ namespace JsonFeedNet
         {
             unchecked
             {
-                var hashCode = Url != null ? Url.GetHashCode() : 0;
+                int hashCode = Url != null ? Url.GetHashCode() : 0;
                 hashCode = (hashCode * 397) ^ (MimeType != null ? MimeType.GetHashCode() : 0);
                 hashCode = (hashCode * 397) ^ (Title != null ? Title.GetHashCode() : 0);
                 hashCode = (hashCode * 397) ^ SizeInBytes.GetHashCode();

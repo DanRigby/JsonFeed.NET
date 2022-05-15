@@ -34,23 +34,22 @@ public class JsonFeedTests
         var jsonFeed = JsonFeed.Parse(inputJsonFeed);
 
         //Then
-        var props = typeof(JsonFeed).GetProperties();
-        foreach (var prop in props)
+        System.Reflection.PropertyInfo[]? props = typeof(JsonFeed).GetProperties();
+        foreach (System.Reflection.PropertyInfo? prop in props)
         {
-            var attrs = prop.GetCustomAttributes(true);
-            foreach (var attr in attrs)
+            object[]? attrs = prop.GetCustomAttributes(true);
+            foreach (object? attr in attrs)
             {
-                var jsonProperty = attr as JsonPropertyAttribute;
-                if (jsonProperty == null)
+                if (attr is not JsonPropertyAttribute jsonProperty)
                 {
                     //Continue if property doesnt have a Json Property Attribute
                     continue;
                 }
 
-                var jsonPropertyName = jsonProperty.PropertyName;
-                var propertyValue = prop.GetValue(jsonFeed);
+                string? jsonPropertyName = jsonProperty.PropertyName;
+                object? propertyValue = prop.GetValue(jsonFeed);
 
-                if (!jObjectJsonFeed.TryGetValue(jsonPropertyName, out var jToken))
+                if (!jObjectJsonFeed.TryGetValue(jsonPropertyName, out JToken? jToken))
                 {
                     //Property not defined in json document
                     Assert.Null(propertyValue);
@@ -58,7 +57,7 @@ public class JsonFeedTests
                 }
 
                 //Assert 
-                var jsonPropertyValue = jToken.ToObject(prop.PropertyType);
+                object? jsonPropertyValue = jToken.ToObject(prop.PropertyType);
                 switch (jsonPropertyValue)
                 {
                     case List<JsonFeedAuthor> authors:
@@ -82,7 +81,7 @@ public class JsonFeedTests
     public async Task ParseFromUriAsyncMakesNetworkRequestAndDeserializesOutput()
     {
         //Given
-        var inputJsonFeed = TestExtensions.GetResourceAsString("Simple.json");
+        string? inputJsonFeed = TestExtensions.GetResourceAsString("Simple.json");
         var expectedJsonFeed = JsonFeed.Parse(inputJsonFeed);
         var contentUri = new Uri("https://jsonfeed.org/feed.json");
         var options = new HttpClientInterceptorOptions();
@@ -98,10 +97,10 @@ public class JsonFeedTests
             .WithContent(inputJsonFeed)
             .RegisterWith(options);
 
-        using var client = options.CreateHttpClient();
+        using HttpClient? client = options.CreateHttpClient();
 
         //When
-        var jsonFeed = await client.ParseFromUriAsync(contentUri);
+        JsonFeed? jsonFeed = await client.ParseFromUriAsync(contentUri);
 
         //Then
         Assert.Equal(expectedJsonFeed, jsonFeed);
@@ -111,7 +110,7 @@ public class JsonFeedTests
     public void WriteFeedToStream()
     {
         //Given
-        var inputJsonFeed = TestExtensions.GetResourceAsString("Simple.json").NormalizeEndings();
+        string? inputJsonFeed = TestExtensions.GetResourceAsString("Simple.json").NormalizeEndings();
         var jsonFeed = JsonFeed.Parse(inputJsonFeed);
 
         using MemoryStream memoryStream = new();
@@ -121,7 +120,7 @@ public class JsonFeedTests
 
         //Then
         using StreamReader reader = new(memoryStream);
-        var outputJsonFeed = reader.ReadToEnd().NormalizeEndings();
+        string? outputJsonFeed = reader.ReadToEnd().NormalizeEndings();
 
         Assert.Equal(inputJsonFeed, outputJsonFeed);
     }

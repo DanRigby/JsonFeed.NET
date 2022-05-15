@@ -6,7 +6,7 @@ public class JsonFeedItemEqualityTestData : TheoryData<JsonFeedItem, JsonFeedIte
 {
     public JsonFeedItemEqualityTestData()
     {
-        var dateTime = DateTimeOffset.UtcNow;
+        DateTimeOffset dateTime = DateTimeOffset.UtcNow;
         Add(new JsonFeedItem
         {
             Id = "id",

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Net.Http;
-using System.Threading.Tasks;
-
-namespace JsonFeedNet
+﻿namespace JsonFeedNet
 {
     public static class JsonFeedExtensions
     {
@@ -14,7 +10,7 @@ namespace JsonFeedNet
         /// <returns>A JsonFeed object representing the parsed feed.</returns>
         public static async Task<JsonFeed> ParseFromUriAsync(this HttpClient client, Uri jsonFeedUri)
         {
-            var jsonDocument = await client.GetStringAsync(jsonFeedUri);
+            string jsonDocument = await client.GetStringAsync(jsonFeedUri);
             return JsonFeed.Parse(jsonDocument);
         }
     }
