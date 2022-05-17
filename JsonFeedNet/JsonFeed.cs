@@ -9,7 +9,7 @@ namespace JsonFeedNet
 {
     public class JsonFeed
     {
-        private static readonly JsonSerializerSettings SerializerSettings = new JsonSerializerSettings
+        private static readonly JsonSerializerSettings s_serializerSettings = new()
         {
             Formatting = Formatting.Indented,
             NullValueHandling = NullValueHandling.Ignore,
@@ -20,7 +20,7 @@ namespace JsonFeedNet
         ///     The URL of the version of the format the feed uses.
         /// </summary>
         [JsonProperty("version")]
-        public string Version { get; set; } = @"https://jsonfeed.org/version/1.1"; //required
+        public string Version { get; set; } = "https://jsonfeed.org/version/1.1"; //required
 
         /// <summary>
         ///     The name of the feed.
@@ -141,7 +141,7 @@ namespace JsonFeedNet
         /// <returns>A JsonFeed object representing the parsed feed.</returns>
         public static async Task<JsonFeed> ParseFromUriAsync(Uri jsonFeedUri, HttpMessageHandler httpMessageHandler = null)
         {
-            HttpClient client = new HttpClient(httpMessageHandler ?? new HttpClientHandler());
+            HttpClient client = new(httpMessageHandler ?? new HttpClientHandler());
             string jsonDocument = await client.GetStringAsync(jsonFeedUri);
 
             return Parse(jsonDocument);
@@ -174,7 +174,7 @@ namespace JsonFeedNet
         /// <returns>A string containing the generated feed JSON.</returns>
         public override string ToString()
         {
-            return JsonConvert.SerializeObject(this, SerializerSettings);
+            return JsonConvert.SerializeObject(this, s_serializerSettings);
         }
     }
 }

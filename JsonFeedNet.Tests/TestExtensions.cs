@@ -21,7 +21,7 @@ public static class TestExtensions
         return reader.ReadToEnd();
     }
 
-    public static Stream? GetResourceAsStream(string resourceName)
+    private static Stream? GetResourceAsStream(string resourceName)
     {
         return Assembly.GetExecutingAssembly().GetManifestResourceStream($"JsonFeedNet.Tests.Resources.{resourceName}");
     }
