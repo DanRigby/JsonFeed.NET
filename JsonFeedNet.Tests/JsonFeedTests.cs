@@ -86,24 +86,6 @@ public class JsonFeedTests
     }
 
     [Fact]
-    public async Task ParseFromUri()
-    {
-        JsonFeed jsonFeed = await JsonFeed.ParseFromUriAsync(new Uri("https://jsonfeed.org/feed.json"));
-        string outputJsonFeed = jsonFeed.Write();
-
-        Assert.NotEmpty(outputJsonFeed);
-    }
-
-    [Fact]
-    public async Task ParseFromUriWithCustomHttpMessageHandler()
-    {
-        JsonFeed jsonFeed = await JsonFeed.ParseFromUriAsync(new Uri("https://jsonfeed.org/feed.json"), new HttpClientHandler());
-        string outputJsonFeed = jsonFeed.Write();
-
-        Assert.NotEmpty(outputJsonFeed);
-    }
-
-    [Fact]
     public async Task ParseFromUriAsyncMakesNetworkRequestAndDeserializesOutput()
     {
         //Given
@@ -138,23 +120,23 @@ public class JsonFeedTests
         {
             Title = "Dan Rigby",
             Description = "Mobile App Development & More.",
-            HomePageUrl = @"https://danrigby.com",
-            FeedUrl = @"https://danrigby.com/feed.json",
+            HomePageUrl = "https://danrigby.com",
+            FeedUrl = "https://danrigby.com/feed.json",
             Authors = new List<JsonFeedAuthor>{
                 new()
                 {
                     Name = "Dan Rigby",
-                    Url = @"https://twitter.com/DanRigby",
+                    Url = "https://twitter.com/DanRigby",
                 }
             },
             Items = new List<JsonFeedItem>
             {
                 new()
                 {
-                    Id = @"https://danrigby.com/2015/09/12/inotifypropertychanged-the-net-4-6-way/",
-                    Url = @"https://danrigby.com/2015/09/12/inotifypropertychanged-the-net-4-6-way/",
+                    Id = "https://danrigby.com/2015/09/12/inotifypropertychanged-the-net-4-6-way/",
+                    Url = "https://danrigby.com/2015/09/12/inotifypropertychanged-the-net-4-6-way/",
                     Title = "INotifyPropertyChanged, The .NET 4.6 Way",
-                    ContentText = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    ContentText = "With the release of Visual Studio 2015 & .NET 4.6, we have a new version of the C# compiler and along with it a new version of C# [version 6] that includes new language features that we can leverage to improve the implementation of INotifyPropertyChanged in our applications.",
                     DatePublished = new DateTime(2015, 09, 12)
                 }
             }
