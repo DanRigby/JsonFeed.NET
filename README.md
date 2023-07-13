@@ -75,6 +75,6 @@ jsonFeed.Write(stream);
 
 ## License
 
-Copyright (c) 2022 Dan Rigby
+Copyright (c) 2023 Dan Rigby
 
 Licensed under the [MIT license](https://github.com/DanRigby/JsonFeed.Net/blob/master/LICENSE).
