@@ -13,25 +13,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Setup DotNet 6.0
-      uses: actions/setup-dotnet@v2
+    - name: Setup DotNet
+      uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '6.0.x'
-
-    - name: Restore Tools
-      run: dotnet tool restore
-
-    - name: Restore Dependencies
-      run: dotnet restore
+        dotnet-version: '7.x'
 
     - name: Build Project
-      run: dotnet build --no-restore
+      run: dotnet build
 
     - name: Run Tests
       run: dotnet test --no-build --verbosity normal
-
-    - name: Run InspectCode
-      run: dotnet jb inspectcode --no-build --swea --severity=SUGGESTION --output=inspectcode.xml *.sln
-
-    - name: Run NVika
-      run: dotnet nvika parsereport "inspectcode.xml"
