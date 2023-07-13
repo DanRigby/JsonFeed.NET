@@ -16,7 +16,7 @@ jobs:
     - name: Setup DotNet
       uses: actions/setup-dotnet@v3
       with:
-        global-json-file: global.json
+        dotnet-version: '7.x'
 
     - name: Build Project
       run: dotnet build
