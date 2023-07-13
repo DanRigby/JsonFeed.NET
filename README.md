@@ -3,7 +3,7 @@ JsonFeed.NET
 
 JsonFeed.NET is a portable .NET library for generating and consuming [JSON Feed](https://jsonfeed.org/) compliant site feeds.
 
-[![build](https://img.shields.io/github/workflow/status/DanRigby/JsonFeed.NET/build)](https://github.com/DanRigby/JsonFeed.NET/actions/workflows/build.yml) [![NuGet Pre Release](https://img.shields.io/nuget/vpre/JsonFeed.NET.svg)](https://www.nuget.org/packages/JsonFeed.NET) [![Twitter Follow](https://img.shields.io/twitter/follow/DanRigby.svg)](https://twitter.com/DanRigby)
+[![Build](https://github.com/DanRigby/JsonFeed.NET/actions/workflows/build.yml/badge.svg)](https://github.com/DanRigby/JsonFeed.NET/actions/workflows/build.yml) [![Qodana](https://github.com/DanRigby/JsonFeed.NET/actions/workflows/qodana.yml/badge.svg)](https://github.com/DanRigby/JsonFeed.NET/actions/workflows/qodana.yml) [![NuGet Pre Release](https://img.shields.io/nuget/vpre/JsonFeed.NET.svg)](https://www.nuget.org/packages/JsonFeed.NET) [![Twitter Follow](https://img.shields.io/twitter/follow/DanRigby.svg)](https://twitter.com/DanRigby)
 
 #### Supported platforms
 * .NET Framework 4.5.1+
@@ -75,6 +75,6 @@ jsonFeed.Write(stream);
 
 ## License
 
-Copyright (c) 2022 Dan Rigby
+Copyright (c) 2023 Dan Rigby
 
 Licensed under the [MIT license](https://github.com/DanRigby/JsonFeed.Net/blob/master/LICENSE).
