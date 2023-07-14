@@ -3,6 +3,8 @@
 using System.Text;
 using Newtonsoft.Json;
 
+// ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable UnusedMember.Global
 public class JsonFeed
 {
     private static readonly JsonSerializerSettings s_serializerSettings = new()
