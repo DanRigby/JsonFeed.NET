@@ -1,9 +1,7 @@
-﻿// ReSharper disable StringLiteralTypo
+﻿namespace JsonFeedNet.Tests;
 
 using JustEat.HttpClientInterception;
 using Xunit;
-
-namespace JsonFeedNet.Tests;
 
 public class JsonFeedTests
 {
@@ -126,7 +124,7 @@ public class JsonFeedTests
                 new()
                 {
                     Name = "Dan Rigby",
-                    Url = "https://twitter.com/DanRigby",
+                    Url = "https://twitter.com/DanRigby"
                 }
             },
             Items = new List<JsonFeedItem>
