@@ -1,4 +1,4 @@
-﻿namespace JsonFeedNet
+﻿namespace JsonFeedNet;
 
 using Newtonsoft.Json;
 
