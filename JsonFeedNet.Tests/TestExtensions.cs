@@ -1,6 +1,6 @@
-﻿using System.Reflection;
+﻿namespace JsonFeedNet.Tests;
 
-namespace JsonFeedNet.Tests;
+using System.Reflection;
 
 public static class TestExtensions
 {
