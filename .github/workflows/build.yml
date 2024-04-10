@@ -28,7 +28,7 @@ jobs:
       run: dotnet test --no-build --verbosity normal
 
     - name: Run InspectCode
-      run: dotnet jb inspectcode --no-build --swea --severity=SUGGESTION --output=inspectcode.xml *.sln
+      run: dotnet jb inspectcode --no-build --swea --severity=SUGGESTION --format="xml" --output=inspectcode.xml *.sln
 
     - name: Run NVika
       run: dotnet nvika parsereport "inspectcode.xml"
