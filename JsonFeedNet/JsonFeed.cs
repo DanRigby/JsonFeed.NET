@@ -5,6 +5,9 @@ namespace JsonFeedNet;
 using System.Text;
 using System.Text.Json.Serialization;
 
+/// <summary>
+///     Represents a JSON Feed.
+/// </summary>
 // ReSharper disable MemberCanBePrivate.Global
 // ReSharper disable UnusedMember.Global
 public class JsonFeed

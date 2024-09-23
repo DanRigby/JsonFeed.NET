@@ -12,6 +12,6 @@ namespace JsonFeedNet;
 [JsonSerializable(typeof(JsonFeedAuthor))]
 [JsonSerializable(typeof(JsonFeedHub))]
 [JsonSerializable(typeof(JsonFeedItem))]
-internal partial class SourceGenerationContext : JsonSerializerContext
+internal sealed partial class SourceGenerationContext : JsonSerializerContext
 {
 }

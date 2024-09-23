@@ -95,6 +95,10 @@ public class JsonFeedItem
     [Obsolete("obsolete by specification version 1.1. Use `Authors`")]
     public JsonFeedAuthor Author { get; set; } //optional
 
+    /// <summary>
+    ///     Feed item authors.
+    ///     If not specified, then the top-level author, if present, is the author of the item.
+    /// </summary>
     [JsonPropertyName("authors")]
     public List<JsonFeedAuthor> Authors { get; set; } //optional
 
