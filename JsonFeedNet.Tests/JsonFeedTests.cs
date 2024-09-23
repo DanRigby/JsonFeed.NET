@@ -11,8 +11,9 @@ public class JsonFeedTests
         string inputJsonFeed = TestExtensions.GetResourceAsString("Simple.json").NormalizeEndings();
         JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
         string outputJsonFeed = jsonFeed.Write().NormalizeEndings();
+        JsonFeed jsonFeed2 = JsonFeed.Parse(outputJsonFeed);
 
-        Assert.Equal(inputJsonFeed, outputJsonFeed);
+        Assert.Equivalent(jsonFeed, jsonFeed2);
     }
 
     [Fact]
@@ -21,8 +22,9 @@ public class JsonFeedTests
         string inputJsonFeed = TestExtensions.GetResourceAsString("DaringFireballBlog.json").NormalizeEndings();
         JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
         string outputJsonFeed = jsonFeed.Write().NormalizeEndings();
-
-        Assert.Equal(inputJsonFeed.Length, outputJsonFeed.Length);
+        JsonFeed jsonFeed2 = JsonFeed.Parse(outputJsonFeed);
+        
+        Assert.Equivalent(jsonFeed, jsonFeed2);
     }
 
     [Fact]
@@ -31,8 +33,9 @@ public class JsonFeedTests
         string inputJsonFeed = TestExtensions.GetResourceAsString("HyperCriticalBlog.json").NormalizeEndings();
         JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
         string outputJsonFeed = jsonFeed.Write().NormalizeEndings();
-
-        Assert.Equal(inputJsonFeed.Length, outputJsonFeed.Length);
+        JsonFeed jsonFeed2 = JsonFeed.Parse(outputJsonFeed);
+        
+        Assert.Equivalent(jsonFeed, jsonFeed2);
     }
 
     [Fact]
@@ -41,8 +44,9 @@ public class JsonFeedTests
         string inputJsonFeed = TestExtensions.GetResourceAsString("MaybePizzaBlog.json").NormalizeEndings();
         JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
         string outputJsonFeed = jsonFeed.Write().NormalizeEndings();
-
-        Assert.Equal(inputJsonFeed.Length, outputJsonFeed.Length);
+        JsonFeed jsonFeed2 = JsonFeed.Parse(outputJsonFeed);
+        
+        Assert.Equivalent(jsonFeed, jsonFeed2);
     }
 
     [Fact]
@@ -51,8 +55,9 @@ public class JsonFeedTests
         string inputJsonFeed = TestExtensions.GetResourceAsString("TheRecordPodcast.json").NormalizeEndings();
         JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
         string outputJsonFeed = jsonFeed.Write().NormalizeEndings();
-
-        Assert.Equal(inputJsonFeed.Length, outputJsonFeed.Length);
+        JsonFeed jsonFeed2 = JsonFeed.Parse(outputJsonFeed);
+        
+        Assert.Equivalent(jsonFeed, jsonFeed2);
     }
 
     [Fact]
@@ -61,8 +66,9 @@ public class JsonFeedTests
         string inputJsonFeed = TestExtensions.GetResourceAsString("TimeTablePodcast.json").NormalizeEndings();
         JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
         string outputJsonFeed = jsonFeed.Write().NormalizeEndings();
-
-        Assert.Equal(inputJsonFeed.Length, outputJsonFeed.Length);
+        JsonFeed jsonFeed2 = JsonFeed.Parse(outputJsonFeed);
+        
+        Assert.Equivalent(jsonFeed, jsonFeed2);
     }
 
     [Fact]
@@ -79,8 +85,9 @@ public class JsonFeedTests
         Assert.Single(jsonFeed.Items[0].Authors);
         Assert.Equal("John Gruber", jsonFeed.Items[0].Authors[0].Name);
 
-        Assert.Equal(inputJsonFeed, outputJsonFeed);
-        Assert.Equal(inputJsonFeed.Length, outputJsonFeed.Length);
+        JsonFeed jsonFeed2 = JsonFeed.Parse(outputJsonFeed);
+        
+        Assert.Equivalent(jsonFeed, jsonFeed2);
     }
 
     [Fact]
@@ -107,8 +114,11 @@ public class JsonFeedTests
         //When
         JsonFeed? jsonFeed = await JsonFeed.ParseFromUriAsync(contentUri, handler);
 
+        string outputJsonFeed = jsonFeed.Write().NormalizeEndings();
+        JsonFeed jsonFeed2 = JsonFeed.Parse(outputJsonFeed);
+        
         //Then
-        Assert.Equal(inputJsonFeed.NormalizeEndings(), jsonFeed.Write().NormalizeEndings());
+        Assert.Equivalent(jsonFeed, jsonFeed2);
     }
 
     [Fact]
@@ -161,6 +171,7 @@ public class JsonFeedTests
         using StreamReader reader = new(memoryStream);
         string outputJsonFeed = reader.ReadToEnd().NormalizeEndings();
 
-        Assert.Equal(inputJsonFeed, outputJsonFeed);
+        var jsonFeed2 = JsonFeed.Parse(outputJsonFeed);
+        Assert.Equivalent(jsonFeed, jsonFeed2);
     }
 }

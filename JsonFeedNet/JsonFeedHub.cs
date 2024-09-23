@@ -1,6 +1,6 @@
 ﻿namespace JsonFeedNet;
 
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 /// <summary>
 ///     Endpoint that can be used to subscribe to real-time notifications of changes to a feed.
@@ -10,12 +10,12 @@ public class JsonFeedHub
     /// <summary>
     ///     The type field describes the protocol used to talk with the hub, such as “rssCloud” or “WebSub.”
     /// </summary>
-    [JsonProperty("type")]
+    [JsonPropertyName("type")]
     public string Type { get; set; } //required
 
     /// <summary>
     ///     Url of the hub endpoint.
     /// </summary>
-    [JsonProperty("url")]
+    [JsonPropertyName("url")]
     public string Url { get; set; } //required
 }

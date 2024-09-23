@@ -1,6 +1,6 @@
 ﻿namespace JsonFeedNet;
 
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 /// <summary>
 ///     A related resource to a feed.
@@ -10,13 +10,13 @@ public class JsonFeedAttachment
     /// <summary>
     ///     The location of the attachment.
     /// </summary>
-    [JsonProperty("url")]
+    [JsonPropertyName("url")]
     public string Url { get; set; } //required
 
     /// <summary>
     ///     The mime type of the attachment, such as “audio/mpeg.”
     /// </summary>
-    [JsonProperty("mime_type")]
+    [JsonPropertyName("mime_type")]
     public string MimeType { get; set; } //required
 
     /// <summary>
@@ -25,18 +25,18 @@ public class JsonFeedAttachment
     ///     of the same thing.
     ///     In this way a podcaster, for instance, might provide an audio recording in different formats.
     /// </summary>
-    [JsonProperty("title")]
+    [JsonPropertyName("title")]
     public string Title { get; set; } //optional
 
     /// <summary>
     ///     How large the file is.
     /// </summary>
-    [JsonProperty("size_in_bytes")]
+    [JsonPropertyName("size_in_bytes")]
     public long? SizeInBytes { get; set; } //optional
 
     /// <summary>
     ///     How long the attachment takes to listen to or watch.
     /// </summary>
-    [JsonProperty("duration_in_seconds")]
+    [JsonPropertyName("duration_in_seconds")]
     public long? DurationInSeconds { get; set; } //optional
 }

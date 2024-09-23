@@ -1,58 +1,53 @@
-﻿namespace JsonFeedNet;
+﻿using System.Text.Json;
+
+namespace JsonFeedNet;
 
 using System.Text;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 // ReSharper disable MemberCanBePrivate.Global
 // ReSharper disable UnusedMember.Global
 public class JsonFeed
 {
-    private static readonly JsonSerializerSettings s_serializerSettings = new()
-    {
-        Formatting = Formatting.Indented,
-        NullValueHandling = NullValueHandling.Ignore,
-        DateFormatHandling = DateFormatHandling.IsoDateFormat
-    };
-
     /// <summary>
     ///     The URL of the version of the format the feed uses.
     /// </summary>
-    [JsonProperty("version")]
+    [JsonPropertyName("version")]
     public string Version { get; set; } = "https://jsonfeed.org/version/1.1"; //required
 
     /// <summary>
     ///     The name of the feed.
     ///     This will often correspond to the name of the website(blog, for instance).
     /// </summary>
-    [JsonProperty("title")]
+    [JsonPropertyName("title")]
     public string Title { get; set; } //required
 
     /// <summary>
     ///     The URL of the resource that the feed describes.
     ///     This resource may or may not actually be a “home” page, but it should be an HTML page.
     /// </summary>
-    [JsonProperty("home_page_url")]
+    [JsonPropertyName("home_page_url")]
     public string HomePageUrl { get; set; } //optional
 
     /// <summary>
     ///     The URL of the feed.
     ///     Serves as the unique identifier for the feed.
     /// </summary>
-    [JsonProperty("feed_url")]
+    [JsonPropertyName("feed_url")]
     public string FeedUrl { get; set; } //optional
 
     /// <summary>
     ///     More detail, beyond the title, on what the feed is about.
     ///     A feed reader may display this text.
     /// </summary>
-    [JsonProperty("description")]
+    [JsonPropertyName("description")]
     public string Description { get; set; } //optional
 
     /// <summary>
     ///     Description of the purpose of the feed.
     ///     This is for the use of people looking at the raw JSON, and should be ignored by feed readers.
     /// </summary>
-    [JsonProperty("user_comment")]
+    [JsonPropertyName("user_comment")]
     public string UserComment { get; set; } //optional
 
     /// <summary>
@@ -61,7 +56,7 @@ public class JsonFeed
     ///     won’t use it very often.
     ///     Must not be the same as FeedUrl, and it must not be the same as a previous NextUrl (to avoid infinite loops).
     /// </summary>
-    [JsonProperty("next_url")]
+    [JsonPropertyName("next_url")]
     public string NextUrl { get; set; } //optional
 
     /// <summary>
@@ -69,7 +64,7 @@ public class JsonFeed
     ///     It should be square and relatively large — such as 512 x 512 — so that it can be scaled-down.
     ///     It should use transparency where appropriate, since it may be rendered on a non-white background.
     /// </summary>
-    [JsonProperty("icon")]
+    [JsonPropertyName("icon")]
     public string Icon { get; set; } //optional
 
     /// <summary>
@@ -77,20 +72,20 @@ public class JsonFeed
     ///     It should be square and relatively small, but not smaller than 64 x 64.
     ///     It should use transparency where appropriate, since it may be rendered on a non-white background.
     /// </summary>
-    [JsonProperty("favicon")]
+    [JsonPropertyName("favicon")]
     public string FavIcon { get; set; } //optional
 
     /// <summary>
     ///     The feed author.
     /// </summary>
-    [JsonProperty("author")]
+    [JsonPropertyName("author")]
     [Obsolete("obsolete by specification version 1.1. Use `Authors`")]
     public JsonFeedAuthor Author { get; set; } //optional
 
     /// <summary>
     ///     Specifies one or more feed authors.
     /// </summary>
-    [JsonProperty("authors")]
+    [JsonPropertyName("authors")]
     public List<JsonFeedAuthor> Authors { get; set; } //optional
 
     /// <summary>
@@ -98,7 +93,7 @@ public class JsonFeed
     ///     The value is usually a 2-letter language tag from ISO 639-1, optionally followed by a region tag.
     ///     (Examples: en or en-US.)
     /// </summary>
-    [JsonProperty("language")]
+    [JsonPropertyName("language")]
     public string Language { get; set; } //optional
 
     /// <summary>
@@ -106,19 +101,19 @@ public class JsonFeed
     ///     If the value is true, then it’s expired. Any other value, or the absence of expired, means the feed may continue to
     ///     update.
     /// </summary>
-    [JsonProperty("expired")]
+    [JsonPropertyName("expired")]
     public bool? Expired { get; set; } //optional
 
     /// <summary>
     ///     Endpoints that can be used to subscribe to real-time notifications of changes to this feed.
     /// </summary>
-    [JsonProperty("hubs")]
+    [JsonPropertyName("hubs")]
     public List<JsonFeedHub> Hubs { get; set; } //optional
 
     /// <summary>
     ///     The individual items in the feed.
     /// </summary>
-    [JsonProperty("items")]
+    [JsonPropertyName("items")]
     public List<JsonFeedItem> Items { get; set; } //required
 
     /// <summary>
@@ -128,7 +123,7 @@ public class JsonFeed
     /// <returns>A JsonFeed object representing the parsed feed.</returns>
     public static JsonFeed Parse(string jsonFeedString)
     {
-        return JsonConvert.DeserializeObject<JsonFeed>(jsonFeedString);
+        return JsonSerializer.Deserialize<JsonFeed>(jsonFeedString, SourceGenerationContext.Default.JsonFeed);
     }
 
     /// <summary>
@@ -142,7 +137,14 @@ public class JsonFeed
         HttpClient client = new(httpMessageHandler ?? new HttpClientHandler());
         string jsonDocument = await client.GetStringAsync(jsonFeedUri);
 
-        return Parse(jsonDocument);
+        try
+        {
+            return Parse(jsonDocument);
+        }
+        finally
+        {
+            client.Dispose();
+        }
     }
 
     /// <summary>
@@ -172,6 +174,6 @@ public class JsonFeed
     /// <returns>A string containing the generated feed JSON.</returns>
     public override string ToString()
     {
-        return JsonConvert.SerializeObject(this, s_serializerSettings);
+        return JsonSerializer.Serialize(this, SourceGenerationContext.Default.JsonFeed);
     }
 }
