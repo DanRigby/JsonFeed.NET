@@ -174,4 +174,19 @@ public class JsonFeedTests
         var jsonFeed2 = JsonFeed.Parse(outputJsonFeed);
         Assert.Equivalent(jsonFeed, jsonFeed2);
     }
+
+    [Fact]
+    public void CustomObjectsHandling()
+    {
+        string inputJsonFeed = TestExtensions.GetResourceAsString("Simple.json").NormalizeEndings();
+        JsonFeed jsonFeed = JsonFeed.Parse(inputJsonFeed);
+
+        Assert.True(jsonFeed.CustomObjects.ContainsKey("_custom_feed_object"));
+        Assert.Equal("custom_feed_value1", jsonFeed.CustomObjects["_custom_feed_object"].GetProperty("custom_feed_key1").GetString());
+        Assert.Equal("custom_feed_value2", jsonFeed.CustomObjects["_custom_feed_object"].GetProperty("custom_feed_key2").GetString());
+
+        Assert.True(jsonFeed.Items[0].CustomObjects.ContainsKey("_custom_object"));
+        Assert.Equal("custom_value1", jsonFeed.Items[0].CustomObjects["_custom_object"].GetProperty("custom_key1").GetString());
+        Assert.Equal("custom_value2", jsonFeed.Items[0].CustomObjects["_custom_object"].GetProperty("custom_key2").GetString());
+    }
 }

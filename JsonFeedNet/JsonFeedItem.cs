@@ -1,5 +1,6 @@
 ﻿namespace JsonFeedNet;
 
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
 /// <summary>
@@ -124,4 +125,10 @@ public class JsonFeedItem
     /// </summary>
     [JsonPropertyName("attachments")]
     public List<JsonFeedAttachment> Attachments { get; set; } //optional
+
+    /// <summary>
+    ///     Custom objects in the feed item.
+    /// </summary>
+    [JsonExtensionData]
+    public Dictionary<string, JsonElement> CustomObjects { get; set; } = new(); //optional
 }

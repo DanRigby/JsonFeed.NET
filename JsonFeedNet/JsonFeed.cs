@@ -120,6 +120,12 @@ public class JsonFeed
     public List<JsonFeedItem> Items { get; set; } //required
 
     /// <summary>
+    ///     Custom objects in the feed.
+    /// </summary>
+    [JsonExtensionData]
+    public Dictionary<string, JsonElement> CustomObjects { get; set; } = new(); //optional
+
+    /// <summary>
     ///     Parses a JsonFeed in an input string into a JsonFeed object for use by code.
     /// </summary>
     /// <param name="jsonFeedString">The JSON Feed as a string.</param>

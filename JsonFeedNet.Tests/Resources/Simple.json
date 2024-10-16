@@ -7,12 +7,20 @@
     {
       "id": "2",
       "url": "https://example.org/second-item",
-      "content_text": "This is a second item."
+      "content_text": "This is a second item.",
+      "_custom_object": {
+        "custom_key1": "custom_value1",
+        "custom_key2": "custom_value2"
+      }
     },
     {
       "id": "1",
       "url": "https://example.org/initial-post",
       "content_html": "<p>Hello, world!</p>"
     }
-  ]
+  ],
+  "_custom_feed_object": {
+    "custom_feed_key1": "custom_feed_value1",
+    "custom_feed_key2": "custom_feed_value2"
+  }
 }
