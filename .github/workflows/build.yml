@@ -16,9 +16,7 @@ jobs:
     - name: Setup DotNet
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: | 
-          6.x
-          8.x
+        dotnet-version: 8.x
 
     - name: Restore Tools
       run: dotnet tool restore
